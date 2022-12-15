@@ -54,7 +54,7 @@ public class Main {
 		AIController p1 = new AIController(a1, true);
 		AIController p2 = new AIController(a2, false);
 		p1.start();
-		p2.start();
+		// p2.start();
 	}
 	
 }

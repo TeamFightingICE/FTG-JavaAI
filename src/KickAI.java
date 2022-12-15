@@ -1,5 +1,6 @@
 import aiinterface.AIInterface;
 import protoc.ServiceGrpc.ServiceBlockingStub;
+import util.GrpcUtil;
 
 public class KickAI extends AIInterface {
 
@@ -10,8 +11,16 @@ public class KickAI extends AIInterface {
 
 	@Override
 	protected void processing() {
-		// TODO Auto-generated method stub
-		super.key.empty();
+		if (super.frameData.getEmptyFlag() || super.frameData.getCurrentFrameNumber() <= 0) {
+			return;
+		}
+		
+		if (super.commandCenter.getSkillKeyCount() > 0) {
+			super.key = GrpcUtil.fromGrpcKey(this.commandCenter.getSkillKey(0));
+			return;
+		}
+		
+		super.calledCommand = "B";
 	}
 	
 }

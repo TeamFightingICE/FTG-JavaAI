@@ -3,7 +3,9 @@ package aiinterface;
 import java.util.Iterator;
 import java.util.UUID;
 
+import protoc.MessageProto.GrpcAudioData;
 import protoc.MessageProto.GrpcCommandCenter;
+import protoc.MessageProto.GrpcFrameData;
 import protoc.ServiceGrpc.ServiceBlockingStub;
 import protoc.ServiceProto.InitializeRequest;
 import protoc.ServiceProto.InitializeResponse;
@@ -11,6 +13,7 @@ import protoc.ServiceProto.ParticipateRequest;
 import protoc.ServiceProto.PlayerAction;
 import protoc.ServiceProto.PlayerGameData;
 import struct.Key;
+import util.GrpcUtil;
 
 public abstract class AIInterface {
 	
@@ -19,7 +22,12 @@ public abstract class AIInterface {
 	private boolean playerNumber;
 	protected boolean blind;
 	
+	protected GrpcCommandCenter commandCenter;
+	protected GrpcFrameData frameData;
+	protected GrpcAudioData audioData;
+	
 	protected Key key;
+	protected String calledCommand;
 	
 	public AIInterface(ServiceBlockingStub stub) {
 		this.stub = stub;
@@ -57,33 +65,37 @@ public abstract class AIInterface {
 	
 	protected abstract void processing();
 	
-	private Key input() {
-		return this.key;
+	private void update(PlayerGameData response) {
+		this.commandCenter = response.getCommandCenter();
+		this.frameData = response.getFrameData();
+		this.audioData = response.getAudioData();
+	}
+	
+	private void call() {
+		PlayerAction pAction;
+		if (this.calledCommand != null) {
+			pAction = PlayerAction.newBuilder()
+					.setPlayerUuid(this.playerUuid.toString())
+					.setCalledCommand(this.calledCommand)
+					.build();
+			this.calledCommand = null;
+		} else {
+			pAction = PlayerAction.newBuilder()
+					.setPlayerUuid(this.playerUuid.toString())
+					.setInputKey(GrpcUtil.convertKey(this.key))
+					.build();
+			this.key.empty();
+		}
+		this.stub.input(pAction);
 	}
 	
 	public void start(boolean playerNumber) {
 		this.initialize(playerNumber);
 		Iterator<PlayerGameData> gameDataIterator = this.participate();
 		while (gameDataIterator.hasNext()) {
-			PlayerGameData pGameData = gameDataIterator.next();
+			this.update(gameDataIterator.next());
 			this.processing();
-			
-			GrpcCommandCenter cc = pGameData.getCommandCenter();
-			PlayerAction pAction;
-			if (cc.getSkillKeyCount() > 0) {
-				pAction = PlayerAction.newBuilder()
-						.setPlayerUuid(this.playerUuid.toString())
-						.setInputKey(cc.getSkillKey(0))
-						.build();
-			} else {
-				pAction = PlayerAction.newBuilder()
-						.setPlayerUuid(this.playerUuid.toString())
-						.setCalledCommand("B")
-						.build();
-			}
-			
-			this.input();
-			this.stub.input(pAction);
+			this.call();
 		}
 	}
 	
