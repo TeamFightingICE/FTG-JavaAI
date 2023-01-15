@@ -1,5 +1,7 @@
 package struct;
 
+import protoc.MessageProto.GrpcKey;
+
 /**
  * The class dealing with all possible keys used in the game.
  */
@@ -59,6 +61,16 @@ public class Key {
 			this.empty();
 		}
 	}
+	
+	public Key(GrpcKey grpcKey) {
+		this.A = grpcKey.getA();
+		this.B = grpcKey.getB();
+		this.C = grpcKey.getC();
+		this.U = grpcKey.getU();
+		this.D = grpcKey.getD();
+		this.L = grpcKey.getL();
+		this.R = grpcKey.getR();
+  	}
 
 	/**
 	 * Resets all keys to false, or not pressed.

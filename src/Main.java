@@ -48,13 +48,13 @@ public class Main {
 				.build();
 		ServiceBlockingStub stub = ServiceGrpc.newBlockingStub(channel);
 		
-		AIInterface a1 = new KickAI(stub);
-		AIInterface a2 = new KickAI(stub);
+		AIInterface a1 = new BlackMamba();
+		AIInterface a2 = new KickAI();
 		
-		AIController p1 = new AIController(a1, true);
-		AIController p2 = new AIController(a2, false);
+		AIController p1 = new AIController(stub, a1, true);
+		AIController p2 = new AIController(stub, a2, false);
 		p1.start();
-		// p2.start();
+		//p2.start();
 	}
 	
 }

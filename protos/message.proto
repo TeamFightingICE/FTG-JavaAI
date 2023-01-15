@@ -79,6 +79,10 @@ message GrpcFftData {
 	bytes imaginary_data_as_bytes = 2;
 }
 
+message GrpcScreenData {
+	bytes display_bytes = 1;
+}
+
 message GrpcAudioData {
 	bytes raw_data_as_bytes = 1;
 	repeated GrpcFftData fft_data = 2;
@@ -98,4 +102,10 @@ message GrpcKey {
 message GrpcCommandCenter {
 	repeated GrpcKey skill_key = 1;
 	string called_command = 2;
+}
+
+message GrpcRoundResult {
+	int32 current_round = 1;
+	repeated int32 remaining_hps = 2;
+	int32 elapsed_frame = 3;
 }

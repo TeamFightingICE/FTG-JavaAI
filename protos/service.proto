@@ -14,8 +14,10 @@ message SpectateRequest {
 }
 
 message SpectatorGameData {
-	GrpcFrameData frame_data = 1;
-	GrpcAudioData audio_data = 2;
+	bool empty_flag = 1;
+	GrpcFrameData frame_data = 2;
+	GrpcScreenData screen_data = 3;
+	GrpcAudioData audio_data = 4;
 }
 
 message InitializeRequest {
@@ -33,9 +35,13 @@ message ParticipateRequest {
 }
 
 message PlayerGameData {
-	GrpcCommandCenter command_center = 1;
-	GrpcFrameData frame_data = 2;
-	GrpcAudioData audio_data = 3;
+	bool empty_flag = 1;
+	bool is_control = 2;
+	bool roundend_flag = 3;
+	GrpcFrameData frame_data = 4;
+	GrpcScreenData screen_data = 5;
+	GrpcAudioData audio_data = 6;
+	GrpcRoundResult round_result = 7;
 }
 
 message PlayerAction {
