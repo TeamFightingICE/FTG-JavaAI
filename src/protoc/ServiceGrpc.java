@@ -139,37 +139,6 @@ public final class ServiceGrpc {
     return getInputMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<protoc.ServiceProto.SimulateRequest,
-      protoc.ServiceProto.SimulateResponse> getSimulateMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Simulate",
-      requestType = protoc.ServiceProto.SimulateRequest.class,
-      responseType = protoc.ServiceProto.SimulateResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<protoc.ServiceProto.SimulateRequest,
-      protoc.ServiceProto.SimulateResponse> getSimulateMethod() {
-    io.grpc.MethodDescriptor<protoc.ServiceProto.SimulateRequest, protoc.ServiceProto.SimulateResponse> getSimulateMethod;
-    if ((getSimulateMethod = ServiceGrpc.getSimulateMethod) == null) {
-      synchronized (ServiceGrpc.class) {
-        if ((getSimulateMethod = ServiceGrpc.getSimulateMethod) == null) {
-          ServiceGrpc.getSimulateMethod = getSimulateMethod =
-              io.grpc.MethodDescriptor.<protoc.ServiceProto.SimulateRequest, protoc.ServiceProto.SimulateResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Simulate"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoc.ServiceProto.SimulateRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoc.ServiceProto.SimulateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Simulate"))
-              .build();
-        }
-      }
-    }
-    return getSimulateMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -246,13 +215,6 @@ public final class ServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInputMethod(), responseObserver);
     }
 
-    /**
-     */
-    public void simulate(protoc.ServiceProto.SimulateRequest request,
-        io.grpc.stub.StreamObserver<protoc.ServiceProto.SimulateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSimulateMethod(), responseObserver);
-    }
-
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -283,13 +245,6 @@ public final class ServiceGrpc {
                 protoc.ServiceProto.PlayerAction,
                 com.google.protobuf.Empty>(
                   this, METHODID_INPUT)))
-          .addMethod(
-            getSimulateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                protoc.ServiceProto.SimulateRequest,
-                protoc.ServiceProto.SimulateResponse>(
-                  this, METHODID_SIMULATE)))
           .build();
     }
   }
@@ -339,14 +294,6 @@ public final class ServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getInputMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void simulate(protoc.ServiceProto.SimulateRequest request,
-        io.grpc.stub.StreamObserver<protoc.ServiceProto.SimulateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getSimulateMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -392,13 +339,6 @@ public final class ServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInputMethod(), getCallOptions(), request);
     }
-
-    /**
-     */
-    public protoc.ServiceProto.SimulateResponse simulate(protoc.ServiceProto.SimulateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getSimulateMethod(), getCallOptions(), request);
-    }
   }
 
   /**
@@ -430,21 +370,12 @@ public final class ServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getInputMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<protoc.ServiceProto.SimulateResponse> simulate(
-        protoc.ServiceProto.SimulateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getSimulateMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_SPECTATE = 0;
   private static final int METHODID_INITIALIZE = 1;
   private static final int METHODID_PARTICIPATE = 2;
   private static final int METHODID_INPUT = 3;
-  private static final int METHODID_SIMULATE = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -478,10 +409,6 @@ public final class ServiceGrpc {
         case METHODID_INPUT:
           serviceImpl.input((protoc.ServiceProto.PlayerAction) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
-          break;
-        case METHODID_SIMULATE:
-          serviceImpl.simulate((protoc.ServiceProto.SimulateRequest) request,
-              (io.grpc.stub.StreamObserver<protoc.ServiceProto.SimulateResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -548,7 +475,6 @@ public final class ServiceGrpc {
               .addMethod(getInitializeMethod())
               .addMethod(getParticipateMethod())
               .addMethod(getInputMethod())
-              .addMethod(getSimulateMethod())
               .build();
         }
       }

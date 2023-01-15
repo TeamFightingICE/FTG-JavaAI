@@ -3270,10 +3270,15 @@ public final class ServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool empty_flag = 1;</code>
-     * @return The emptyFlag.
+     * <code>.service.GrpcFlag flag = 1;</code>
+     * @return The enum numeric value on the wire for flag.
      */
-    boolean getEmptyFlag();
+    int getFlagValue();
+    /**
+     * <code>.service.GrpcFlag flag = 1;</code>
+     * @return The flag.
+     */
+    protoc.EnumProto.GrpcFlag getFlag();
 
     /**
      * <code>bool is_control = 2;</code>
@@ -3282,68 +3287,62 @@ public final class ServiceProto {
     boolean getIsControl();
 
     /**
-     * <code>bool roundend_flag = 3;</code>
-     * @return The roundendFlag.
-     */
-    boolean getRoundendFlag();
-
-    /**
-     * <code>.service.GrpcFrameData frame_data = 4;</code>
+     * <code>.service.GrpcFrameData frame_data = 3;</code>
      * @return Whether the frameData field is set.
      */
     boolean hasFrameData();
     /**
-     * <code>.service.GrpcFrameData frame_data = 4;</code>
+     * <code>.service.GrpcFrameData frame_data = 3;</code>
      * @return The frameData.
      */
     protoc.MessageProto.GrpcFrameData getFrameData();
     /**
-     * <code>.service.GrpcFrameData frame_data = 4;</code>
+     * <code>.service.GrpcFrameData frame_data = 3;</code>
      */
     protoc.MessageProto.GrpcFrameDataOrBuilder getFrameDataOrBuilder();
 
     /**
-     * <code>.service.GrpcScreenData screen_data = 5;</code>
+     * <code>.service.GrpcScreenData screen_data = 4;</code>
      * @return Whether the screenData field is set.
      */
     boolean hasScreenData();
     /**
-     * <code>.service.GrpcScreenData screen_data = 5;</code>
+     * <code>.service.GrpcScreenData screen_data = 4;</code>
      * @return The screenData.
      */
     protoc.MessageProto.GrpcScreenData getScreenData();
     /**
-     * <code>.service.GrpcScreenData screen_data = 5;</code>
+     * <code>.service.GrpcScreenData screen_data = 4;</code>
      */
     protoc.MessageProto.GrpcScreenDataOrBuilder getScreenDataOrBuilder();
 
     /**
-     * <code>.service.GrpcAudioData audio_data = 6;</code>
+     * <code>.service.GrpcAudioData audio_data = 5;</code>
      * @return Whether the audioData field is set.
      */
     boolean hasAudioData();
     /**
-     * <code>.service.GrpcAudioData audio_data = 6;</code>
+     * <code>.service.GrpcAudioData audio_data = 5;</code>
      * @return The audioData.
      */
     protoc.MessageProto.GrpcAudioData getAudioData();
     /**
-     * <code>.service.GrpcAudioData audio_data = 6;</code>
+     * <code>.service.GrpcAudioData audio_data = 5;</code>
      */
     protoc.MessageProto.GrpcAudioDataOrBuilder getAudioDataOrBuilder();
 
     /**
-     * <code>.service.GrpcRoundResult round_result = 7;</code>
+     * <code>.service.GrpcRoundResult round_result = 6;</code>
      * @return Whether the roundResult field is set.
      */
     boolean hasRoundResult();
     /**
-     * <code>.service.GrpcRoundResult round_result = 7;</code>
+     * <code>.service.GrpcRoundResult round_result = 6;</code>
      * @return The roundResult.
      */
     protoc.MessageProto.GrpcRoundResult getRoundResult();
     /**
-     * <code>.service.GrpcRoundResult round_result = 7;</code>
+     * <code>.service.GrpcRoundResult round_result = 6;</code>
      */
     protoc.MessageProto.GrpcRoundResultOrBuilder getRoundResultOrBuilder();
   }
@@ -3360,6 +3359,7 @@ public final class ServiceProto {
       super(builder);
     }
     private PlayerGameData() {
+      flag_ = 0;
     }
 
     @java.lang.Override
@@ -3387,15 +3387,23 @@ public final class ServiceProto {
               protoc.ServiceProto.PlayerGameData.class, protoc.ServiceProto.PlayerGameData.Builder.class);
     }
 
-    public static final int EMPTY_FLAG_FIELD_NUMBER = 1;
-    private boolean emptyFlag_;
+    public static final int FLAG_FIELD_NUMBER = 1;
+    private int flag_;
     /**
-     * <code>bool empty_flag = 1;</code>
-     * @return The emptyFlag.
+     * <code>.service.GrpcFlag flag = 1;</code>
+     * @return The enum numeric value on the wire for flag.
      */
-    @java.lang.Override
-    public boolean getEmptyFlag() {
-      return emptyFlag_;
+    @java.lang.Override public int getFlagValue() {
+      return flag_;
+    }
+    /**
+     * <code>.service.GrpcFlag flag = 1;</code>
+     * @return The flag.
+     */
+    @java.lang.Override public protoc.EnumProto.GrpcFlag getFlag() {
+      @SuppressWarnings("deprecation")
+      protoc.EnumProto.GrpcFlag result = protoc.EnumProto.GrpcFlag.valueOf(flag_);
+      return result == null ? protoc.EnumProto.GrpcFlag.UNRECOGNIZED : result;
     }
 
     public static final int IS_CONTROL_FIELD_NUMBER = 2;
@@ -3409,21 +3417,10 @@ public final class ServiceProto {
       return isControl_;
     }
 
-    public static final int ROUNDEND_FLAG_FIELD_NUMBER = 3;
-    private boolean roundendFlag_;
-    /**
-     * <code>bool roundend_flag = 3;</code>
-     * @return The roundendFlag.
-     */
-    @java.lang.Override
-    public boolean getRoundendFlag() {
-      return roundendFlag_;
-    }
-
-    public static final int FRAME_DATA_FIELD_NUMBER = 4;
+    public static final int FRAME_DATA_FIELD_NUMBER = 3;
     private protoc.MessageProto.GrpcFrameData frameData_;
     /**
-     * <code>.service.GrpcFrameData frame_data = 4;</code>
+     * <code>.service.GrpcFrameData frame_data = 3;</code>
      * @return Whether the frameData field is set.
      */
     @java.lang.Override
@@ -3431,7 +3428,7 @@ public final class ServiceProto {
       return frameData_ != null;
     }
     /**
-     * <code>.service.GrpcFrameData frame_data = 4;</code>
+     * <code>.service.GrpcFrameData frame_data = 3;</code>
      * @return The frameData.
      */
     @java.lang.Override
@@ -3439,17 +3436,17 @@ public final class ServiceProto {
       return frameData_ == null ? protoc.MessageProto.GrpcFrameData.getDefaultInstance() : frameData_;
     }
     /**
-     * <code>.service.GrpcFrameData frame_data = 4;</code>
+     * <code>.service.GrpcFrameData frame_data = 3;</code>
      */
     @java.lang.Override
     public protoc.MessageProto.GrpcFrameDataOrBuilder getFrameDataOrBuilder() {
       return getFrameData();
     }
 
-    public static final int SCREEN_DATA_FIELD_NUMBER = 5;
+    public static final int SCREEN_DATA_FIELD_NUMBER = 4;
     private protoc.MessageProto.GrpcScreenData screenData_;
     /**
-     * <code>.service.GrpcScreenData screen_data = 5;</code>
+     * <code>.service.GrpcScreenData screen_data = 4;</code>
      * @return Whether the screenData field is set.
      */
     @java.lang.Override
@@ -3457,7 +3454,7 @@ public final class ServiceProto {
       return screenData_ != null;
     }
     /**
-     * <code>.service.GrpcScreenData screen_data = 5;</code>
+     * <code>.service.GrpcScreenData screen_data = 4;</code>
      * @return The screenData.
      */
     @java.lang.Override
@@ -3465,17 +3462,17 @@ public final class ServiceProto {
       return screenData_ == null ? protoc.MessageProto.GrpcScreenData.getDefaultInstance() : screenData_;
     }
     /**
-     * <code>.service.GrpcScreenData screen_data = 5;</code>
+     * <code>.service.GrpcScreenData screen_data = 4;</code>
      */
     @java.lang.Override
     public protoc.MessageProto.GrpcScreenDataOrBuilder getScreenDataOrBuilder() {
       return getScreenData();
     }
 
-    public static final int AUDIO_DATA_FIELD_NUMBER = 6;
+    public static final int AUDIO_DATA_FIELD_NUMBER = 5;
     private protoc.MessageProto.GrpcAudioData audioData_;
     /**
-     * <code>.service.GrpcAudioData audio_data = 6;</code>
+     * <code>.service.GrpcAudioData audio_data = 5;</code>
      * @return Whether the audioData field is set.
      */
     @java.lang.Override
@@ -3483,7 +3480,7 @@ public final class ServiceProto {
       return audioData_ != null;
     }
     /**
-     * <code>.service.GrpcAudioData audio_data = 6;</code>
+     * <code>.service.GrpcAudioData audio_data = 5;</code>
      * @return The audioData.
      */
     @java.lang.Override
@@ -3491,17 +3488,17 @@ public final class ServiceProto {
       return audioData_ == null ? protoc.MessageProto.GrpcAudioData.getDefaultInstance() : audioData_;
     }
     /**
-     * <code>.service.GrpcAudioData audio_data = 6;</code>
+     * <code>.service.GrpcAudioData audio_data = 5;</code>
      */
     @java.lang.Override
     public protoc.MessageProto.GrpcAudioDataOrBuilder getAudioDataOrBuilder() {
       return getAudioData();
     }
 
-    public static final int ROUND_RESULT_FIELD_NUMBER = 7;
+    public static final int ROUND_RESULT_FIELD_NUMBER = 6;
     private protoc.MessageProto.GrpcRoundResult roundResult_;
     /**
-     * <code>.service.GrpcRoundResult round_result = 7;</code>
+     * <code>.service.GrpcRoundResult round_result = 6;</code>
      * @return Whether the roundResult field is set.
      */
     @java.lang.Override
@@ -3509,7 +3506,7 @@ public final class ServiceProto {
       return roundResult_ != null;
     }
     /**
-     * <code>.service.GrpcRoundResult round_result = 7;</code>
+     * <code>.service.GrpcRoundResult round_result = 6;</code>
      * @return The roundResult.
      */
     @java.lang.Override
@@ -3517,7 +3514,7 @@ public final class ServiceProto {
       return roundResult_ == null ? protoc.MessageProto.GrpcRoundResult.getDefaultInstance() : roundResult_;
     }
     /**
-     * <code>.service.GrpcRoundResult round_result = 7;</code>
+     * <code>.service.GrpcRoundResult round_result = 6;</code>
      */
     @java.lang.Override
     public protoc.MessageProto.GrpcRoundResultOrBuilder getRoundResultOrBuilder() {
@@ -3538,26 +3535,23 @@ public final class ServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (emptyFlag_ != false) {
-        output.writeBool(1, emptyFlag_);
+      if (flag_ != protoc.EnumProto.GrpcFlag.EMPTY.getNumber()) {
+        output.writeEnum(1, flag_);
       }
       if (isControl_ != false) {
         output.writeBool(2, isControl_);
       }
-      if (roundendFlag_ != false) {
-        output.writeBool(3, roundendFlag_);
-      }
       if (frameData_ != null) {
-        output.writeMessage(4, getFrameData());
+        output.writeMessage(3, getFrameData());
       }
       if (screenData_ != null) {
-        output.writeMessage(5, getScreenData());
+        output.writeMessage(4, getScreenData());
       }
       if (audioData_ != null) {
-        output.writeMessage(6, getAudioData());
+        output.writeMessage(5, getAudioData());
       }
       if (roundResult_ != null) {
-        output.writeMessage(7, getRoundResult());
+        output.writeMessage(6, getRoundResult());
       }
       getUnknownFields().writeTo(output);
     }
@@ -3568,33 +3562,29 @@ public final class ServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (emptyFlag_ != false) {
+      if (flag_ != protoc.EnumProto.GrpcFlag.EMPTY.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, emptyFlag_);
+          .computeEnumSize(1, flag_);
       }
       if (isControl_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, isControl_);
       }
-      if (roundendFlag_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, roundendFlag_);
-      }
       if (frameData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getFrameData());
+          .computeMessageSize(3, getFrameData());
       }
       if (screenData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getScreenData());
+          .computeMessageSize(4, getScreenData());
       }
       if (audioData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getAudioData());
+          .computeMessageSize(5, getAudioData());
       }
       if (roundResult_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getRoundResult());
+          .computeMessageSize(6, getRoundResult());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3611,12 +3601,9 @@ public final class ServiceProto {
       }
       protoc.ServiceProto.PlayerGameData other = (protoc.ServiceProto.PlayerGameData) obj;
 
-      if (getEmptyFlag()
-          != other.getEmptyFlag()) return false;
+      if (flag_ != other.flag_) return false;
       if (getIsControl()
           != other.getIsControl()) return false;
-      if (getRoundendFlag()
-          != other.getRoundendFlag()) return false;
       if (hasFrameData() != other.hasFrameData()) return false;
       if (hasFrameData()) {
         if (!getFrameData()
@@ -3648,15 +3635,11 @@ public final class ServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + EMPTY_FLAG_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getEmptyFlag());
+      hash = (37 * hash) + FLAG_FIELD_NUMBER;
+      hash = (53 * hash) + flag_;
       hash = (37 * hash) + IS_CONTROL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsControl());
-      hash = (37 * hash) + ROUNDEND_FLAG_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getRoundendFlag());
       if (hasFrameData()) {
         hash = (37 * hash) + FRAME_DATA_FIELD_NUMBER;
         hash = (53 * hash) + getFrameData().hashCode();
@@ -3801,11 +3784,9 @@ public final class ServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        emptyFlag_ = false;
+        flag_ = 0;
 
         isControl_ = false;
-
-        roundendFlag_ = false;
 
         if (frameDataBuilder_ == null) {
           frameData_ = null;
@@ -3857,9 +3838,8 @@ public final class ServiceProto {
       @java.lang.Override
       public protoc.ServiceProto.PlayerGameData buildPartial() {
         protoc.ServiceProto.PlayerGameData result = new protoc.ServiceProto.PlayerGameData(this);
-        result.emptyFlag_ = emptyFlag_;
+        result.flag_ = flag_;
         result.isControl_ = isControl_;
-        result.roundendFlag_ = roundendFlag_;
         if (frameDataBuilder_ == null) {
           result.frameData_ = frameData_;
         } else {
@@ -3928,14 +3908,11 @@ public final class ServiceProto {
 
       public Builder mergeFrom(protoc.ServiceProto.PlayerGameData other) {
         if (other == protoc.ServiceProto.PlayerGameData.getDefaultInstance()) return this;
-        if (other.getEmptyFlag() != false) {
-          setEmptyFlag(other.getEmptyFlag());
+        if (other.flag_ != 0) {
+          setFlagValue(other.getFlagValue());
         }
         if (other.getIsControl() != false) {
           setIsControl(other.getIsControl());
-        }
-        if (other.getRoundendFlag() != false) {
-          setRoundendFlag(other.getRoundendFlag());
         }
         if (other.hasFrameData()) {
           mergeFrameData(other.getFrameData());
@@ -3976,7 +3953,7 @@ public final class ServiceProto {
                 done = true;
                 break;
               case 8: {
-                emptyFlag_ = input.readBool();
+                flag_ = input.readEnum();
 
                 break;
               } // case 8
@@ -3985,39 +3962,34 @@ public final class ServiceProto {
 
                 break;
               } // case 16
-              case 24: {
-                roundendFlag_ = input.readBool();
-
-                break;
-              } // case 24
-              case 34: {
+              case 26: {
                 input.readMessage(
                     getFrameDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getScreenDataFieldBuilder().getBuilder(),
                     extensionRegistry);
 
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
-                    getScreenDataFieldBuilder().getBuilder(),
+                    getAudioDataFieldBuilder().getBuilder(),
                     extensionRegistry);
 
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
-                    getAudioDataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 50
-              case 58: {
-                input.readMessage(
                     getRoundResultFieldBuilder().getBuilder(),
                     extensionRegistry);
 
                 break;
-              } // case 58
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4034,33 +4006,56 @@ public final class ServiceProto {
         return this;
       }
 
-      private boolean emptyFlag_ ;
+      private int flag_ = 0;
       /**
-       * <code>bool empty_flag = 1;</code>
-       * @return The emptyFlag.
+       * <code>.service.GrpcFlag flag = 1;</code>
+       * @return The enum numeric value on the wire for flag.
        */
-      @java.lang.Override
-      public boolean getEmptyFlag() {
-        return emptyFlag_;
+      @java.lang.Override public int getFlagValue() {
+        return flag_;
       }
       /**
-       * <code>bool empty_flag = 1;</code>
-       * @param value The emptyFlag to set.
+       * <code>.service.GrpcFlag flag = 1;</code>
+       * @param value The enum numeric value on the wire for flag to set.
        * @return This builder for chaining.
        */
-      public Builder setEmptyFlag(boolean value) {
+      public Builder setFlagValue(int value) {
         
-        emptyFlag_ = value;
+        flag_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool empty_flag = 1;</code>
+       * <code>.service.GrpcFlag flag = 1;</code>
+       * @return The flag.
+       */
+      @java.lang.Override
+      public protoc.EnumProto.GrpcFlag getFlag() {
+        @SuppressWarnings("deprecation")
+        protoc.EnumProto.GrpcFlag result = protoc.EnumProto.GrpcFlag.valueOf(flag_);
+        return result == null ? protoc.EnumProto.GrpcFlag.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.service.GrpcFlag flag = 1;</code>
+       * @param value The flag to set.
        * @return This builder for chaining.
        */
-      public Builder clearEmptyFlag() {
+      public Builder setFlag(protoc.EnumProto.GrpcFlag value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         
-        emptyFlag_ = false;
+        flag_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.service.GrpcFlag flag = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlag() {
+        
+        flag_ = 0;
         onChanged();
         return this;
       }
@@ -4096,49 +4091,18 @@ public final class ServiceProto {
         return this;
       }
 
-      private boolean roundendFlag_ ;
-      /**
-       * <code>bool roundend_flag = 3;</code>
-       * @return The roundendFlag.
-       */
-      @java.lang.Override
-      public boolean getRoundendFlag() {
-        return roundendFlag_;
-      }
-      /**
-       * <code>bool roundend_flag = 3;</code>
-       * @param value The roundendFlag to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRoundendFlag(boolean value) {
-        
-        roundendFlag_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool roundend_flag = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRoundendFlag() {
-        
-        roundendFlag_ = false;
-        onChanged();
-        return this;
-      }
-
       private protoc.MessageProto.GrpcFrameData frameData_;
       private com.google.protobuf.SingleFieldBuilderV3<
           protoc.MessageProto.GrpcFrameData, protoc.MessageProto.GrpcFrameData.Builder, protoc.MessageProto.GrpcFrameDataOrBuilder> frameDataBuilder_;
       /**
-       * <code>.service.GrpcFrameData frame_data = 4;</code>
+       * <code>.service.GrpcFrameData frame_data = 3;</code>
        * @return Whether the frameData field is set.
        */
       public boolean hasFrameData() {
         return frameDataBuilder_ != null || frameData_ != null;
       }
       /**
-       * <code>.service.GrpcFrameData frame_data = 4;</code>
+       * <code>.service.GrpcFrameData frame_data = 3;</code>
        * @return The frameData.
        */
       public protoc.MessageProto.GrpcFrameData getFrameData() {
@@ -4149,7 +4113,7 @@ public final class ServiceProto {
         }
       }
       /**
-       * <code>.service.GrpcFrameData frame_data = 4;</code>
+       * <code>.service.GrpcFrameData frame_data = 3;</code>
        */
       public Builder setFrameData(protoc.MessageProto.GrpcFrameData value) {
         if (frameDataBuilder_ == null) {
@@ -4165,7 +4129,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcFrameData frame_data = 4;</code>
+       * <code>.service.GrpcFrameData frame_data = 3;</code>
        */
       public Builder setFrameData(
           protoc.MessageProto.GrpcFrameData.Builder builderForValue) {
@@ -4179,7 +4143,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcFrameData frame_data = 4;</code>
+       * <code>.service.GrpcFrameData frame_data = 3;</code>
        */
       public Builder mergeFrameData(protoc.MessageProto.GrpcFrameData value) {
         if (frameDataBuilder_ == null) {
@@ -4197,7 +4161,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcFrameData frame_data = 4;</code>
+       * <code>.service.GrpcFrameData frame_data = 3;</code>
        */
       public Builder clearFrameData() {
         if (frameDataBuilder_ == null) {
@@ -4211,7 +4175,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcFrameData frame_data = 4;</code>
+       * <code>.service.GrpcFrameData frame_data = 3;</code>
        */
       public protoc.MessageProto.GrpcFrameData.Builder getFrameDataBuilder() {
         
@@ -4219,7 +4183,7 @@ public final class ServiceProto {
         return getFrameDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.service.GrpcFrameData frame_data = 4;</code>
+       * <code>.service.GrpcFrameData frame_data = 3;</code>
        */
       public protoc.MessageProto.GrpcFrameDataOrBuilder getFrameDataOrBuilder() {
         if (frameDataBuilder_ != null) {
@@ -4230,7 +4194,7 @@ public final class ServiceProto {
         }
       }
       /**
-       * <code>.service.GrpcFrameData frame_data = 4;</code>
+       * <code>.service.GrpcFrameData frame_data = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           protoc.MessageProto.GrpcFrameData, protoc.MessageProto.GrpcFrameData.Builder, protoc.MessageProto.GrpcFrameDataOrBuilder> 
@@ -4250,14 +4214,14 @@ public final class ServiceProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           protoc.MessageProto.GrpcScreenData, protoc.MessageProto.GrpcScreenData.Builder, protoc.MessageProto.GrpcScreenDataOrBuilder> screenDataBuilder_;
       /**
-       * <code>.service.GrpcScreenData screen_data = 5;</code>
+       * <code>.service.GrpcScreenData screen_data = 4;</code>
        * @return Whether the screenData field is set.
        */
       public boolean hasScreenData() {
         return screenDataBuilder_ != null || screenData_ != null;
       }
       /**
-       * <code>.service.GrpcScreenData screen_data = 5;</code>
+       * <code>.service.GrpcScreenData screen_data = 4;</code>
        * @return The screenData.
        */
       public protoc.MessageProto.GrpcScreenData getScreenData() {
@@ -4268,7 +4232,7 @@ public final class ServiceProto {
         }
       }
       /**
-       * <code>.service.GrpcScreenData screen_data = 5;</code>
+       * <code>.service.GrpcScreenData screen_data = 4;</code>
        */
       public Builder setScreenData(protoc.MessageProto.GrpcScreenData value) {
         if (screenDataBuilder_ == null) {
@@ -4284,7 +4248,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcScreenData screen_data = 5;</code>
+       * <code>.service.GrpcScreenData screen_data = 4;</code>
        */
       public Builder setScreenData(
           protoc.MessageProto.GrpcScreenData.Builder builderForValue) {
@@ -4298,7 +4262,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcScreenData screen_data = 5;</code>
+       * <code>.service.GrpcScreenData screen_data = 4;</code>
        */
       public Builder mergeScreenData(protoc.MessageProto.GrpcScreenData value) {
         if (screenDataBuilder_ == null) {
@@ -4316,7 +4280,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcScreenData screen_data = 5;</code>
+       * <code>.service.GrpcScreenData screen_data = 4;</code>
        */
       public Builder clearScreenData() {
         if (screenDataBuilder_ == null) {
@@ -4330,7 +4294,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcScreenData screen_data = 5;</code>
+       * <code>.service.GrpcScreenData screen_data = 4;</code>
        */
       public protoc.MessageProto.GrpcScreenData.Builder getScreenDataBuilder() {
         
@@ -4338,7 +4302,7 @@ public final class ServiceProto {
         return getScreenDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.service.GrpcScreenData screen_data = 5;</code>
+       * <code>.service.GrpcScreenData screen_data = 4;</code>
        */
       public protoc.MessageProto.GrpcScreenDataOrBuilder getScreenDataOrBuilder() {
         if (screenDataBuilder_ != null) {
@@ -4349,7 +4313,7 @@ public final class ServiceProto {
         }
       }
       /**
-       * <code>.service.GrpcScreenData screen_data = 5;</code>
+       * <code>.service.GrpcScreenData screen_data = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           protoc.MessageProto.GrpcScreenData, protoc.MessageProto.GrpcScreenData.Builder, protoc.MessageProto.GrpcScreenDataOrBuilder> 
@@ -4369,14 +4333,14 @@ public final class ServiceProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           protoc.MessageProto.GrpcAudioData, protoc.MessageProto.GrpcAudioData.Builder, protoc.MessageProto.GrpcAudioDataOrBuilder> audioDataBuilder_;
       /**
-       * <code>.service.GrpcAudioData audio_data = 6;</code>
+       * <code>.service.GrpcAudioData audio_data = 5;</code>
        * @return Whether the audioData field is set.
        */
       public boolean hasAudioData() {
         return audioDataBuilder_ != null || audioData_ != null;
       }
       /**
-       * <code>.service.GrpcAudioData audio_data = 6;</code>
+       * <code>.service.GrpcAudioData audio_data = 5;</code>
        * @return The audioData.
        */
       public protoc.MessageProto.GrpcAudioData getAudioData() {
@@ -4387,7 +4351,7 @@ public final class ServiceProto {
         }
       }
       /**
-       * <code>.service.GrpcAudioData audio_data = 6;</code>
+       * <code>.service.GrpcAudioData audio_data = 5;</code>
        */
       public Builder setAudioData(protoc.MessageProto.GrpcAudioData value) {
         if (audioDataBuilder_ == null) {
@@ -4403,7 +4367,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcAudioData audio_data = 6;</code>
+       * <code>.service.GrpcAudioData audio_data = 5;</code>
        */
       public Builder setAudioData(
           protoc.MessageProto.GrpcAudioData.Builder builderForValue) {
@@ -4417,7 +4381,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcAudioData audio_data = 6;</code>
+       * <code>.service.GrpcAudioData audio_data = 5;</code>
        */
       public Builder mergeAudioData(protoc.MessageProto.GrpcAudioData value) {
         if (audioDataBuilder_ == null) {
@@ -4435,7 +4399,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcAudioData audio_data = 6;</code>
+       * <code>.service.GrpcAudioData audio_data = 5;</code>
        */
       public Builder clearAudioData() {
         if (audioDataBuilder_ == null) {
@@ -4449,7 +4413,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcAudioData audio_data = 6;</code>
+       * <code>.service.GrpcAudioData audio_data = 5;</code>
        */
       public protoc.MessageProto.GrpcAudioData.Builder getAudioDataBuilder() {
         
@@ -4457,7 +4421,7 @@ public final class ServiceProto {
         return getAudioDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.service.GrpcAudioData audio_data = 6;</code>
+       * <code>.service.GrpcAudioData audio_data = 5;</code>
        */
       public protoc.MessageProto.GrpcAudioDataOrBuilder getAudioDataOrBuilder() {
         if (audioDataBuilder_ != null) {
@@ -4468,7 +4432,7 @@ public final class ServiceProto {
         }
       }
       /**
-       * <code>.service.GrpcAudioData audio_data = 6;</code>
+       * <code>.service.GrpcAudioData audio_data = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           protoc.MessageProto.GrpcAudioData, protoc.MessageProto.GrpcAudioData.Builder, protoc.MessageProto.GrpcAudioDataOrBuilder> 
@@ -4488,14 +4452,14 @@ public final class ServiceProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           protoc.MessageProto.GrpcRoundResult, protoc.MessageProto.GrpcRoundResult.Builder, protoc.MessageProto.GrpcRoundResultOrBuilder> roundResultBuilder_;
       /**
-       * <code>.service.GrpcRoundResult round_result = 7;</code>
+       * <code>.service.GrpcRoundResult round_result = 6;</code>
        * @return Whether the roundResult field is set.
        */
       public boolean hasRoundResult() {
         return roundResultBuilder_ != null || roundResult_ != null;
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 7;</code>
+       * <code>.service.GrpcRoundResult round_result = 6;</code>
        * @return The roundResult.
        */
       public protoc.MessageProto.GrpcRoundResult getRoundResult() {
@@ -4506,7 +4470,7 @@ public final class ServiceProto {
         }
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 7;</code>
+       * <code>.service.GrpcRoundResult round_result = 6;</code>
        */
       public Builder setRoundResult(protoc.MessageProto.GrpcRoundResult value) {
         if (roundResultBuilder_ == null) {
@@ -4522,7 +4486,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 7;</code>
+       * <code>.service.GrpcRoundResult round_result = 6;</code>
        */
       public Builder setRoundResult(
           protoc.MessageProto.GrpcRoundResult.Builder builderForValue) {
@@ -4536,7 +4500,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 7;</code>
+       * <code>.service.GrpcRoundResult round_result = 6;</code>
        */
       public Builder mergeRoundResult(protoc.MessageProto.GrpcRoundResult value) {
         if (roundResultBuilder_ == null) {
@@ -4554,7 +4518,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 7;</code>
+       * <code>.service.GrpcRoundResult round_result = 6;</code>
        */
       public Builder clearRoundResult() {
         if (roundResultBuilder_ == null) {
@@ -4568,7 +4532,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 7;</code>
+       * <code>.service.GrpcRoundResult round_result = 6;</code>
        */
       public protoc.MessageProto.GrpcRoundResult.Builder getRoundResultBuilder() {
         
@@ -4576,7 +4540,7 @@ public final class ServiceProto {
         return getRoundResultFieldBuilder().getBuilder();
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 7;</code>
+       * <code>.service.GrpcRoundResult round_result = 6;</code>
        */
       public protoc.MessageProto.GrpcRoundResultOrBuilder getRoundResultOrBuilder() {
         if (roundResultBuilder_ != null) {
@@ -4587,7 +4551,7 @@ public final class ServiceProto {
         }
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 7;</code>
+       * <code>.service.GrpcRoundResult round_result = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           protoc.MessageProto.GrpcRoundResult, protoc.MessageProto.GrpcRoundResult.Builder, protoc.MessageProto.GrpcRoundResultOrBuilder> 
@@ -5561,1797 +5525,6 @@ public final class ServiceProto {
 
   }
 
-  public interface SimulateRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:service.SimulateRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string player_uuid = 1;</code>
-     * @return The playerUuid.
-     */
-    java.lang.String getPlayerUuid();
-    /**
-     * <code>string player_uuid = 1;</code>
-     * @return The bytes for playerUuid.
-     */
-    com.google.protobuf.ByteString
-        getPlayerUuidBytes();
-
-    /**
-     * <code>repeated .service.GrpcAction my_action = 2;</code>
-     * @return A list containing the myAction.
-     */
-    java.util.List<protoc.EnumProto.GrpcAction> getMyActionList();
-    /**
-     * <code>repeated .service.GrpcAction my_action = 2;</code>
-     * @return The count of myAction.
-     */
-    int getMyActionCount();
-    /**
-     * <code>repeated .service.GrpcAction my_action = 2;</code>
-     * @param index The index of the element to return.
-     * @return The myAction at the given index.
-     */
-    protoc.EnumProto.GrpcAction getMyAction(int index);
-    /**
-     * <code>repeated .service.GrpcAction my_action = 2;</code>
-     * @return A list containing the enum numeric values on the wire for myAction.
-     */
-    java.util.List<java.lang.Integer>
-    getMyActionValueList();
-    /**
-     * <code>repeated .service.GrpcAction my_action = 2;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of myAction at the given index.
-     */
-    int getMyActionValue(int index);
-
-    /**
-     * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-     * @return A list containing the opponentAction.
-     */
-    java.util.List<protoc.EnumProto.GrpcAction> getOpponentActionList();
-    /**
-     * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-     * @return The count of opponentAction.
-     */
-    int getOpponentActionCount();
-    /**
-     * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-     * @param index The index of the element to return.
-     * @return The opponentAction at the given index.
-     */
-    protoc.EnumProto.GrpcAction getOpponentAction(int index);
-    /**
-     * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-     * @return A list containing the enum numeric values on the wire for opponentAction.
-     */
-    java.util.List<java.lang.Integer>
-    getOpponentActionValueList();
-    /**
-     * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of opponentAction at the given index.
-     */
-    int getOpponentActionValue(int index);
-
-    /**
-     * <code>int32 simulation_limit = 4;</code>
-     * @return The simulationLimit.
-     */
-    int getSimulationLimit();
-  }
-  /**
-   * Protobuf type {@code service.SimulateRequest}
-   */
-  public static final class SimulateRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:service.SimulateRequest)
-      SimulateRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SimulateRequest.newBuilder() to construct.
-    private SimulateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private SimulateRequest() {
-      playerUuid_ = "";
-      myAction_ = java.util.Collections.emptyList();
-      opponentAction_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SimulateRequest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return protoc.ServiceProto.internal_static_service_SimulateRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return protoc.ServiceProto.internal_static_service_SimulateRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              protoc.ServiceProto.SimulateRequest.class, protoc.ServiceProto.SimulateRequest.Builder.class);
-    }
-
-    public static final int PLAYER_UUID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object playerUuid_;
-    /**
-     * <code>string player_uuid = 1;</code>
-     * @return The playerUuid.
-     */
-    @java.lang.Override
-    public java.lang.String getPlayerUuid() {
-      java.lang.Object ref = playerUuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        playerUuid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string player_uuid = 1;</code>
-     * @return The bytes for playerUuid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPlayerUuidBytes() {
-      java.lang.Object ref = playerUuid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        playerUuid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int MY_ACTION_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> myAction_;
-    private static final com.google.protobuf.Internal.ListAdapter.Converter<
-        java.lang.Integer, protoc.EnumProto.GrpcAction> myAction_converter_ =
-            new com.google.protobuf.Internal.ListAdapter.Converter<
-                java.lang.Integer, protoc.EnumProto.GrpcAction>() {
-              public protoc.EnumProto.GrpcAction convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                protoc.EnumProto.GrpcAction result = protoc.EnumProto.GrpcAction.valueOf(from);
-                return result == null ? protoc.EnumProto.GrpcAction.UNRECOGNIZED : result;
-              }
-            };
-    /**
-     * <code>repeated .service.GrpcAction my_action = 2;</code>
-     * @return A list containing the myAction.
-     */
-    @java.lang.Override
-    public java.util.List<protoc.EnumProto.GrpcAction> getMyActionList() {
-      return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, protoc.EnumProto.GrpcAction>(myAction_, myAction_converter_);
-    }
-    /**
-     * <code>repeated .service.GrpcAction my_action = 2;</code>
-     * @return The count of myAction.
-     */
-    @java.lang.Override
-    public int getMyActionCount() {
-      return myAction_.size();
-    }
-    /**
-     * <code>repeated .service.GrpcAction my_action = 2;</code>
-     * @param index The index of the element to return.
-     * @return The myAction at the given index.
-     */
-    @java.lang.Override
-    public protoc.EnumProto.GrpcAction getMyAction(int index) {
-      return myAction_converter_.convert(myAction_.get(index));
-    }
-    /**
-     * <code>repeated .service.GrpcAction my_action = 2;</code>
-     * @return A list containing the enum numeric values on the wire for myAction.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-    getMyActionValueList() {
-      return myAction_;
-    }
-    /**
-     * <code>repeated .service.GrpcAction my_action = 2;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of myAction at the given index.
-     */
-    @java.lang.Override
-    public int getMyActionValue(int index) {
-      return myAction_.get(index);
-    }
-    private int myActionMemoizedSerializedSize;
-
-    public static final int OPPONENT_ACTION_FIELD_NUMBER = 3;
-    private java.util.List<java.lang.Integer> opponentAction_;
-    private static final com.google.protobuf.Internal.ListAdapter.Converter<
-        java.lang.Integer, protoc.EnumProto.GrpcAction> opponentAction_converter_ =
-            new com.google.protobuf.Internal.ListAdapter.Converter<
-                java.lang.Integer, protoc.EnumProto.GrpcAction>() {
-              public protoc.EnumProto.GrpcAction convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                protoc.EnumProto.GrpcAction result = protoc.EnumProto.GrpcAction.valueOf(from);
-                return result == null ? protoc.EnumProto.GrpcAction.UNRECOGNIZED : result;
-              }
-            };
-    /**
-     * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-     * @return A list containing the opponentAction.
-     */
-    @java.lang.Override
-    public java.util.List<protoc.EnumProto.GrpcAction> getOpponentActionList() {
-      return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, protoc.EnumProto.GrpcAction>(opponentAction_, opponentAction_converter_);
-    }
-    /**
-     * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-     * @return The count of opponentAction.
-     */
-    @java.lang.Override
-    public int getOpponentActionCount() {
-      return opponentAction_.size();
-    }
-    /**
-     * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-     * @param index The index of the element to return.
-     * @return The opponentAction at the given index.
-     */
-    @java.lang.Override
-    public protoc.EnumProto.GrpcAction getOpponentAction(int index) {
-      return opponentAction_converter_.convert(opponentAction_.get(index));
-    }
-    /**
-     * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-     * @return A list containing the enum numeric values on the wire for opponentAction.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-    getOpponentActionValueList() {
-      return opponentAction_;
-    }
-    /**
-     * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of opponentAction at the given index.
-     */
-    @java.lang.Override
-    public int getOpponentActionValue(int index) {
-      return opponentAction_.get(index);
-    }
-    private int opponentActionMemoizedSerializedSize;
-
-    public static final int SIMULATION_LIMIT_FIELD_NUMBER = 4;
-    private int simulationLimit_;
-    /**
-     * <code>int32 simulation_limit = 4;</code>
-     * @return The simulationLimit.
-     */
-    @java.lang.Override
-    public int getSimulationLimit() {
-      return simulationLimit_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(playerUuid_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, playerUuid_);
-      }
-      if (getMyActionList().size() > 0) {
-        output.writeUInt32NoTag(18);
-        output.writeUInt32NoTag(myActionMemoizedSerializedSize);
-      }
-      for (int i = 0; i < myAction_.size(); i++) {
-        output.writeEnumNoTag(myAction_.get(i));
-      }
-      if (getOpponentActionList().size() > 0) {
-        output.writeUInt32NoTag(26);
-        output.writeUInt32NoTag(opponentActionMemoizedSerializedSize);
-      }
-      for (int i = 0; i < opponentAction_.size(); i++) {
-        output.writeEnumNoTag(opponentAction_.get(i));
-      }
-      if (simulationLimit_ != 0) {
-        output.writeInt32(4, simulationLimit_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(playerUuid_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, playerUuid_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < myAction_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeEnumSizeNoTag(myAction_.get(i));
-        }
-        size += dataSize;
-        if (!getMyActionList().isEmpty()) {  size += 1;
-          size += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(dataSize);
-        }myActionMemoizedSerializedSize = dataSize;
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < opponentAction_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeEnumSizeNoTag(opponentAction_.get(i));
-        }
-        size += dataSize;
-        if (!getOpponentActionList().isEmpty()) {  size += 1;
-          size += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(dataSize);
-        }opponentActionMemoizedSerializedSize = dataSize;
-      }
-      if (simulationLimit_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, simulationLimit_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof protoc.ServiceProto.SimulateRequest)) {
-        return super.equals(obj);
-      }
-      protoc.ServiceProto.SimulateRequest other = (protoc.ServiceProto.SimulateRequest) obj;
-
-      if (!getPlayerUuid()
-          .equals(other.getPlayerUuid())) return false;
-      if (!myAction_.equals(other.myAction_)) return false;
-      if (!opponentAction_.equals(other.opponentAction_)) return false;
-      if (getSimulationLimit()
-          != other.getSimulationLimit()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PLAYER_UUID_FIELD_NUMBER;
-      hash = (53 * hash) + getPlayerUuid().hashCode();
-      if (getMyActionCount() > 0) {
-        hash = (37 * hash) + MY_ACTION_FIELD_NUMBER;
-        hash = (53 * hash) + myAction_.hashCode();
-      }
-      if (getOpponentActionCount() > 0) {
-        hash = (37 * hash) + OPPONENT_ACTION_FIELD_NUMBER;
-        hash = (53 * hash) + opponentAction_.hashCode();
-      }
-      hash = (37 * hash) + SIMULATION_LIMIT_FIELD_NUMBER;
-      hash = (53 * hash) + getSimulationLimit();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static protoc.ServiceProto.SimulateRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.ServiceProto.SimulateRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.ServiceProto.SimulateRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.ServiceProto.SimulateRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.ServiceProto.SimulateRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.ServiceProto.SimulateRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.ServiceProto.SimulateRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static protoc.ServiceProto.SimulateRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static protoc.ServiceProto.SimulateRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static protoc.ServiceProto.SimulateRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static protoc.ServiceProto.SimulateRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static protoc.ServiceProto.SimulateRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(protoc.ServiceProto.SimulateRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code service.SimulateRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:service.SimulateRequest)
-        protoc.ServiceProto.SimulateRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return protoc.ServiceProto.internal_static_service_SimulateRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return protoc.ServiceProto.internal_static_service_SimulateRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                protoc.ServiceProto.SimulateRequest.class, protoc.ServiceProto.SimulateRequest.Builder.class);
-      }
-
-      // Construct using protoc.ServiceProto.SimulateRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        playerUuid_ = "";
-
-        myAction_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        opponentAction_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        simulationLimit_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return protoc.ServiceProto.internal_static_service_SimulateRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public protoc.ServiceProto.SimulateRequest getDefaultInstanceForType() {
-        return protoc.ServiceProto.SimulateRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public protoc.ServiceProto.SimulateRequest build() {
-        protoc.ServiceProto.SimulateRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public protoc.ServiceProto.SimulateRequest buildPartial() {
-        protoc.ServiceProto.SimulateRequest result = new protoc.ServiceProto.SimulateRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.playerUuid_ = playerUuid_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          myAction_ = java.util.Collections.unmodifiableList(myAction_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.myAction_ = myAction_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          opponentAction_ = java.util.Collections.unmodifiableList(opponentAction_);
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.opponentAction_ = opponentAction_;
-        result.simulationLimit_ = simulationLimit_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof protoc.ServiceProto.SimulateRequest) {
-          return mergeFrom((protoc.ServiceProto.SimulateRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(protoc.ServiceProto.SimulateRequest other) {
-        if (other == protoc.ServiceProto.SimulateRequest.getDefaultInstance()) return this;
-        if (!other.getPlayerUuid().isEmpty()) {
-          playerUuid_ = other.playerUuid_;
-          onChanged();
-        }
-        if (!other.myAction_.isEmpty()) {
-          if (myAction_.isEmpty()) {
-            myAction_ = other.myAction_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureMyActionIsMutable();
-            myAction_.addAll(other.myAction_);
-          }
-          onChanged();
-        }
-        if (!other.opponentAction_.isEmpty()) {
-          if (opponentAction_.isEmpty()) {
-            opponentAction_ = other.opponentAction_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureOpponentActionIsMutable();
-            opponentAction_.addAll(other.opponentAction_);
-          }
-          onChanged();
-        }
-        if (other.getSimulationLimit() != 0) {
-          setSimulationLimit(other.getSimulationLimit());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                playerUuid_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 10
-              case 16: {
-                int tmpRaw = input.readEnum();
-                ensureMyActionIsMutable();
-                myAction_.add(tmpRaw);
-                break;
-              } // case 16
-              case 18: {
-                int length = input.readRawVarint32();
-                int oldLimit = input.pushLimit(length);
-                while(input.getBytesUntilLimit() > 0) {
-                  int tmpRaw = input.readEnum();
-                  ensureMyActionIsMutable();
-                  myAction_.add(tmpRaw);
-                }
-                input.popLimit(oldLimit);
-                break;
-              } // case 18
-              case 24: {
-                int tmpRaw = input.readEnum();
-                ensureOpponentActionIsMutable();
-                opponentAction_.add(tmpRaw);
-                break;
-              } // case 24
-              case 26: {
-                int length = input.readRawVarint32();
-                int oldLimit = input.pushLimit(length);
-                while(input.getBytesUntilLimit() > 0) {
-                  int tmpRaw = input.readEnum();
-                  ensureOpponentActionIsMutable();
-                  opponentAction_.add(tmpRaw);
-                }
-                input.popLimit(oldLimit);
-                break;
-              } // case 26
-              case 32: {
-                simulationLimit_ = input.readInt32();
-
-                break;
-              } // case 32
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object playerUuid_ = "";
-      /**
-       * <code>string player_uuid = 1;</code>
-       * @return The playerUuid.
-       */
-      public java.lang.String getPlayerUuid() {
-        java.lang.Object ref = playerUuid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          playerUuid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string player_uuid = 1;</code>
-       * @return The bytes for playerUuid.
-       */
-      public com.google.protobuf.ByteString
-          getPlayerUuidBytes() {
-        java.lang.Object ref = playerUuid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          playerUuid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string player_uuid = 1;</code>
-       * @param value The playerUuid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPlayerUuid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        playerUuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string player_uuid = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPlayerUuid() {
-        
-        playerUuid_ = getDefaultInstance().getPlayerUuid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string player_uuid = 1;</code>
-       * @param value The bytes for playerUuid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPlayerUuidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        playerUuid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<java.lang.Integer> myAction_ =
-        java.util.Collections.emptyList();
-      private void ensureMyActionIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          myAction_ = new java.util.ArrayList<java.lang.Integer>(myAction_);
-          bitField0_ |= 0x00000001;
-        }
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @return A list containing the myAction.
-       */
-      public java.util.List<protoc.EnumProto.GrpcAction> getMyActionList() {
-        return new com.google.protobuf.Internal.ListAdapter<
-            java.lang.Integer, protoc.EnumProto.GrpcAction>(myAction_, myAction_converter_);
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @return The count of myAction.
-       */
-      public int getMyActionCount() {
-        return myAction_.size();
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @param index The index of the element to return.
-       * @return The myAction at the given index.
-       */
-      public protoc.EnumProto.GrpcAction getMyAction(int index) {
-        return myAction_converter_.convert(myAction_.get(index));
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @param index The index to set the value at.
-       * @param value The myAction to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMyAction(
-          int index, protoc.EnumProto.GrpcAction value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMyActionIsMutable();
-        myAction_.set(index, value.getNumber());
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @param value The myAction to add.
-       * @return This builder for chaining.
-       */
-      public Builder addMyAction(protoc.EnumProto.GrpcAction value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMyActionIsMutable();
-        myAction_.add(value.getNumber());
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @param values The myAction to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllMyAction(
-          java.lang.Iterable<? extends protoc.EnumProto.GrpcAction> values) {
-        ensureMyActionIsMutable();
-        for (protoc.EnumProto.GrpcAction value : values) {
-          myAction_.add(value.getNumber());
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMyAction() {
-        myAction_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @return A list containing the enum numeric values on the wire for myAction.
-       */
-      public java.util.List<java.lang.Integer>
-      getMyActionValueList() {
-        return java.util.Collections.unmodifiableList(myAction_);
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of myAction at the given index.
-       */
-      public int getMyActionValue(int index) {
-        return myAction_.get(index);
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @param index The index to set the value at.
-       * @param value The enum numeric value on the wire for myAction to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMyActionValue(
-          int index, int value) {
-        ensureMyActionIsMutable();
-        myAction_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @param value The enum numeric value on the wire for myAction to add.
-       * @return This builder for chaining.
-       */
-      public Builder addMyActionValue(int value) {
-        ensureMyActionIsMutable();
-        myAction_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction my_action = 2;</code>
-       * @param values The enum numeric values on the wire for myAction to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllMyActionValue(
-          java.lang.Iterable<java.lang.Integer> values) {
-        ensureMyActionIsMutable();
-        for (int value : values) {
-          myAction_.add(value);
-        }
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<java.lang.Integer> opponentAction_ =
-        java.util.Collections.emptyList();
-      private void ensureOpponentActionIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          opponentAction_ = new java.util.ArrayList<java.lang.Integer>(opponentAction_);
-          bitField0_ |= 0x00000002;
-        }
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @return A list containing the opponentAction.
-       */
-      public java.util.List<protoc.EnumProto.GrpcAction> getOpponentActionList() {
-        return new com.google.protobuf.Internal.ListAdapter<
-            java.lang.Integer, protoc.EnumProto.GrpcAction>(opponentAction_, opponentAction_converter_);
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @return The count of opponentAction.
-       */
-      public int getOpponentActionCount() {
-        return opponentAction_.size();
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @param index The index of the element to return.
-       * @return The opponentAction at the given index.
-       */
-      public protoc.EnumProto.GrpcAction getOpponentAction(int index) {
-        return opponentAction_converter_.convert(opponentAction_.get(index));
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The opponentAction to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOpponentAction(
-          int index, protoc.EnumProto.GrpcAction value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureOpponentActionIsMutable();
-        opponentAction_.set(index, value.getNumber());
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @param value The opponentAction to add.
-       * @return This builder for chaining.
-       */
-      public Builder addOpponentAction(protoc.EnumProto.GrpcAction value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureOpponentActionIsMutable();
-        opponentAction_.add(value.getNumber());
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @param values The opponentAction to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllOpponentAction(
-          java.lang.Iterable<? extends protoc.EnumProto.GrpcAction> values) {
-        ensureOpponentActionIsMutable();
-        for (protoc.EnumProto.GrpcAction value : values) {
-          opponentAction_.add(value.getNumber());
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOpponentAction() {
-        opponentAction_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @return A list containing the enum numeric values on the wire for opponentAction.
-       */
-      public java.util.List<java.lang.Integer>
-      getOpponentActionValueList() {
-        return java.util.Collections.unmodifiableList(opponentAction_);
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of opponentAction at the given index.
-       */
-      public int getOpponentActionValue(int index) {
-        return opponentAction_.get(index);
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The enum numeric value on the wire for opponentAction to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOpponentActionValue(
-          int index, int value) {
-        ensureOpponentActionIsMutable();
-        opponentAction_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @param value The enum numeric value on the wire for opponentAction to add.
-       * @return This builder for chaining.
-       */
-      public Builder addOpponentActionValue(int value) {
-        ensureOpponentActionIsMutable();
-        opponentAction_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcAction opponent_action = 3;</code>
-       * @param values The enum numeric values on the wire for opponentAction to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllOpponentActionValue(
-          java.lang.Iterable<java.lang.Integer> values) {
-        ensureOpponentActionIsMutable();
-        for (int value : values) {
-          opponentAction_.add(value);
-        }
-        onChanged();
-        return this;
-      }
-
-      private int simulationLimit_ ;
-      /**
-       * <code>int32 simulation_limit = 4;</code>
-       * @return The simulationLimit.
-       */
-      @java.lang.Override
-      public int getSimulationLimit() {
-        return simulationLimit_;
-      }
-      /**
-       * <code>int32 simulation_limit = 4;</code>
-       * @param value The simulationLimit to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSimulationLimit(int value) {
-        
-        simulationLimit_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 simulation_limit = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSimulationLimit() {
-        
-        simulationLimit_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:service.SimulateRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:service.SimulateRequest)
-    private static final protoc.ServiceProto.SimulateRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new protoc.ServiceProto.SimulateRequest();
-    }
-
-    public static protoc.ServiceProto.SimulateRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<SimulateRequest>
-        PARSER = new com.google.protobuf.AbstractParser<SimulateRequest>() {
-      @java.lang.Override
-      public SimulateRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<SimulateRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SimulateRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public protoc.ServiceProto.SimulateRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface SimulateResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:service.SimulateResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.service.GrpcFrameData frame_data = 1;</code>
-     * @return Whether the frameData field is set.
-     */
-    boolean hasFrameData();
-    /**
-     * <code>.service.GrpcFrameData frame_data = 1;</code>
-     * @return The frameData.
-     */
-    protoc.MessageProto.GrpcFrameData getFrameData();
-    /**
-     * <code>.service.GrpcFrameData frame_data = 1;</code>
-     */
-    protoc.MessageProto.GrpcFrameDataOrBuilder getFrameDataOrBuilder();
-  }
-  /**
-   * Protobuf type {@code service.SimulateResponse}
-   */
-  public static final class SimulateResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:service.SimulateResponse)
-      SimulateResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SimulateResponse.newBuilder() to construct.
-    private SimulateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private SimulateResponse() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SimulateResponse();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return protoc.ServiceProto.internal_static_service_SimulateResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return protoc.ServiceProto.internal_static_service_SimulateResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              protoc.ServiceProto.SimulateResponse.class, protoc.ServiceProto.SimulateResponse.Builder.class);
-    }
-
-    public static final int FRAME_DATA_FIELD_NUMBER = 1;
-    private protoc.MessageProto.GrpcFrameData frameData_;
-    /**
-     * <code>.service.GrpcFrameData frame_data = 1;</code>
-     * @return Whether the frameData field is set.
-     */
-    @java.lang.Override
-    public boolean hasFrameData() {
-      return frameData_ != null;
-    }
-    /**
-     * <code>.service.GrpcFrameData frame_data = 1;</code>
-     * @return The frameData.
-     */
-    @java.lang.Override
-    public protoc.MessageProto.GrpcFrameData getFrameData() {
-      return frameData_ == null ? protoc.MessageProto.GrpcFrameData.getDefaultInstance() : frameData_;
-    }
-    /**
-     * <code>.service.GrpcFrameData frame_data = 1;</code>
-     */
-    @java.lang.Override
-    public protoc.MessageProto.GrpcFrameDataOrBuilder getFrameDataOrBuilder() {
-      return getFrameData();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (frameData_ != null) {
-        output.writeMessage(1, getFrameData());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (frameData_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getFrameData());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof protoc.ServiceProto.SimulateResponse)) {
-        return super.equals(obj);
-      }
-      protoc.ServiceProto.SimulateResponse other = (protoc.ServiceProto.SimulateResponse) obj;
-
-      if (hasFrameData() != other.hasFrameData()) return false;
-      if (hasFrameData()) {
-        if (!getFrameData()
-            .equals(other.getFrameData())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasFrameData()) {
-        hash = (37 * hash) + FRAME_DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getFrameData().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static protoc.ServiceProto.SimulateResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.ServiceProto.SimulateResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.ServiceProto.SimulateResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.ServiceProto.SimulateResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.ServiceProto.SimulateResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.ServiceProto.SimulateResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.ServiceProto.SimulateResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static protoc.ServiceProto.SimulateResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static protoc.ServiceProto.SimulateResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static protoc.ServiceProto.SimulateResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static protoc.ServiceProto.SimulateResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static protoc.ServiceProto.SimulateResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(protoc.ServiceProto.SimulateResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code service.SimulateResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:service.SimulateResponse)
-        protoc.ServiceProto.SimulateResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return protoc.ServiceProto.internal_static_service_SimulateResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return protoc.ServiceProto.internal_static_service_SimulateResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                protoc.ServiceProto.SimulateResponse.class, protoc.ServiceProto.SimulateResponse.Builder.class);
-      }
-
-      // Construct using protoc.ServiceProto.SimulateResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (frameDataBuilder_ == null) {
-          frameData_ = null;
-        } else {
-          frameData_ = null;
-          frameDataBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return protoc.ServiceProto.internal_static_service_SimulateResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public protoc.ServiceProto.SimulateResponse getDefaultInstanceForType() {
-        return protoc.ServiceProto.SimulateResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public protoc.ServiceProto.SimulateResponse build() {
-        protoc.ServiceProto.SimulateResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public protoc.ServiceProto.SimulateResponse buildPartial() {
-        protoc.ServiceProto.SimulateResponse result = new protoc.ServiceProto.SimulateResponse(this);
-        if (frameDataBuilder_ == null) {
-          result.frameData_ = frameData_;
-        } else {
-          result.frameData_ = frameDataBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof protoc.ServiceProto.SimulateResponse) {
-          return mergeFrom((protoc.ServiceProto.SimulateResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(protoc.ServiceProto.SimulateResponse other) {
-        if (other == protoc.ServiceProto.SimulateResponse.getDefaultInstance()) return this;
-        if (other.hasFrameData()) {
-          mergeFrameData(other.getFrameData());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getFrameDataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-
-      private protoc.MessageProto.GrpcFrameData frameData_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          protoc.MessageProto.GrpcFrameData, protoc.MessageProto.GrpcFrameData.Builder, protoc.MessageProto.GrpcFrameDataOrBuilder> frameDataBuilder_;
-      /**
-       * <code>.service.GrpcFrameData frame_data = 1;</code>
-       * @return Whether the frameData field is set.
-       */
-      public boolean hasFrameData() {
-        return frameDataBuilder_ != null || frameData_ != null;
-      }
-      /**
-       * <code>.service.GrpcFrameData frame_data = 1;</code>
-       * @return The frameData.
-       */
-      public protoc.MessageProto.GrpcFrameData getFrameData() {
-        if (frameDataBuilder_ == null) {
-          return frameData_ == null ? protoc.MessageProto.GrpcFrameData.getDefaultInstance() : frameData_;
-        } else {
-          return frameDataBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.service.GrpcFrameData frame_data = 1;</code>
-       */
-      public Builder setFrameData(protoc.MessageProto.GrpcFrameData value) {
-        if (frameDataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          frameData_ = value;
-          onChanged();
-        } else {
-          frameDataBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.service.GrpcFrameData frame_data = 1;</code>
-       */
-      public Builder setFrameData(
-          protoc.MessageProto.GrpcFrameData.Builder builderForValue) {
-        if (frameDataBuilder_ == null) {
-          frameData_ = builderForValue.build();
-          onChanged();
-        } else {
-          frameDataBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.service.GrpcFrameData frame_data = 1;</code>
-       */
-      public Builder mergeFrameData(protoc.MessageProto.GrpcFrameData value) {
-        if (frameDataBuilder_ == null) {
-          if (frameData_ != null) {
-            frameData_ =
-              protoc.MessageProto.GrpcFrameData.newBuilder(frameData_).mergeFrom(value).buildPartial();
-          } else {
-            frameData_ = value;
-          }
-          onChanged();
-        } else {
-          frameDataBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.service.GrpcFrameData frame_data = 1;</code>
-       */
-      public Builder clearFrameData() {
-        if (frameDataBuilder_ == null) {
-          frameData_ = null;
-          onChanged();
-        } else {
-          frameData_ = null;
-          frameDataBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.service.GrpcFrameData frame_data = 1;</code>
-       */
-      public protoc.MessageProto.GrpcFrameData.Builder getFrameDataBuilder() {
-        
-        onChanged();
-        return getFrameDataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.service.GrpcFrameData frame_data = 1;</code>
-       */
-      public protoc.MessageProto.GrpcFrameDataOrBuilder getFrameDataOrBuilder() {
-        if (frameDataBuilder_ != null) {
-          return frameDataBuilder_.getMessageOrBuilder();
-        } else {
-          return frameData_ == null ?
-              protoc.MessageProto.GrpcFrameData.getDefaultInstance() : frameData_;
-        }
-      }
-      /**
-       * <code>.service.GrpcFrameData frame_data = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          protoc.MessageProto.GrpcFrameData, protoc.MessageProto.GrpcFrameData.Builder, protoc.MessageProto.GrpcFrameDataOrBuilder> 
-          getFrameDataFieldBuilder() {
-        if (frameDataBuilder_ == null) {
-          frameDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              protoc.MessageProto.GrpcFrameData, protoc.MessageProto.GrpcFrameData.Builder, protoc.MessageProto.GrpcFrameDataOrBuilder>(
-                  getFrameData(),
-                  getParentForChildren(),
-                  isClean());
-          frameData_ = null;
-        }
-        return frameDataBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:service.SimulateResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:service.SimulateResponse)
-    private static final protoc.ServiceProto.SimulateResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new protoc.ServiceProto.SimulateResponse();
-    }
-
-    public static protoc.ServiceProto.SimulateResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<SimulateResponse>
-        PARSER = new com.google.protobuf.AbstractParser<SimulateResponse>() {
-      @java.lang.Override
-      public SimulateResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<SimulateResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SimulateResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public protoc.ServiceProto.SimulateResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_service_SpectateRequest_descriptor;
   private static final 
@@ -7387,16 +5560,6 @@ public final class ServiceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_service_PlayerAction_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service_SimulateRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service_SimulateRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service_SimulateResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service_SimulateResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7417,31 +5580,24 @@ public final class ServiceProto {
       "\023\n\013player_name\030\002 \001(\t\022\020\n\010is_blind\030\003 \001(\010\")" +
       "\n\022InitializeResponse\022\023\n\013player_uuid\030\001 \001(" +
       "\t\")\n\022ParticipateRequest\022\023\n\013player_uuid\030\001" +
-      " \001(\t\"\205\002\n\016PlayerGameData\022\022\n\nempty_flag\030\001 " +
-      "\001(\010\022\022\n\nis_control\030\002 \001(\010\022\025\n\rroundend_flag" +
-      "\030\003 \001(\010\022*\n\nframe_data\030\004 \001(\0132\026.service.Grp" +
-      "cFrameData\022,\n\013screen_data\030\005 \001(\0132\027.servic" +
-      "e.GrpcScreenData\022*\n\naudio_data\030\006 \001(\0132\026.s" +
-      "ervice.GrpcAudioData\022.\n\014round_result\030\007 \001" +
-      "(\0132\030.service.GrpcRoundResult\"`\n\014PlayerAc" +
-      "tion\022\023\n\013player_uuid\030\001 \001(\t\022#\n\tinput_key\030\002" +
-      " \001(\0132\020.service.GrpcKey\022\026\n\016called_command" +
-      "\030\003 \001(\t\"\226\001\n\017SimulateRequest\022\023\n\013player_uui" +
-      "d\030\001 \001(\t\022&\n\tmy_action\030\002 \003(\0162\023.service.Grp" +
-      "cAction\022,\n\017opponent_action\030\003 \003(\0162\023.servi" +
-      "ce.GrpcAction\022\030\n\020simulation_limit\030\004 \001(\005\"" +
-      ">\n\020SimulateResponse\022*\n\nframe_data\030\001 \001(\0132" +
-      "\026.service.GrpcFrameData2\336\002\n\007Service\022D\n\010S" +
-      "pectate\022\030.service.SpectateRequest\032\032.serv" +
-      "ice.SpectatorGameData\"\0000\001\022G\n\nInitialize\022" +
-      "\032.service.InitializeRequest\032\033.service.In" +
-      "itializeResponse\"\000\022G\n\013Participate\022\033.serv" +
-      "ice.ParticipateRequest\032\027.service.PlayerG" +
-      "ameData\"\0000\001\0228\n\005Input\022\025.service.PlayerAct" +
-      "ion\032\026.google.protobuf.Empty\"\000\022A\n\010Simulat" +
-      "e\022\030.service.SimulateRequest\032\031.service.Si" +
-      "mulateResponse\"\000B\036\n\006protocB\014ServiceProto" +
-      "P\000\242\002\003HLWb\006proto3"
+      " \001(\t\"\373\001\n\016PlayerGameData\022\037\n\004flag\030\001 \001(\0162\021." +
+      "service.GrpcFlag\022\022\n\nis_control\030\002 \001(\010\022*\n\n" +
+      "frame_data\030\003 \001(\0132\026.service.GrpcFrameData" +
+      "\022,\n\013screen_data\030\004 \001(\0132\027.service.GrpcScre" +
+      "enData\022*\n\naudio_data\030\005 \001(\0132\026.service.Grp" +
+      "cAudioData\022.\n\014round_result\030\006 \001(\0132\030.servi" +
+      "ce.GrpcRoundResult\"`\n\014PlayerAction\022\023\n\013pl" +
+      "ayer_uuid\030\001 \001(\t\022#\n\tinput_key\030\002 \001(\0132\020.ser" +
+      "vice.GrpcKey\022\026\n\016called_command\030\003 \001(\t2\233\002\n" +
+      "\007Service\022D\n\010Spectate\022\030.service.SpectateR" +
+      "equest\032\032.service.SpectatorGameData\"\0000\001\022G" +
+      "\n\nInitialize\022\032.service.InitializeRequest" +
+      "\032\033.service.InitializeResponse\"\000\022G\n\013Parti" +
+      "cipate\022\033.service.ParticipateRequest\032\027.se" +
+      "rvice.PlayerGameData\"\0000\001\0228\n\005Input\022\025.serv" +
+      "ice.PlayerAction\032\026.google.protobuf.Empty" +
+      "\"\000B\036\n\006protocB\014ServiceProtoP\000\242\002\003HLWb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7485,25 +5641,13 @@ public final class ServiceProto {
     internal_static_service_PlayerGameData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service_PlayerGameData_descriptor,
-        new java.lang.String[] { "EmptyFlag", "IsControl", "RoundendFlag", "FrameData", "ScreenData", "AudioData", "RoundResult", });
+        new java.lang.String[] { "Flag", "IsControl", "FrameData", "ScreenData", "AudioData", "RoundResult", });
     internal_static_service_PlayerAction_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_service_PlayerAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service_PlayerAction_descriptor,
         new java.lang.String[] { "PlayerUuid", "InputKey", "CalledCommand", });
-    internal_static_service_SimulateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_service_SimulateRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service_SimulateRequest_descriptor,
-        new java.lang.String[] { "PlayerUuid", "MyAction", "OpponentAction", "SimulationLimit", });
-    internal_static_service_SimulateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_service_SimulateResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service_SimulateResponse_descriptor,
-        new java.lang.String[] { "FrameData", });
     com.google.protobuf.EmptyProto.getDescriptor();
     protoc.EnumProto.getDescriptor();
     protoc.MessageProto.getDescriptor();

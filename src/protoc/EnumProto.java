@@ -15,6 +15,141 @@ public final class EnumProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * Protobuf enum {@code service.GrpcFlag}
+   */
+  public enum GrpcFlag
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>EMPTY = 0;</code>
+     */
+    EMPTY(0),
+    /**
+     * <code>INITIALIZE = 1;</code>
+     */
+    INITIALIZE(1),
+    /**
+     * <code>PROCESSING = 2;</code>
+     */
+    PROCESSING(2),
+    /**
+     * <code>ROUND_END = 3;</code>
+     */
+    ROUND_END(3),
+    /**
+     * <code>GAME_END = 4;</code>
+     */
+    GAME_END(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>EMPTY = 0;</code>
+     */
+    public static final int EMPTY_VALUE = 0;
+    /**
+     * <code>INITIALIZE = 1;</code>
+     */
+    public static final int INITIALIZE_VALUE = 1;
+    /**
+     * <code>PROCESSING = 2;</code>
+     */
+    public static final int PROCESSING_VALUE = 2;
+    /**
+     * <code>ROUND_END = 3;</code>
+     */
+    public static final int ROUND_END_VALUE = 3;
+    /**
+     * <code>GAME_END = 4;</code>
+     */
+    public static final int GAME_END_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static GrpcFlag valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static GrpcFlag forNumber(int value) {
+      switch (value) {
+        case 0: return EMPTY;
+        case 1: return INITIALIZE;
+        case 2: return PROCESSING;
+        case 3: return ROUND_END;
+        case 4: return GAME_END;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<GrpcFlag>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        GrpcFlag> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<GrpcFlag>() {
+            public GrpcFlag findValueByNumber(int number) {
+              return GrpcFlag.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return protoc.EnumProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final GrpcFlag[] VALUES = values();
+
+    public static GrpcFlag valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private GrpcFlag(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:service.GrpcFlag)
+  }
+
+  /**
    * Protobuf enum {@code service.GrpcState}
    */
   public enum GrpcState
@@ -114,7 +249,7 @@ public final class EnumProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return protoc.EnumProto.getDescriptor().getEnumTypes().get(0);
+      return protoc.EnumProto.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final GrpcState[] VALUES = values();
@@ -708,7 +843,7 @@ public final class EnumProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return protoc.EnumProto.getDescriptor().getEnumTypes().get(1);
+      return protoc.EnumProto.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final GrpcAction[] VALUES = values();
@@ -743,31 +878,34 @@ public final class EnumProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\nenum.proto\022\007service*M\n\tGrpcState\022\017\n\013ST" +
-      "AND_STATE\020\000\022\020\n\014CROUCH_STATE\020\001\022\r\n\tAIR_STA" +
-      "TE\020\002\022\016\n\nDOWN_STATE\020\003*\331\006\n\nGrpcAction\022\013\n\007N" +
-      "EUTRAL\020\000\022\t\n\005STAND\020\001\022\020\n\014FORWARD_WALK\020\002\022\010\n" +
-      "\004DASH\020\003\022\r\n\tBACK_STEP\020\004\022\n\n\006CROUCH\020\005\022\010\n\004JU" +
-      "MP\020\006\022\014\n\010FOR_JUMP\020\007\022\r\n\tBACK_JUMP\020\010\022\007\n\003AIR" +
-      "\020\t\022\017\n\013STAND_GUARD\020\n\022\020\n\014CROUCH_GUARD\020\013\022\r\n" +
-      "\tAIR_GUARD\020\014\022\025\n\021STAND_GUARD_RECOV\020\r\022\026\n\022C" +
-      "ROUCH_GUARD_RECOV\020\016\022\023\n\017AIR_GUARD_RECOV\020\017" +
-      "\022\017\n\013STAND_RECOV\020\020\022\020\n\014CROUCH_RECOV\020\021\022\r\n\tA" +
-      "IR_RECOV\020\022\022\017\n\013CHANGE_DOWN\020\023\022\010\n\004DOWN\020\024\022\010\n" +
-      "\004RISE\020\025\022\013\n\007LANDING\020\026\022\013\n\007THROW_A\020\027\022\013\n\007THR" +
-      "OW_B\020\030\022\r\n\tTHROW_HIT\020\031\022\020\n\014THROW_SUFFER\020\032\022" +
-      "\013\n\007STAND_A\020\033\022\013\n\007STAND_B\020\034\022\014\n\010CROUCH_A\020\035\022" +
-      "\014\n\010CROUCH_B\020\036\022\t\n\005AIR_A\020\037\022\t\n\005AIR_B\020 \022\n\n\006A" +
-      "IR_DA\020!\022\n\n\006AIR_DB\020\"\022\014\n\010STAND_FA\020#\022\014\n\010STA" +
-      "ND_FB\020$\022\r\n\tCROUCH_FA\020%\022\r\n\tCROUCH_FB\020&\022\n\n" +
-      "\006AIR_FA\020\'\022\n\n\006AIR_FB\020(\022\n\n\006AIR_UA\020)\022\n\n\006AIR" +
-      "_UB\020*\022\021\n\rSTAND_D_DF_FA\020+\022\021\n\rSTAND_D_DF_F" +
-      "B\020,\022\021\n\rSTAND_F_D_DFA\020-\022\021\n\rSTAND_F_D_DFB\020" +
-      ".\022\021\n\rSTAND_D_DB_BA\020/\022\021\n\rSTAND_D_DB_BB\0200\022" +
-      "\017\n\013AIR_D_DF_FA\0201\022\017\n\013AIR_D_DF_FB\0202\022\017\n\013AIR" +
-      "_F_D_DFA\0203\022\017\n\013AIR_F_D_DFB\0204\022\017\n\013AIR_D_DB_" +
-      "BA\0205\022\017\n\013AIR_D_DB_BB\0206\022\021\n\rSTAND_D_DF_FC\0207" +
-      "B\033\n\006protocB\tEnumProtoP\000\242\002\003HLWb\006proto3"
+      "\n\nenum.proto\022\007service*R\n\010GrpcFlag\022\t\n\005EMP" +
+      "TY\020\000\022\016\n\nINITIALIZE\020\001\022\016\n\nPROCESSING\020\002\022\r\n\t" +
+      "ROUND_END\020\003\022\014\n\010GAME_END\020\004*M\n\tGrpcState\022\017" +
+      "\n\013STAND_STATE\020\000\022\020\n\014CROUCH_STATE\020\001\022\r\n\tAIR" +
+      "_STATE\020\002\022\016\n\nDOWN_STATE\020\003*\331\006\n\nGrpcAction\022" +
+      "\013\n\007NEUTRAL\020\000\022\t\n\005STAND\020\001\022\020\n\014FORWARD_WALK\020" +
+      "\002\022\010\n\004DASH\020\003\022\r\n\tBACK_STEP\020\004\022\n\n\006CROUCH\020\005\022\010" +
+      "\n\004JUMP\020\006\022\014\n\010FOR_JUMP\020\007\022\r\n\tBACK_JUMP\020\010\022\007\n" +
+      "\003AIR\020\t\022\017\n\013STAND_GUARD\020\n\022\020\n\014CROUCH_GUARD\020" +
+      "\013\022\r\n\tAIR_GUARD\020\014\022\025\n\021STAND_GUARD_RECOV\020\r\022" +
+      "\026\n\022CROUCH_GUARD_RECOV\020\016\022\023\n\017AIR_GUARD_REC" +
+      "OV\020\017\022\017\n\013STAND_RECOV\020\020\022\020\n\014CROUCH_RECOV\020\021\022" +
+      "\r\n\tAIR_RECOV\020\022\022\017\n\013CHANGE_DOWN\020\023\022\010\n\004DOWN\020" +
+      "\024\022\010\n\004RISE\020\025\022\013\n\007LANDING\020\026\022\013\n\007THROW_A\020\027\022\013\n" +
+      "\007THROW_B\020\030\022\r\n\tTHROW_HIT\020\031\022\020\n\014THROW_SUFFE" +
+      "R\020\032\022\013\n\007STAND_A\020\033\022\013\n\007STAND_B\020\034\022\014\n\010CROUCH_" +
+      "A\020\035\022\014\n\010CROUCH_B\020\036\022\t\n\005AIR_A\020\037\022\t\n\005AIR_B\020 \022" +
+      "\n\n\006AIR_DA\020!\022\n\n\006AIR_DB\020\"\022\014\n\010STAND_FA\020#\022\014\n" +
+      "\010STAND_FB\020$\022\r\n\tCROUCH_FA\020%\022\r\n\tCROUCH_FB\020" +
+      "&\022\n\n\006AIR_FA\020\'\022\n\n\006AIR_FB\020(\022\n\n\006AIR_UA\020)\022\n\n" +
+      "\006AIR_UB\020*\022\021\n\rSTAND_D_DF_FA\020+\022\021\n\rSTAND_D_" +
+      "DF_FB\020,\022\021\n\rSTAND_F_D_DFA\020-\022\021\n\rSTAND_F_D_" +
+      "DFB\020.\022\021\n\rSTAND_D_DB_BA\020/\022\021\n\rSTAND_D_DB_B" +
+      "B\0200\022\017\n\013AIR_D_DF_FA\0201\022\017\n\013AIR_D_DF_FB\0202\022\017\n" +
+      "\013AIR_F_D_DFA\0203\022\017\n\013AIR_F_D_DFB\0204\022\017\n\013AIR_D" +
+      "_DB_BA\0205\022\017\n\013AIR_D_DB_BB\0206\022\021\n\rSTAND_D_DF_" +
+      "FC\0207B\033\n\006protocB\tEnumProtoP\000\242\002\003HLWb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

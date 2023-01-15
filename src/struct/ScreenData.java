@@ -1,7 +1,5 @@
 package struct;
 
-import java.nio.ByteBuffer;
-
 import protoc.MessageProto.GrpcScreenData;
 
 /**
@@ -10,10 +8,10 @@ import protoc.MessageProto.GrpcScreenData;
  */
 public class ScreenData {
 
-	private ByteBuffer displayByteBuffer;
+	private byte[] displayBytes;
 	
 	public ScreenData(GrpcScreenData sd) {
-		this.displayByteBuffer = ByteBuffer.wrap(sd.getDisplayBytes().toByteArray());
+		this.displayBytes = sd.getDisplayBytes().toByteArray();
 	}
 
 	/**
@@ -22,21 +20,8 @@ public class ScreenData {
 	 *
 	 * @return the RGB data of the screen in the form of ByteBuffer
 	 */
-	public ByteBuffer getDisplayByteBuffer() {
-		return this.displayByteBuffer;
-	}
-
-	/**
-	 * Obtains RGB data of the screen in the form of byte[].<br>
-	 * Warning: If the window is disabled, will just return a black buffer.
-	 *
-	 * @return the RGB data of the screen in the form of byte[]
-	 */
-	public byte[] getDisplayByteBufferAsBytes() {
-		byte[] buffer = new byte[this.displayByteBuffer.remaining()];
-		this.displayByteBuffer.get(buffer);
-
-		return buffer;
+	public byte[] getDisplayBytes() {
+		return this.displayBytes;
 	}
 
 }

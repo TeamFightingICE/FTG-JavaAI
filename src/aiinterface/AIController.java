@@ -58,17 +58,22 @@ public class AIController extends Thread {
 		Iterator<PlayerGameData> gameDataIterator = this.participate();
 		while (gameDataIterator.hasNext()) {
 			PlayerGameData state = gameDataIterator.next();
-			if (state.getEmptyFlag()) {
-				continue;
-			}
-			if (state.getRoundendFlag()) {
-				this.ai.roundEnd(new RoundResult(state.getRoundResult()));
-			} else {
+			switch (state.getFlag()) {
+			case INITIALIZE:
+				// on initialize
+				break;
+			case PROCESSING:
 				this.ai.getInformation(new FrameData(state.getFrameData()), state.getIsControl());
 				this.ai.getScreenData(new ScreenData(state.getScreenData()));
 				this.ai.getAudioData(new AudioData(state.getAudioData()));
 				this.ai.processing();
 				this.input();
+				break;
+			case ROUND_END:
+				this.ai.roundEnd(new RoundResult(state.getRoundResult()));
+				break;
+			default:
+				break;
 			}
 		}
 	}

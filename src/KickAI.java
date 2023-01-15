@@ -11,8 +11,6 @@ public class KickAI implements AIInterface {
 	private boolean blindFlag;
 	private boolean playerNumber;
 	private FrameData frameData;
-	private ScreenData screenData;
-	private AudioData audioData;
 	private Key key;
 	private CommandCenter cc;
 	
@@ -32,7 +30,7 @@ public class KickAI implements AIInterface {
 		
 		this.key = new Key();
 		this.cc = new CommandCenter();
-		this.blindFlag = true;
+		this.blindFlag = false;
 	}
 	
 	@Override
@@ -43,12 +41,12 @@ public class KickAI implements AIInterface {
 	
 	@Override
 	public void getScreenData(ScreenData screenData) {
-		this.screenData = screenData;
+		
 	}
 
 	@Override
 	public void getAudioData(AudioData audioData) {
-		this.audioData = audioData;
+		
 	}
 
 	@Override
@@ -62,17 +60,11 @@ public class KickAI implements AIInterface {
 			return;
 		}
 		
-		System.out.println(playerNumber ? "P1" : "P2");
-		System.out.println(screenData.getDisplayByteBufferAsBytes().length);
-		System.out.println(audioData.getRawDataAsBytes().length);
-		
 		if (cc.getSkillFlag()) {
 			key = cc.getSkillKey();
 		} else {
 			key.empty();
 			cc.skillCancel();
-			
-			
 			
 			cc.commandCall("B");
 		}

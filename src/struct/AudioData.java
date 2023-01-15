@@ -3,7 +3,6 @@ package struct;
 import java.nio.ByteBuffer;
 
 import protoc.MessageProto.GrpcAudioData;
-import setting.GameSetting;
 
 /**
  * The class dealing with the audio information in game such as raw audio data, FFT and Mel-Spectrogram transformation.<br>
@@ -36,7 +35,7 @@ public class AudioData {
      * Initialize data.
      */
     public AudioData() {
-        this.rawData = new float[2][GameSetting.SOUND_BUFFER_SIZE];
+        this.rawData = new float[2][1024];
         this.fftData = new FFTData[2];
         this.spectrogramData = new float[2][][];
     }
