@@ -89,6 +89,19 @@ message GrpcAudioData {
 	bytes spectrogram_data_as_bytes = 3;
 }
 
+message GrpcGameData {
+	repeated int32 max_hps = 1;
+	repeated int32 max_energies = 2;
+	repeated string character_names = 3;
+	repeated string ai_names = 4;
+}
+
+message GrpcRoundResult {
+	int32 current_round = 1;
+	repeated int32 remaining_hps = 2;
+	int32 elapsed_frame = 3;
+}
+
 message GrpcKey {
 	bool A = 1;
 	bool B = 2;
@@ -97,15 +110,4 @@ message GrpcKey {
 	bool R = 5;
 	bool D = 6;
 	bool L = 7;
-}
-
-message GrpcCommandCenter {
-	repeated GrpcKey skill_key = 1;
-	string called_command = 2;
-}
-
-message GrpcRoundResult {
-	int32 current_round = 1;
-	repeated int32 remaining_hps = 2;
-	int32 elapsed_frame = 3;
 }

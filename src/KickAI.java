@@ -2,6 +2,7 @@ import aiinterface.AIInterface;
 import aiinterface.CommandCenter;
 import struct.AudioData;
 import struct.FrameData;
+import struct.GameData;
 import struct.Key;
 import struct.RoundResult;
 import struct.ScreenData;
@@ -14,6 +15,10 @@ public class KickAI implements AIInterface {
 	private Key key;
 	private CommandCenter cc;
 	
+	public KickAI() {
+		this.blindFlag = false;
+	}
+	
 	@Override
 	public String name() {
 		return this.getClass().getName();
@@ -25,12 +30,11 @@ public class KickAI implements AIInterface {
 	}
 
 	@Override
-	public void initialize(boolean playerNumber) {
+	public void initialize(GameData gameData, boolean playerNumber) {
 		this.playerNumber = playerNumber;
 		
 		this.key = new Key();
 		this.cc = new CommandCenter();
-		this.blindFlag = false;
 	}
 	
 	@Override

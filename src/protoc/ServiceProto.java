@@ -3332,17 +3332,32 @@ public final class ServiceProto {
     protoc.MessageProto.GrpcAudioDataOrBuilder getAudioDataOrBuilder();
 
     /**
-     * <code>.service.GrpcRoundResult round_result = 6;</code>
+     * <code>.service.GrpcGameData game_data = 6;</code>
+     * @return Whether the gameData field is set.
+     */
+    boolean hasGameData();
+    /**
+     * <code>.service.GrpcGameData game_data = 6;</code>
+     * @return The gameData.
+     */
+    protoc.MessageProto.GrpcGameData getGameData();
+    /**
+     * <code>.service.GrpcGameData game_data = 6;</code>
+     */
+    protoc.MessageProto.GrpcGameDataOrBuilder getGameDataOrBuilder();
+
+    /**
+     * <code>.service.GrpcRoundResult round_result = 7;</code>
      * @return Whether the roundResult field is set.
      */
     boolean hasRoundResult();
     /**
-     * <code>.service.GrpcRoundResult round_result = 6;</code>
+     * <code>.service.GrpcRoundResult round_result = 7;</code>
      * @return The roundResult.
      */
     protoc.MessageProto.GrpcRoundResult getRoundResult();
     /**
-     * <code>.service.GrpcRoundResult round_result = 6;</code>
+     * <code>.service.GrpcRoundResult round_result = 7;</code>
      */
     protoc.MessageProto.GrpcRoundResultOrBuilder getRoundResultOrBuilder();
   }
@@ -3495,10 +3510,36 @@ public final class ServiceProto {
       return getAudioData();
     }
 
-    public static final int ROUND_RESULT_FIELD_NUMBER = 6;
+    public static final int GAME_DATA_FIELD_NUMBER = 6;
+    private protoc.MessageProto.GrpcGameData gameData_;
+    /**
+     * <code>.service.GrpcGameData game_data = 6;</code>
+     * @return Whether the gameData field is set.
+     */
+    @java.lang.Override
+    public boolean hasGameData() {
+      return gameData_ != null;
+    }
+    /**
+     * <code>.service.GrpcGameData game_data = 6;</code>
+     * @return The gameData.
+     */
+    @java.lang.Override
+    public protoc.MessageProto.GrpcGameData getGameData() {
+      return gameData_ == null ? protoc.MessageProto.GrpcGameData.getDefaultInstance() : gameData_;
+    }
+    /**
+     * <code>.service.GrpcGameData game_data = 6;</code>
+     */
+    @java.lang.Override
+    public protoc.MessageProto.GrpcGameDataOrBuilder getGameDataOrBuilder() {
+      return getGameData();
+    }
+
+    public static final int ROUND_RESULT_FIELD_NUMBER = 7;
     private protoc.MessageProto.GrpcRoundResult roundResult_;
     /**
-     * <code>.service.GrpcRoundResult round_result = 6;</code>
+     * <code>.service.GrpcRoundResult round_result = 7;</code>
      * @return Whether the roundResult field is set.
      */
     @java.lang.Override
@@ -3506,7 +3547,7 @@ public final class ServiceProto {
       return roundResult_ != null;
     }
     /**
-     * <code>.service.GrpcRoundResult round_result = 6;</code>
+     * <code>.service.GrpcRoundResult round_result = 7;</code>
      * @return The roundResult.
      */
     @java.lang.Override
@@ -3514,7 +3555,7 @@ public final class ServiceProto {
       return roundResult_ == null ? protoc.MessageProto.GrpcRoundResult.getDefaultInstance() : roundResult_;
     }
     /**
-     * <code>.service.GrpcRoundResult round_result = 6;</code>
+     * <code>.service.GrpcRoundResult round_result = 7;</code>
      */
     @java.lang.Override
     public protoc.MessageProto.GrpcRoundResultOrBuilder getRoundResultOrBuilder() {
@@ -3550,8 +3591,11 @@ public final class ServiceProto {
       if (audioData_ != null) {
         output.writeMessage(5, getAudioData());
       }
+      if (gameData_ != null) {
+        output.writeMessage(6, getGameData());
+      }
       if (roundResult_ != null) {
-        output.writeMessage(6, getRoundResult());
+        output.writeMessage(7, getRoundResult());
       }
       getUnknownFields().writeTo(output);
     }
@@ -3582,9 +3626,13 @@ public final class ServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getAudioData());
       }
+      if (gameData_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getGameData());
+      }
       if (roundResult_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getRoundResult());
+          .computeMessageSize(7, getRoundResult());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3619,6 +3667,11 @@ public final class ServiceProto {
         if (!getAudioData()
             .equals(other.getAudioData())) return false;
       }
+      if (hasGameData() != other.hasGameData()) return false;
+      if (hasGameData()) {
+        if (!getGameData()
+            .equals(other.getGameData())) return false;
+      }
       if (hasRoundResult() != other.hasRoundResult()) return false;
       if (hasRoundResult()) {
         if (!getRoundResult()
@@ -3651,6 +3704,10 @@ public final class ServiceProto {
       if (hasAudioData()) {
         hash = (37 * hash) + AUDIO_DATA_FIELD_NUMBER;
         hash = (53 * hash) + getAudioData().hashCode();
+      }
+      if (hasGameData()) {
+        hash = (37 * hash) + GAME_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getGameData().hashCode();
       }
       if (hasRoundResult()) {
         hash = (37 * hash) + ROUND_RESULT_FIELD_NUMBER;
@@ -3806,6 +3863,12 @@ public final class ServiceProto {
           audioData_ = null;
           audioDataBuilder_ = null;
         }
+        if (gameDataBuilder_ == null) {
+          gameData_ = null;
+        } else {
+          gameData_ = null;
+          gameDataBuilder_ = null;
+        }
         if (roundResultBuilder_ == null) {
           roundResult_ = null;
         } else {
@@ -3854,6 +3917,11 @@ public final class ServiceProto {
           result.audioData_ = audioData_;
         } else {
           result.audioData_ = audioDataBuilder_.build();
+        }
+        if (gameDataBuilder_ == null) {
+          result.gameData_ = gameData_;
+        } else {
+          result.gameData_ = gameDataBuilder_.build();
         }
         if (roundResultBuilder_ == null) {
           result.roundResult_ = roundResult_;
@@ -3923,6 +3991,9 @@ public final class ServiceProto {
         if (other.hasAudioData()) {
           mergeAudioData(other.getAudioData());
         }
+        if (other.hasGameData()) {
+          mergeGameData(other.getGameData());
+        }
         if (other.hasRoundResult()) {
           mergeRoundResult(other.getRoundResult());
         }
@@ -3985,11 +4056,18 @@ public final class ServiceProto {
               } // case 42
               case 50: {
                 input.readMessage(
-                    getRoundResultFieldBuilder().getBuilder(),
+                    getGameDataFieldBuilder().getBuilder(),
                     extensionRegistry);
 
                 break;
               } // case 50
+              case 58: {
+                input.readMessage(
+                    getRoundResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4448,18 +4526,137 @@ public final class ServiceProto {
         return audioDataBuilder_;
       }
 
+      private protoc.MessageProto.GrpcGameData gameData_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          protoc.MessageProto.GrpcGameData, protoc.MessageProto.GrpcGameData.Builder, protoc.MessageProto.GrpcGameDataOrBuilder> gameDataBuilder_;
+      /**
+       * <code>.service.GrpcGameData game_data = 6;</code>
+       * @return Whether the gameData field is set.
+       */
+      public boolean hasGameData() {
+        return gameDataBuilder_ != null || gameData_ != null;
+      }
+      /**
+       * <code>.service.GrpcGameData game_data = 6;</code>
+       * @return The gameData.
+       */
+      public protoc.MessageProto.GrpcGameData getGameData() {
+        if (gameDataBuilder_ == null) {
+          return gameData_ == null ? protoc.MessageProto.GrpcGameData.getDefaultInstance() : gameData_;
+        } else {
+          return gameDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.service.GrpcGameData game_data = 6;</code>
+       */
+      public Builder setGameData(protoc.MessageProto.GrpcGameData value) {
+        if (gameDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gameData_ = value;
+          onChanged();
+        } else {
+          gameDataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.service.GrpcGameData game_data = 6;</code>
+       */
+      public Builder setGameData(
+          protoc.MessageProto.GrpcGameData.Builder builderForValue) {
+        if (gameDataBuilder_ == null) {
+          gameData_ = builderForValue.build();
+          onChanged();
+        } else {
+          gameDataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.service.GrpcGameData game_data = 6;</code>
+       */
+      public Builder mergeGameData(protoc.MessageProto.GrpcGameData value) {
+        if (gameDataBuilder_ == null) {
+          if (gameData_ != null) {
+            gameData_ =
+              protoc.MessageProto.GrpcGameData.newBuilder(gameData_).mergeFrom(value).buildPartial();
+          } else {
+            gameData_ = value;
+          }
+          onChanged();
+        } else {
+          gameDataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.service.GrpcGameData game_data = 6;</code>
+       */
+      public Builder clearGameData() {
+        if (gameDataBuilder_ == null) {
+          gameData_ = null;
+          onChanged();
+        } else {
+          gameData_ = null;
+          gameDataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.service.GrpcGameData game_data = 6;</code>
+       */
+      public protoc.MessageProto.GrpcGameData.Builder getGameDataBuilder() {
+        
+        onChanged();
+        return getGameDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.service.GrpcGameData game_data = 6;</code>
+       */
+      public protoc.MessageProto.GrpcGameDataOrBuilder getGameDataOrBuilder() {
+        if (gameDataBuilder_ != null) {
+          return gameDataBuilder_.getMessageOrBuilder();
+        } else {
+          return gameData_ == null ?
+              protoc.MessageProto.GrpcGameData.getDefaultInstance() : gameData_;
+        }
+      }
+      /**
+       * <code>.service.GrpcGameData game_data = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          protoc.MessageProto.GrpcGameData, protoc.MessageProto.GrpcGameData.Builder, protoc.MessageProto.GrpcGameDataOrBuilder> 
+          getGameDataFieldBuilder() {
+        if (gameDataBuilder_ == null) {
+          gameDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              protoc.MessageProto.GrpcGameData, protoc.MessageProto.GrpcGameData.Builder, protoc.MessageProto.GrpcGameDataOrBuilder>(
+                  getGameData(),
+                  getParentForChildren(),
+                  isClean());
+          gameData_ = null;
+        }
+        return gameDataBuilder_;
+      }
+
       private protoc.MessageProto.GrpcRoundResult roundResult_;
       private com.google.protobuf.SingleFieldBuilderV3<
           protoc.MessageProto.GrpcRoundResult, protoc.MessageProto.GrpcRoundResult.Builder, protoc.MessageProto.GrpcRoundResultOrBuilder> roundResultBuilder_;
       /**
-       * <code>.service.GrpcRoundResult round_result = 6;</code>
+       * <code>.service.GrpcRoundResult round_result = 7;</code>
        * @return Whether the roundResult field is set.
        */
       public boolean hasRoundResult() {
         return roundResultBuilder_ != null || roundResult_ != null;
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 6;</code>
+       * <code>.service.GrpcRoundResult round_result = 7;</code>
        * @return The roundResult.
        */
       public protoc.MessageProto.GrpcRoundResult getRoundResult() {
@@ -4470,7 +4667,7 @@ public final class ServiceProto {
         }
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 6;</code>
+       * <code>.service.GrpcRoundResult round_result = 7;</code>
        */
       public Builder setRoundResult(protoc.MessageProto.GrpcRoundResult value) {
         if (roundResultBuilder_ == null) {
@@ -4486,7 +4683,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 6;</code>
+       * <code>.service.GrpcRoundResult round_result = 7;</code>
        */
       public Builder setRoundResult(
           protoc.MessageProto.GrpcRoundResult.Builder builderForValue) {
@@ -4500,7 +4697,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 6;</code>
+       * <code>.service.GrpcRoundResult round_result = 7;</code>
        */
       public Builder mergeRoundResult(protoc.MessageProto.GrpcRoundResult value) {
         if (roundResultBuilder_ == null) {
@@ -4518,7 +4715,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 6;</code>
+       * <code>.service.GrpcRoundResult round_result = 7;</code>
        */
       public Builder clearRoundResult() {
         if (roundResultBuilder_ == null) {
@@ -4532,7 +4729,7 @@ public final class ServiceProto {
         return this;
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 6;</code>
+       * <code>.service.GrpcRoundResult round_result = 7;</code>
        */
       public protoc.MessageProto.GrpcRoundResult.Builder getRoundResultBuilder() {
         
@@ -4540,7 +4737,7 @@ public final class ServiceProto {
         return getRoundResultFieldBuilder().getBuilder();
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 6;</code>
+       * <code>.service.GrpcRoundResult round_result = 7;</code>
        */
       public protoc.MessageProto.GrpcRoundResultOrBuilder getRoundResultOrBuilder() {
         if (roundResultBuilder_ != null) {
@@ -4551,7 +4748,7 @@ public final class ServiceProto {
         }
       }
       /**
-       * <code>.service.GrpcRoundResult round_result = 6;</code>
+       * <code>.service.GrpcRoundResult round_result = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           protoc.MessageProto.GrpcRoundResult, protoc.MessageProto.GrpcRoundResult.Builder, protoc.MessageProto.GrpcRoundResultOrBuilder> 
@@ -5580,24 +5777,25 @@ public final class ServiceProto {
       "\023\n\013player_name\030\002 \001(\t\022\020\n\010is_blind\030\003 \001(\010\")" +
       "\n\022InitializeResponse\022\023\n\013player_uuid\030\001 \001(" +
       "\t\")\n\022ParticipateRequest\022\023\n\013player_uuid\030\001" +
-      " \001(\t\"\373\001\n\016PlayerGameData\022\037\n\004flag\030\001 \001(\0162\021." +
+      " \001(\t\"\245\002\n\016PlayerGameData\022\037\n\004flag\030\001 \001(\0162\021." +
       "service.GrpcFlag\022\022\n\nis_control\030\002 \001(\010\022*\n\n" +
       "frame_data\030\003 \001(\0132\026.service.GrpcFrameData" +
       "\022,\n\013screen_data\030\004 \001(\0132\027.service.GrpcScre" +
       "enData\022*\n\naudio_data\030\005 \001(\0132\026.service.Grp" +
-      "cAudioData\022.\n\014round_result\030\006 \001(\0132\030.servi" +
-      "ce.GrpcRoundResult\"`\n\014PlayerAction\022\023\n\013pl" +
-      "ayer_uuid\030\001 \001(\t\022#\n\tinput_key\030\002 \001(\0132\020.ser" +
-      "vice.GrpcKey\022\026\n\016called_command\030\003 \001(\t2\233\002\n" +
-      "\007Service\022D\n\010Spectate\022\030.service.SpectateR" +
-      "equest\032\032.service.SpectatorGameData\"\0000\001\022G" +
-      "\n\nInitialize\022\032.service.InitializeRequest" +
-      "\032\033.service.InitializeResponse\"\000\022G\n\013Parti" +
-      "cipate\022\033.service.ParticipateRequest\032\027.se" +
-      "rvice.PlayerGameData\"\0000\001\0228\n\005Input\022\025.serv" +
-      "ice.PlayerAction\032\026.google.protobuf.Empty" +
-      "\"\000B\036\n\006protocB\014ServiceProtoP\000\242\002\003HLWb\006prot" +
-      "o3"
+      "cAudioData\022(\n\tgame_data\030\006 \001(\0132\025.service." +
+      "GrpcGameData\022.\n\014round_result\030\007 \001(\0132\030.ser" +
+      "vice.GrpcRoundResult\"`\n\014PlayerAction\022\023\n\013" +
+      "player_uuid\030\001 \001(\t\022#\n\tinput_key\030\002 \001(\0132\020.s" +
+      "ervice.GrpcKey\022\026\n\016called_command\030\003 \001(\t2\233" +
+      "\002\n\007Service\022D\n\010Spectate\022\030.service.Spectat" +
+      "eRequest\032\032.service.SpectatorGameData\"\0000\001" +
+      "\022G\n\nInitialize\022\032.service.InitializeReque" +
+      "st\032\033.service.InitializeResponse\"\000\022G\n\013Par" +
+      "ticipate\022\033.service.ParticipateRequest\032\027." +
+      "service.PlayerGameData\"\0000\001\0228\n\005Input\022\025.se" +
+      "rvice.PlayerAction\032\026.google.protobuf.Emp" +
+      "ty\"\000B\036\n\006protocB\014ServiceProtoP\000\242\002\003HLWb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5641,7 +5839,7 @@ public final class ServiceProto {
     internal_static_service_PlayerGameData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service_PlayerGameData_descriptor,
-        new java.lang.String[] { "Flag", "IsControl", "FrameData", "ScreenData", "AudioData", "RoundResult", });
+        new java.lang.String[] { "Flag", "IsControl", "FrameData", "ScreenData", "AudioData", "GameData", "RoundResult", });
     internal_static_service_PlayerAction_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_service_PlayerAction_fieldAccessorTable = new

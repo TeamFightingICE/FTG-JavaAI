@@ -40,7 +40,8 @@ message PlayerGameData {
 	GrpcFrameData frame_data = 3;
 	GrpcScreenData screen_data = 4;
 	GrpcAudioData audio_data = 5;
-	GrpcRoundResult round_result = 6;
+	GrpcGameData game_data = 6;
+	GrpcRoundResult round_result = 7;
 }
 
 message PlayerAction {

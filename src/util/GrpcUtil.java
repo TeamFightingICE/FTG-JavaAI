@@ -1,7 +1,5 @@
 package util;
 
-import aiinterface.CommandCenter;
-import protoc.MessageProto.GrpcCommandCenter;
 import protoc.MessageProto.GrpcKey;
 import struct.Key;
 
@@ -17,12 +15,6 @@ public class GrpcUtil {
     			.setL(key.L)
     			.setR(key.R)
     			.setU(key.U)
-    			.build();
-    }
-    
-    public static GrpcCommandCenter convertCommandCenter(CommandCenter commandCenter) {
-    	return GrpcCommandCenter.newBuilder()
-    			.addAllSkillKey(commandCenter.getSkillKeys().stream().map(x -> convertKey(x)).toList())
     			.build();
     }
 	

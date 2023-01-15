@@ -9,6 +9,7 @@ import network.Network;
 import network.None;
 import struct.AudioData;
 import struct.FrameData;
+import struct.GameData;
 import struct.Key;
 import struct.RoundResult;
 import struct.ScreenData;
@@ -51,11 +52,11 @@ public class BlackMamba implements AIInterface {
     }
 
     @Override
-    public void initialize(boolean playerNumber) {
+    public void initialize(GameData gameData, boolean playerNumber) {
         this.frameskip = false;
         this.playerNumber = playerNumber;
-        this.ourCharacter = "ZEN";
-        this.speedmode = true;
+        this.ourCharacter = gameData.getCharacterName(playerNumber);
+        this.speedmode = gameData.getAiName(!playerNumber).equals("LimitedMctsAi35");
         myaction = new Action[] {
                 Action.AIR,
                 Action.AIR_A,
@@ -311,13 +312,11 @@ public class BlackMamba implements AIInterface {
 
 	@Override
 	public boolean isBlind() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public void getAudioData(AudioData audioData) {
-		// TODO Auto-generated method stub
 		
 	}
 

@@ -11,6 +11,7 @@ import protoc.ServiceProto.PlayerAction;
 import protoc.ServiceProto.PlayerGameData;
 import struct.AudioData;
 import struct.FrameData;
+import struct.GameData;
 import struct.RoundResult;
 import struct.ScreenData;
 import util.GrpcUtil;
@@ -53,14 +54,13 @@ public class AIController extends Thread {
 	
 	@Override
 	public void run() {
-		this.ai.initialize(playerNumber);
 		this.initialize(playerNumber);
 		Iterator<PlayerGameData> gameDataIterator = this.participate();
 		while (gameDataIterator.hasNext()) {
 			PlayerGameData state = gameDataIterator.next();
 			switch (state.getFlag()) {
 			case INITIALIZE:
-				// on initialize
+				this.ai.initialize(new GameData(state.getGameData()), playerNumber);
 				break;
 			case PROCESSING:
 				this.ai.getInformation(new FrameData(state.getFrameData()), state.getIsControl());

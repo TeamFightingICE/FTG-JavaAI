@@ -8591,6 +8591,1929 @@ public final class MessageProto {
 
   }
 
+  public interface GrpcGameDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:service.GrpcGameData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int32 max_hps = 1;</code>
+     * @return A list containing the maxHps.
+     */
+    java.util.List<java.lang.Integer> getMaxHpsList();
+    /**
+     * <code>repeated int32 max_hps = 1;</code>
+     * @return The count of maxHps.
+     */
+    int getMaxHpsCount();
+    /**
+     * <code>repeated int32 max_hps = 1;</code>
+     * @param index The index of the element to return.
+     * @return The maxHps at the given index.
+     */
+    int getMaxHps(int index);
+
+    /**
+     * <code>repeated int32 max_energies = 2;</code>
+     * @return A list containing the maxEnergies.
+     */
+    java.util.List<java.lang.Integer> getMaxEnergiesList();
+    /**
+     * <code>repeated int32 max_energies = 2;</code>
+     * @return The count of maxEnergies.
+     */
+    int getMaxEnergiesCount();
+    /**
+     * <code>repeated int32 max_energies = 2;</code>
+     * @param index The index of the element to return.
+     * @return The maxEnergies at the given index.
+     */
+    int getMaxEnergies(int index);
+
+    /**
+     * <code>repeated string character_names = 3;</code>
+     * @return A list containing the characterNames.
+     */
+    java.util.List<java.lang.String>
+        getCharacterNamesList();
+    /**
+     * <code>repeated string character_names = 3;</code>
+     * @return The count of characterNames.
+     */
+    int getCharacterNamesCount();
+    /**
+     * <code>repeated string character_names = 3;</code>
+     * @param index The index of the element to return.
+     * @return The characterNames at the given index.
+     */
+    java.lang.String getCharacterNames(int index);
+    /**
+     * <code>repeated string character_names = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the characterNames at the given index.
+     */
+    com.google.protobuf.ByteString
+        getCharacterNamesBytes(int index);
+
+    /**
+     * <code>repeated string ai_names = 4;</code>
+     * @return A list containing the aiNames.
+     */
+    java.util.List<java.lang.String>
+        getAiNamesList();
+    /**
+     * <code>repeated string ai_names = 4;</code>
+     * @return The count of aiNames.
+     */
+    int getAiNamesCount();
+    /**
+     * <code>repeated string ai_names = 4;</code>
+     * @param index The index of the element to return.
+     * @return The aiNames at the given index.
+     */
+    java.lang.String getAiNames(int index);
+    /**
+     * <code>repeated string ai_names = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the aiNames at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAiNamesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code service.GrpcGameData}
+   */
+  public static final class GrpcGameData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:service.GrpcGameData)
+      GrpcGameDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GrpcGameData.newBuilder() to construct.
+    private GrpcGameData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GrpcGameData() {
+      maxHps_ = emptyIntList();
+      maxEnergies_ = emptyIntList();
+      characterNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      aiNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GrpcGameData();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return protoc.MessageProto.internal_static_service_GrpcGameData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return protoc.MessageProto.internal_static_service_GrpcGameData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              protoc.MessageProto.GrpcGameData.class, protoc.MessageProto.GrpcGameData.Builder.class);
+    }
+
+    public static final int MAX_HPS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.IntList maxHps_;
+    /**
+     * <code>repeated int32 max_hps = 1;</code>
+     * @return A list containing the maxHps.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getMaxHpsList() {
+      return maxHps_;
+    }
+    /**
+     * <code>repeated int32 max_hps = 1;</code>
+     * @return The count of maxHps.
+     */
+    public int getMaxHpsCount() {
+      return maxHps_.size();
+    }
+    /**
+     * <code>repeated int32 max_hps = 1;</code>
+     * @param index The index of the element to return.
+     * @return The maxHps at the given index.
+     */
+    public int getMaxHps(int index) {
+      return maxHps_.getInt(index);
+    }
+    private int maxHpsMemoizedSerializedSize = -1;
+
+    public static final int MAX_ENERGIES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.IntList maxEnergies_;
+    /**
+     * <code>repeated int32 max_energies = 2;</code>
+     * @return A list containing the maxEnergies.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getMaxEnergiesList() {
+      return maxEnergies_;
+    }
+    /**
+     * <code>repeated int32 max_energies = 2;</code>
+     * @return The count of maxEnergies.
+     */
+    public int getMaxEnergiesCount() {
+      return maxEnergies_.size();
+    }
+    /**
+     * <code>repeated int32 max_energies = 2;</code>
+     * @param index The index of the element to return.
+     * @return The maxEnergies at the given index.
+     */
+    public int getMaxEnergies(int index) {
+      return maxEnergies_.getInt(index);
+    }
+    private int maxEnergiesMemoizedSerializedSize = -1;
+
+    public static final int CHARACTER_NAMES_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList characterNames_;
+    /**
+     * <code>repeated string character_names = 3;</code>
+     * @return A list containing the characterNames.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCharacterNamesList() {
+      return characterNames_;
+    }
+    /**
+     * <code>repeated string character_names = 3;</code>
+     * @return The count of characterNames.
+     */
+    public int getCharacterNamesCount() {
+      return characterNames_.size();
+    }
+    /**
+     * <code>repeated string character_names = 3;</code>
+     * @param index The index of the element to return.
+     * @return The characterNames at the given index.
+     */
+    public java.lang.String getCharacterNames(int index) {
+      return characterNames_.get(index);
+    }
+    /**
+     * <code>repeated string character_names = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the characterNames at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCharacterNamesBytes(int index) {
+      return characterNames_.getByteString(index);
+    }
+
+    public static final int AI_NAMES_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList aiNames_;
+    /**
+     * <code>repeated string ai_names = 4;</code>
+     * @return A list containing the aiNames.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAiNamesList() {
+      return aiNames_;
+    }
+    /**
+     * <code>repeated string ai_names = 4;</code>
+     * @return The count of aiNames.
+     */
+    public int getAiNamesCount() {
+      return aiNames_.size();
+    }
+    /**
+     * <code>repeated string ai_names = 4;</code>
+     * @param index The index of the element to return.
+     * @return The aiNames at the given index.
+     */
+    public java.lang.String getAiNames(int index) {
+      return aiNames_.get(index);
+    }
+    /**
+     * <code>repeated string ai_names = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the aiNames at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAiNamesBytes(int index) {
+      return aiNames_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getMaxHpsList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(maxHpsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < maxHps_.size(); i++) {
+        output.writeInt32NoTag(maxHps_.getInt(i));
+      }
+      if (getMaxEnergiesList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(maxEnergiesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < maxEnergies_.size(); i++) {
+        output.writeInt32NoTag(maxEnergies_.getInt(i));
+      }
+      for (int i = 0; i < characterNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, characterNames_.getRaw(i));
+      }
+      for (int i = 0; i < aiNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, aiNames_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < maxHps_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(maxHps_.getInt(i));
+        }
+        size += dataSize;
+        if (!getMaxHpsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        maxHpsMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < maxEnergies_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(maxEnergies_.getInt(i));
+        }
+        size += dataSize;
+        if (!getMaxEnergiesList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        maxEnergiesMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < characterNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(characterNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getCharacterNamesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < aiNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(aiNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAiNamesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof protoc.MessageProto.GrpcGameData)) {
+        return super.equals(obj);
+      }
+      protoc.MessageProto.GrpcGameData other = (protoc.MessageProto.GrpcGameData) obj;
+
+      if (!getMaxHpsList()
+          .equals(other.getMaxHpsList())) return false;
+      if (!getMaxEnergiesList()
+          .equals(other.getMaxEnergiesList())) return false;
+      if (!getCharacterNamesList()
+          .equals(other.getCharacterNamesList())) return false;
+      if (!getAiNamesList()
+          .equals(other.getAiNamesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMaxHpsCount() > 0) {
+        hash = (37 * hash) + MAX_HPS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxHpsList().hashCode();
+      }
+      if (getMaxEnergiesCount() > 0) {
+        hash = (37 * hash) + MAX_ENERGIES_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxEnergiesList().hashCode();
+      }
+      if (getCharacterNamesCount() > 0) {
+        hash = (37 * hash) + CHARACTER_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getCharacterNamesList().hashCode();
+      }
+      if (getAiNamesCount() > 0) {
+        hash = (37 * hash) + AI_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getAiNamesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static protoc.MessageProto.GrpcGameData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protoc.MessageProto.GrpcGameData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protoc.MessageProto.GrpcGameData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protoc.MessageProto.GrpcGameData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protoc.MessageProto.GrpcGameData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protoc.MessageProto.GrpcGameData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protoc.MessageProto.GrpcGameData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protoc.MessageProto.GrpcGameData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protoc.MessageProto.GrpcGameData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static protoc.MessageProto.GrpcGameData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protoc.MessageProto.GrpcGameData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protoc.MessageProto.GrpcGameData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(protoc.MessageProto.GrpcGameData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code service.GrpcGameData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:service.GrpcGameData)
+        protoc.MessageProto.GrpcGameDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return protoc.MessageProto.internal_static_service_GrpcGameData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return protoc.MessageProto.internal_static_service_GrpcGameData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                protoc.MessageProto.GrpcGameData.class, protoc.MessageProto.GrpcGameData.Builder.class);
+      }
+
+      // Construct using protoc.MessageProto.GrpcGameData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        maxHps_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        maxEnergies_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        characterNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        aiNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return protoc.MessageProto.internal_static_service_GrpcGameData_descriptor;
+      }
+
+      @java.lang.Override
+      public protoc.MessageProto.GrpcGameData getDefaultInstanceForType() {
+        return protoc.MessageProto.GrpcGameData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public protoc.MessageProto.GrpcGameData build() {
+        protoc.MessageProto.GrpcGameData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public protoc.MessageProto.GrpcGameData buildPartial() {
+        protoc.MessageProto.GrpcGameData result = new protoc.MessageProto.GrpcGameData(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          maxHps_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.maxHps_ = maxHps_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          maxEnergies_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.maxEnergies_ = maxEnergies_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          characterNames_ = characterNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.characterNames_ = characterNames_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          aiNames_ = aiNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.aiNames_ = aiNames_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof protoc.MessageProto.GrpcGameData) {
+          return mergeFrom((protoc.MessageProto.GrpcGameData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(protoc.MessageProto.GrpcGameData other) {
+        if (other == protoc.MessageProto.GrpcGameData.getDefaultInstance()) return this;
+        if (!other.maxHps_.isEmpty()) {
+          if (maxHps_.isEmpty()) {
+            maxHps_ = other.maxHps_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureMaxHpsIsMutable();
+            maxHps_.addAll(other.maxHps_);
+          }
+          onChanged();
+        }
+        if (!other.maxEnergies_.isEmpty()) {
+          if (maxEnergies_.isEmpty()) {
+            maxEnergies_ = other.maxEnergies_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureMaxEnergiesIsMutable();
+            maxEnergies_.addAll(other.maxEnergies_);
+          }
+          onChanged();
+        }
+        if (!other.characterNames_.isEmpty()) {
+          if (characterNames_.isEmpty()) {
+            characterNames_ = other.characterNames_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureCharacterNamesIsMutable();
+            characterNames_.addAll(other.characterNames_);
+          }
+          onChanged();
+        }
+        if (!other.aiNames_.isEmpty()) {
+          if (aiNames_.isEmpty()) {
+            aiNames_ = other.aiNames_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureAiNamesIsMutable();
+            aiNames_.addAll(other.aiNames_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int v = input.readInt32();
+                ensureMaxHpsIsMutable();
+                maxHps_.addInt(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureMaxHpsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  maxHps_.addInt(input.readInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              case 16: {
+                int v = input.readInt32();
+                ensureMaxEnergiesIsMutable();
+                maxEnergies_.addInt(v);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureMaxEnergiesIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  maxEnergies_.addInt(input.readInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureCharacterNamesIsMutable();
+                characterNames_.add(s);
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAiNamesIsMutable();
+                aiNames_.add(s);
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.IntList maxHps_ = emptyIntList();
+      private void ensureMaxHpsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          maxHps_ = mutableCopy(maxHps_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int32 max_hps = 1;</code>
+       * @return A list containing the maxHps.
+       */
+      public java.util.List<java.lang.Integer>
+          getMaxHpsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(maxHps_) : maxHps_;
+      }
+      /**
+       * <code>repeated int32 max_hps = 1;</code>
+       * @return The count of maxHps.
+       */
+      public int getMaxHpsCount() {
+        return maxHps_.size();
+      }
+      /**
+       * <code>repeated int32 max_hps = 1;</code>
+       * @param index The index of the element to return.
+       * @return The maxHps at the given index.
+       */
+      public int getMaxHps(int index) {
+        return maxHps_.getInt(index);
+      }
+      /**
+       * <code>repeated int32 max_hps = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The maxHps to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxHps(
+          int index, int value) {
+        ensureMaxHpsIsMutable();
+        maxHps_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 max_hps = 1;</code>
+       * @param value The maxHps to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMaxHps(int value) {
+        ensureMaxHpsIsMutable();
+        maxHps_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 max_hps = 1;</code>
+       * @param values The maxHps to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMaxHps(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureMaxHpsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, maxHps_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 max_hps = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxHps() {
+        maxHps_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList maxEnergies_ = emptyIntList();
+      private void ensureMaxEnergiesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          maxEnergies_ = mutableCopy(maxEnergies_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated int32 max_energies = 2;</code>
+       * @return A list containing the maxEnergies.
+       */
+      public java.util.List<java.lang.Integer>
+          getMaxEnergiesList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(maxEnergies_) : maxEnergies_;
+      }
+      /**
+       * <code>repeated int32 max_energies = 2;</code>
+       * @return The count of maxEnergies.
+       */
+      public int getMaxEnergiesCount() {
+        return maxEnergies_.size();
+      }
+      /**
+       * <code>repeated int32 max_energies = 2;</code>
+       * @param index The index of the element to return.
+       * @return The maxEnergies at the given index.
+       */
+      public int getMaxEnergies(int index) {
+        return maxEnergies_.getInt(index);
+      }
+      /**
+       * <code>repeated int32 max_energies = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The maxEnergies to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxEnergies(
+          int index, int value) {
+        ensureMaxEnergiesIsMutable();
+        maxEnergies_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 max_energies = 2;</code>
+       * @param value The maxEnergies to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMaxEnergies(int value) {
+        ensureMaxEnergiesIsMutable();
+        maxEnergies_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 max_energies = 2;</code>
+       * @param values The maxEnergies to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMaxEnergies(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureMaxEnergiesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, maxEnergies_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 max_energies = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxEnergies() {
+        maxEnergies_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList characterNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureCharacterNamesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          characterNames_ = new com.google.protobuf.LazyStringArrayList(characterNames_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string character_names = 3;</code>
+       * @return A list containing the characterNames.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCharacterNamesList() {
+        return characterNames_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string character_names = 3;</code>
+       * @return The count of characterNames.
+       */
+      public int getCharacterNamesCount() {
+        return characterNames_.size();
+      }
+      /**
+       * <code>repeated string character_names = 3;</code>
+       * @param index The index of the element to return.
+       * @return The characterNames at the given index.
+       */
+      public java.lang.String getCharacterNames(int index) {
+        return characterNames_.get(index);
+      }
+      /**
+       * <code>repeated string character_names = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the characterNames at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getCharacterNamesBytes(int index) {
+        return characterNames_.getByteString(index);
+      }
+      /**
+       * <code>repeated string character_names = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The characterNames to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCharacterNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCharacterNamesIsMutable();
+        characterNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string character_names = 3;</code>
+       * @param value The characterNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCharacterNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCharacterNamesIsMutable();
+        characterNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string character_names = 3;</code>
+       * @param values The characterNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCharacterNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCharacterNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, characterNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string character_names = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCharacterNames() {
+        characterNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string character_names = 3;</code>
+       * @param value The bytes of the characterNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCharacterNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureCharacterNamesIsMutable();
+        characterNames_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList aiNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureAiNamesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          aiNames_ = new com.google.protobuf.LazyStringArrayList(aiNames_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated string ai_names = 4;</code>
+       * @return A list containing the aiNames.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAiNamesList() {
+        return aiNames_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string ai_names = 4;</code>
+       * @return The count of aiNames.
+       */
+      public int getAiNamesCount() {
+        return aiNames_.size();
+      }
+      /**
+       * <code>repeated string ai_names = 4;</code>
+       * @param index The index of the element to return.
+       * @return The aiNames at the given index.
+       */
+      public java.lang.String getAiNames(int index) {
+        return aiNames_.get(index);
+      }
+      /**
+       * <code>repeated string ai_names = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the aiNames at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAiNamesBytes(int index) {
+        return aiNames_.getByteString(index);
+      }
+      /**
+       * <code>repeated string ai_names = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The aiNames to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAiNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAiNamesIsMutable();
+        aiNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ai_names = 4;</code>
+       * @param value The aiNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAiNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAiNamesIsMutable();
+        aiNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ai_names = 4;</code>
+       * @param values The aiNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAiNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAiNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, aiNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ai_names = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAiNames() {
+        aiNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ai_names = 4;</code>
+       * @param value The bytes of the aiNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAiNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureAiNamesIsMutable();
+        aiNames_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:service.GrpcGameData)
+    }
+
+    // @@protoc_insertion_point(class_scope:service.GrpcGameData)
+    private static final protoc.MessageProto.GrpcGameData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new protoc.MessageProto.GrpcGameData();
+    }
+
+    public static protoc.MessageProto.GrpcGameData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GrpcGameData>
+        PARSER = new com.google.protobuf.AbstractParser<GrpcGameData>() {
+      @java.lang.Override
+      public GrpcGameData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GrpcGameData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GrpcGameData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public protoc.MessageProto.GrpcGameData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GrpcRoundResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:service.GrpcRoundResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 current_round = 1;</code>
+     * @return The currentRound.
+     */
+    int getCurrentRound();
+
+    /**
+     * <code>repeated int32 remaining_hps = 2;</code>
+     * @return A list containing the remainingHps.
+     */
+    java.util.List<java.lang.Integer> getRemainingHpsList();
+    /**
+     * <code>repeated int32 remaining_hps = 2;</code>
+     * @return The count of remainingHps.
+     */
+    int getRemainingHpsCount();
+    /**
+     * <code>repeated int32 remaining_hps = 2;</code>
+     * @param index The index of the element to return.
+     * @return The remainingHps at the given index.
+     */
+    int getRemainingHps(int index);
+
+    /**
+     * <code>int32 elapsed_frame = 3;</code>
+     * @return The elapsedFrame.
+     */
+    int getElapsedFrame();
+  }
+  /**
+   * Protobuf type {@code service.GrpcRoundResult}
+   */
+  public static final class GrpcRoundResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:service.GrpcRoundResult)
+      GrpcRoundResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GrpcRoundResult.newBuilder() to construct.
+    private GrpcRoundResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GrpcRoundResult() {
+      remainingHps_ = emptyIntList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GrpcRoundResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return protoc.MessageProto.internal_static_service_GrpcRoundResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return protoc.MessageProto.internal_static_service_GrpcRoundResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              protoc.MessageProto.GrpcRoundResult.class, protoc.MessageProto.GrpcRoundResult.Builder.class);
+    }
+
+    public static final int CURRENT_ROUND_FIELD_NUMBER = 1;
+    private int currentRound_;
+    /**
+     * <code>int32 current_round = 1;</code>
+     * @return The currentRound.
+     */
+    @java.lang.Override
+    public int getCurrentRound() {
+      return currentRound_;
+    }
+
+    public static final int REMAINING_HPS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.IntList remainingHps_;
+    /**
+     * <code>repeated int32 remaining_hps = 2;</code>
+     * @return A list containing the remainingHps.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getRemainingHpsList() {
+      return remainingHps_;
+    }
+    /**
+     * <code>repeated int32 remaining_hps = 2;</code>
+     * @return The count of remainingHps.
+     */
+    public int getRemainingHpsCount() {
+      return remainingHps_.size();
+    }
+    /**
+     * <code>repeated int32 remaining_hps = 2;</code>
+     * @param index The index of the element to return.
+     * @return The remainingHps at the given index.
+     */
+    public int getRemainingHps(int index) {
+      return remainingHps_.getInt(index);
+    }
+    private int remainingHpsMemoizedSerializedSize = -1;
+
+    public static final int ELAPSED_FRAME_FIELD_NUMBER = 3;
+    private int elapsedFrame_;
+    /**
+     * <code>int32 elapsed_frame = 3;</code>
+     * @return The elapsedFrame.
+     */
+    @java.lang.Override
+    public int getElapsedFrame() {
+      return elapsedFrame_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (currentRound_ != 0) {
+        output.writeInt32(1, currentRound_);
+      }
+      if (getRemainingHpsList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(remainingHpsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < remainingHps_.size(); i++) {
+        output.writeInt32NoTag(remainingHps_.getInt(i));
+      }
+      if (elapsedFrame_ != 0) {
+        output.writeInt32(3, elapsedFrame_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (currentRound_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, currentRound_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < remainingHps_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(remainingHps_.getInt(i));
+        }
+        size += dataSize;
+        if (!getRemainingHpsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        remainingHpsMemoizedSerializedSize = dataSize;
+      }
+      if (elapsedFrame_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, elapsedFrame_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof protoc.MessageProto.GrpcRoundResult)) {
+        return super.equals(obj);
+      }
+      protoc.MessageProto.GrpcRoundResult other = (protoc.MessageProto.GrpcRoundResult) obj;
+
+      if (getCurrentRound()
+          != other.getCurrentRound()) return false;
+      if (!getRemainingHpsList()
+          .equals(other.getRemainingHpsList())) return false;
+      if (getElapsedFrame()
+          != other.getElapsedFrame()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CURRENT_ROUND_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrentRound();
+      if (getRemainingHpsCount() > 0) {
+        hash = (37 * hash) + REMAINING_HPS_FIELD_NUMBER;
+        hash = (53 * hash) + getRemainingHpsList().hashCode();
+      }
+      hash = (37 * hash) + ELAPSED_FRAME_FIELD_NUMBER;
+      hash = (53 * hash) + getElapsedFrame();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static protoc.MessageProto.GrpcRoundResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protoc.MessageProto.GrpcRoundResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protoc.MessageProto.GrpcRoundResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protoc.MessageProto.GrpcRoundResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protoc.MessageProto.GrpcRoundResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protoc.MessageProto.GrpcRoundResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protoc.MessageProto.GrpcRoundResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protoc.MessageProto.GrpcRoundResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protoc.MessageProto.GrpcRoundResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static protoc.MessageProto.GrpcRoundResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protoc.MessageProto.GrpcRoundResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protoc.MessageProto.GrpcRoundResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(protoc.MessageProto.GrpcRoundResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code service.GrpcRoundResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:service.GrpcRoundResult)
+        protoc.MessageProto.GrpcRoundResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return protoc.MessageProto.internal_static_service_GrpcRoundResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return protoc.MessageProto.internal_static_service_GrpcRoundResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                protoc.MessageProto.GrpcRoundResult.class, protoc.MessageProto.GrpcRoundResult.Builder.class);
+      }
+
+      // Construct using protoc.MessageProto.GrpcRoundResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        currentRound_ = 0;
+
+        remainingHps_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        elapsedFrame_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return protoc.MessageProto.internal_static_service_GrpcRoundResult_descriptor;
+      }
+
+      @java.lang.Override
+      public protoc.MessageProto.GrpcRoundResult getDefaultInstanceForType() {
+        return protoc.MessageProto.GrpcRoundResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public protoc.MessageProto.GrpcRoundResult build() {
+        protoc.MessageProto.GrpcRoundResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public protoc.MessageProto.GrpcRoundResult buildPartial() {
+        protoc.MessageProto.GrpcRoundResult result = new protoc.MessageProto.GrpcRoundResult(this);
+        int from_bitField0_ = bitField0_;
+        result.currentRound_ = currentRound_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          remainingHps_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.remainingHps_ = remainingHps_;
+        result.elapsedFrame_ = elapsedFrame_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof protoc.MessageProto.GrpcRoundResult) {
+          return mergeFrom((protoc.MessageProto.GrpcRoundResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(protoc.MessageProto.GrpcRoundResult other) {
+        if (other == protoc.MessageProto.GrpcRoundResult.getDefaultInstance()) return this;
+        if (other.getCurrentRound() != 0) {
+          setCurrentRound(other.getCurrentRound());
+        }
+        if (!other.remainingHps_.isEmpty()) {
+          if (remainingHps_.isEmpty()) {
+            remainingHps_ = other.remainingHps_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureRemainingHpsIsMutable();
+            remainingHps_.addAll(other.remainingHps_);
+          }
+          onChanged();
+        }
+        if (other.getElapsedFrame() != 0) {
+          setElapsedFrame(other.getElapsedFrame());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                currentRound_ = input.readInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                int v = input.readInt32();
+                ensureRemainingHpsIsMutable();
+                remainingHps_.addInt(v);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureRemainingHpsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  remainingHps_.addInt(input.readInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 18
+              case 24: {
+                elapsedFrame_ = input.readInt32();
+
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int currentRound_ ;
+      /**
+       * <code>int32 current_round = 1;</code>
+       * @return The currentRound.
+       */
+      @java.lang.Override
+      public int getCurrentRound() {
+        return currentRound_;
+      }
+      /**
+       * <code>int32 current_round = 1;</code>
+       * @param value The currentRound to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentRound(int value) {
+        
+        currentRound_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 current_round = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentRound() {
+        
+        currentRound_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList remainingHps_ = emptyIntList();
+      private void ensureRemainingHpsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          remainingHps_ = mutableCopy(remainingHps_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int32 remaining_hps = 2;</code>
+       * @return A list containing the remainingHps.
+       */
+      public java.util.List<java.lang.Integer>
+          getRemainingHpsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(remainingHps_) : remainingHps_;
+      }
+      /**
+       * <code>repeated int32 remaining_hps = 2;</code>
+       * @return The count of remainingHps.
+       */
+      public int getRemainingHpsCount() {
+        return remainingHps_.size();
+      }
+      /**
+       * <code>repeated int32 remaining_hps = 2;</code>
+       * @param index The index of the element to return.
+       * @return The remainingHps at the given index.
+       */
+      public int getRemainingHps(int index) {
+        return remainingHps_.getInt(index);
+      }
+      /**
+       * <code>repeated int32 remaining_hps = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The remainingHps to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemainingHps(
+          int index, int value) {
+        ensureRemainingHpsIsMutable();
+        remainingHps_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 remaining_hps = 2;</code>
+       * @param value The remainingHps to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRemainingHps(int value) {
+        ensureRemainingHpsIsMutable();
+        remainingHps_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 remaining_hps = 2;</code>
+       * @param values The remainingHps to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRemainingHps(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureRemainingHpsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, remainingHps_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 remaining_hps = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemainingHps() {
+        remainingHps_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private int elapsedFrame_ ;
+      /**
+       * <code>int32 elapsed_frame = 3;</code>
+       * @return The elapsedFrame.
+       */
+      @java.lang.Override
+      public int getElapsedFrame() {
+        return elapsedFrame_;
+      }
+      /**
+       * <code>int32 elapsed_frame = 3;</code>
+       * @param value The elapsedFrame to set.
+       * @return This builder for chaining.
+       */
+      public Builder setElapsedFrame(int value) {
+        
+        elapsedFrame_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 elapsed_frame = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearElapsedFrame() {
+        
+        elapsedFrame_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:service.GrpcRoundResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:service.GrpcRoundResult)
+    private static final protoc.MessageProto.GrpcRoundResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new protoc.MessageProto.GrpcRoundResult();
+    }
+
+    public static protoc.MessageProto.GrpcRoundResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GrpcRoundResult>
+        PARSER = new com.google.protobuf.AbstractParser<GrpcRoundResult>() {
+      @java.lang.Override
+      public GrpcRoundResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GrpcRoundResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GrpcRoundResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public protoc.MessageProto.GrpcRoundResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GrpcKeyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:service.GrpcKey)
       com.google.protobuf.MessageOrBuilder {
@@ -9488,1658 +11411,6 @@ public final class MessageProto {
 
   }
 
-  public interface GrpcCommandCenterOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:service.GrpcCommandCenter)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .service.GrpcKey skill_key = 1;</code>
-     */
-    java.util.List<protoc.MessageProto.GrpcKey> 
-        getSkillKeyList();
-    /**
-     * <code>repeated .service.GrpcKey skill_key = 1;</code>
-     */
-    protoc.MessageProto.GrpcKey getSkillKey(int index);
-    /**
-     * <code>repeated .service.GrpcKey skill_key = 1;</code>
-     */
-    int getSkillKeyCount();
-    /**
-     * <code>repeated .service.GrpcKey skill_key = 1;</code>
-     */
-    java.util.List<? extends protoc.MessageProto.GrpcKeyOrBuilder> 
-        getSkillKeyOrBuilderList();
-    /**
-     * <code>repeated .service.GrpcKey skill_key = 1;</code>
-     */
-    protoc.MessageProto.GrpcKeyOrBuilder getSkillKeyOrBuilder(
-        int index);
-
-    /**
-     * <code>string called_command = 2;</code>
-     * @return The calledCommand.
-     */
-    java.lang.String getCalledCommand();
-    /**
-     * <code>string called_command = 2;</code>
-     * @return The bytes for calledCommand.
-     */
-    com.google.protobuf.ByteString
-        getCalledCommandBytes();
-  }
-  /**
-   * Protobuf type {@code service.GrpcCommandCenter}
-   */
-  public static final class GrpcCommandCenter extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:service.GrpcCommandCenter)
-      GrpcCommandCenterOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GrpcCommandCenter.newBuilder() to construct.
-    private GrpcCommandCenter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private GrpcCommandCenter() {
-      skillKey_ = java.util.Collections.emptyList();
-      calledCommand_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GrpcCommandCenter();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return protoc.MessageProto.internal_static_service_GrpcCommandCenter_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return protoc.MessageProto.internal_static_service_GrpcCommandCenter_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              protoc.MessageProto.GrpcCommandCenter.class, protoc.MessageProto.GrpcCommandCenter.Builder.class);
-    }
-
-    public static final int SKILL_KEY_FIELD_NUMBER = 1;
-    private java.util.List<protoc.MessageProto.GrpcKey> skillKey_;
-    /**
-     * <code>repeated .service.GrpcKey skill_key = 1;</code>
-     */
-    @java.lang.Override
-    public java.util.List<protoc.MessageProto.GrpcKey> getSkillKeyList() {
-      return skillKey_;
-    }
-    /**
-     * <code>repeated .service.GrpcKey skill_key = 1;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends protoc.MessageProto.GrpcKeyOrBuilder> 
-        getSkillKeyOrBuilderList() {
-      return skillKey_;
-    }
-    /**
-     * <code>repeated .service.GrpcKey skill_key = 1;</code>
-     */
-    @java.lang.Override
-    public int getSkillKeyCount() {
-      return skillKey_.size();
-    }
-    /**
-     * <code>repeated .service.GrpcKey skill_key = 1;</code>
-     */
-    @java.lang.Override
-    public protoc.MessageProto.GrpcKey getSkillKey(int index) {
-      return skillKey_.get(index);
-    }
-    /**
-     * <code>repeated .service.GrpcKey skill_key = 1;</code>
-     */
-    @java.lang.Override
-    public protoc.MessageProto.GrpcKeyOrBuilder getSkillKeyOrBuilder(
-        int index) {
-      return skillKey_.get(index);
-    }
-
-    public static final int CALLED_COMMAND_FIELD_NUMBER = 2;
-    private volatile java.lang.Object calledCommand_;
-    /**
-     * <code>string called_command = 2;</code>
-     * @return The calledCommand.
-     */
-    @java.lang.Override
-    public java.lang.String getCalledCommand() {
-      java.lang.Object ref = calledCommand_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        calledCommand_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string called_command = 2;</code>
-     * @return The bytes for calledCommand.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCalledCommandBytes() {
-      java.lang.Object ref = calledCommand_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        calledCommand_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < skillKey_.size(); i++) {
-        output.writeMessage(1, skillKey_.get(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(calledCommand_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, calledCommand_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < skillKey_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, skillKey_.get(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(calledCommand_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, calledCommand_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof protoc.MessageProto.GrpcCommandCenter)) {
-        return super.equals(obj);
-      }
-      protoc.MessageProto.GrpcCommandCenter other = (protoc.MessageProto.GrpcCommandCenter) obj;
-
-      if (!getSkillKeyList()
-          .equals(other.getSkillKeyList())) return false;
-      if (!getCalledCommand()
-          .equals(other.getCalledCommand())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getSkillKeyCount() > 0) {
-        hash = (37 * hash) + SKILL_KEY_FIELD_NUMBER;
-        hash = (53 * hash) + getSkillKeyList().hashCode();
-      }
-      hash = (37 * hash) + CALLED_COMMAND_FIELD_NUMBER;
-      hash = (53 * hash) + getCalledCommand().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static protoc.MessageProto.GrpcCommandCenter parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.MessageProto.GrpcCommandCenter parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.MessageProto.GrpcCommandCenter parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.MessageProto.GrpcCommandCenter parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.MessageProto.GrpcCommandCenter parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.MessageProto.GrpcCommandCenter parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.MessageProto.GrpcCommandCenter parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static protoc.MessageProto.GrpcCommandCenter parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static protoc.MessageProto.GrpcCommandCenter parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static protoc.MessageProto.GrpcCommandCenter parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static protoc.MessageProto.GrpcCommandCenter parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static protoc.MessageProto.GrpcCommandCenter parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(protoc.MessageProto.GrpcCommandCenter prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code service.GrpcCommandCenter}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:service.GrpcCommandCenter)
-        protoc.MessageProto.GrpcCommandCenterOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return protoc.MessageProto.internal_static_service_GrpcCommandCenter_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return protoc.MessageProto.internal_static_service_GrpcCommandCenter_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                protoc.MessageProto.GrpcCommandCenter.class, protoc.MessageProto.GrpcCommandCenter.Builder.class);
-      }
-
-      // Construct using protoc.MessageProto.GrpcCommandCenter.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (skillKeyBuilder_ == null) {
-          skillKey_ = java.util.Collections.emptyList();
-        } else {
-          skillKey_ = null;
-          skillKeyBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        calledCommand_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return protoc.MessageProto.internal_static_service_GrpcCommandCenter_descriptor;
-      }
-
-      @java.lang.Override
-      public protoc.MessageProto.GrpcCommandCenter getDefaultInstanceForType() {
-        return protoc.MessageProto.GrpcCommandCenter.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public protoc.MessageProto.GrpcCommandCenter build() {
-        protoc.MessageProto.GrpcCommandCenter result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public protoc.MessageProto.GrpcCommandCenter buildPartial() {
-        protoc.MessageProto.GrpcCommandCenter result = new protoc.MessageProto.GrpcCommandCenter(this);
-        int from_bitField0_ = bitField0_;
-        if (skillKeyBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            skillKey_ = java.util.Collections.unmodifiableList(skillKey_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.skillKey_ = skillKey_;
-        } else {
-          result.skillKey_ = skillKeyBuilder_.build();
-        }
-        result.calledCommand_ = calledCommand_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof protoc.MessageProto.GrpcCommandCenter) {
-          return mergeFrom((protoc.MessageProto.GrpcCommandCenter)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(protoc.MessageProto.GrpcCommandCenter other) {
-        if (other == protoc.MessageProto.GrpcCommandCenter.getDefaultInstance()) return this;
-        if (skillKeyBuilder_ == null) {
-          if (!other.skillKey_.isEmpty()) {
-            if (skillKey_.isEmpty()) {
-              skillKey_ = other.skillKey_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureSkillKeyIsMutable();
-              skillKey_.addAll(other.skillKey_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.skillKey_.isEmpty()) {
-            if (skillKeyBuilder_.isEmpty()) {
-              skillKeyBuilder_.dispose();
-              skillKeyBuilder_ = null;
-              skillKey_ = other.skillKey_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              skillKeyBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getSkillKeyFieldBuilder() : null;
-            } else {
-              skillKeyBuilder_.addAllMessages(other.skillKey_);
-            }
-          }
-        }
-        if (!other.getCalledCommand().isEmpty()) {
-          calledCommand_ = other.calledCommand_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                protoc.MessageProto.GrpcKey m =
-                    input.readMessage(
-                        protoc.MessageProto.GrpcKey.parser(),
-                        extensionRegistry);
-                if (skillKeyBuilder_ == null) {
-                  ensureSkillKeyIsMutable();
-                  skillKey_.add(m);
-                } else {
-                  skillKeyBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              case 18: {
-                calledCommand_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<protoc.MessageProto.GrpcKey> skillKey_ =
-        java.util.Collections.emptyList();
-      private void ensureSkillKeyIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          skillKey_ = new java.util.ArrayList<protoc.MessageProto.GrpcKey>(skillKey_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          protoc.MessageProto.GrpcKey, protoc.MessageProto.GrpcKey.Builder, protoc.MessageProto.GrpcKeyOrBuilder> skillKeyBuilder_;
-
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public java.util.List<protoc.MessageProto.GrpcKey> getSkillKeyList() {
-        if (skillKeyBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(skillKey_);
-        } else {
-          return skillKeyBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public int getSkillKeyCount() {
-        if (skillKeyBuilder_ == null) {
-          return skillKey_.size();
-        } else {
-          return skillKeyBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public protoc.MessageProto.GrpcKey getSkillKey(int index) {
-        if (skillKeyBuilder_ == null) {
-          return skillKey_.get(index);
-        } else {
-          return skillKeyBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public Builder setSkillKey(
-          int index, protoc.MessageProto.GrpcKey value) {
-        if (skillKeyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSkillKeyIsMutable();
-          skillKey_.set(index, value);
-          onChanged();
-        } else {
-          skillKeyBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public Builder setSkillKey(
-          int index, protoc.MessageProto.GrpcKey.Builder builderForValue) {
-        if (skillKeyBuilder_ == null) {
-          ensureSkillKeyIsMutable();
-          skillKey_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          skillKeyBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public Builder addSkillKey(protoc.MessageProto.GrpcKey value) {
-        if (skillKeyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSkillKeyIsMutable();
-          skillKey_.add(value);
-          onChanged();
-        } else {
-          skillKeyBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public Builder addSkillKey(
-          int index, protoc.MessageProto.GrpcKey value) {
-        if (skillKeyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSkillKeyIsMutable();
-          skillKey_.add(index, value);
-          onChanged();
-        } else {
-          skillKeyBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public Builder addSkillKey(
-          protoc.MessageProto.GrpcKey.Builder builderForValue) {
-        if (skillKeyBuilder_ == null) {
-          ensureSkillKeyIsMutable();
-          skillKey_.add(builderForValue.build());
-          onChanged();
-        } else {
-          skillKeyBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public Builder addSkillKey(
-          int index, protoc.MessageProto.GrpcKey.Builder builderForValue) {
-        if (skillKeyBuilder_ == null) {
-          ensureSkillKeyIsMutable();
-          skillKey_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          skillKeyBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public Builder addAllSkillKey(
-          java.lang.Iterable<? extends protoc.MessageProto.GrpcKey> values) {
-        if (skillKeyBuilder_ == null) {
-          ensureSkillKeyIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, skillKey_);
-          onChanged();
-        } else {
-          skillKeyBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public Builder clearSkillKey() {
-        if (skillKeyBuilder_ == null) {
-          skillKey_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          skillKeyBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public Builder removeSkillKey(int index) {
-        if (skillKeyBuilder_ == null) {
-          ensureSkillKeyIsMutable();
-          skillKey_.remove(index);
-          onChanged();
-        } else {
-          skillKeyBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public protoc.MessageProto.GrpcKey.Builder getSkillKeyBuilder(
-          int index) {
-        return getSkillKeyFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public protoc.MessageProto.GrpcKeyOrBuilder getSkillKeyOrBuilder(
-          int index) {
-        if (skillKeyBuilder_ == null) {
-          return skillKey_.get(index);  } else {
-          return skillKeyBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public java.util.List<? extends protoc.MessageProto.GrpcKeyOrBuilder> 
-           getSkillKeyOrBuilderList() {
-        if (skillKeyBuilder_ != null) {
-          return skillKeyBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(skillKey_);
-        }
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public protoc.MessageProto.GrpcKey.Builder addSkillKeyBuilder() {
-        return getSkillKeyFieldBuilder().addBuilder(
-            protoc.MessageProto.GrpcKey.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public protoc.MessageProto.GrpcKey.Builder addSkillKeyBuilder(
-          int index) {
-        return getSkillKeyFieldBuilder().addBuilder(
-            index, protoc.MessageProto.GrpcKey.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .service.GrpcKey skill_key = 1;</code>
-       */
-      public java.util.List<protoc.MessageProto.GrpcKey.Builder> 
-           getSkillKeyBuilderList() {
-        return getSkillKeyFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          protoc.MessageProto.GrpcKey, protoc.MessageProto.GrpcKey.Builder, protoc.MessageProto.GrpcKeyOrBuilder> 
-          getSkillKeyFieldBuilder() {
-        if (skillKeyBuilder_ == null) {
-          skillKeyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              protoc.MessageProto.GrpcKey, protoc.MessageProto.GrpcKey.Builder, protoc.MessageProto.GrpcKeyOrBuilder>(
-                  skillKey_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          skillKey_ = null;
-        }
-        return skillKeyBuilder_;
-      }
-
-      private java.lang.Object calledCommand_ = "";
-      /**
-       * <code>string called_command = 2;</code>
-       * @return The calledCommand.
-       */
-      public java.lang.String getCalledCommand() {
-        java.lang.Object ref = calledCommand_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          calledCommand_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string called_command = 2;</code>
-       * @return The bytes for calledCommand.
-       */
-      public com.google.protobuf.ByteString
-          getCalledCommandBytes() {
-        java.lang.Object ref = calledCommand_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          calledCommand_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string called_command = 2;</code>
-       * @param value The calledCommand to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCalledCommand(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        calledCommand_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string called_command = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCalledCommand() {
-        
-        calledCommand_ = getDefaultInstance().getCalledCommand();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string called_command = 2;</code>
-       * @param value The bytes for calledCommand to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCalledCommandBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        calledCommand_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:service.GrpcCommandCenter)
-    }
-
-    // @@protoc_insertion_point(class_scope:service.GrpcCommandCenter)
-    private static final protoc.MessageProto.GrpcCommandCenter DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new protoc.MessageProto.GrpcCommandCenter();
-    }
-
-    public static protoc.MessageProto.GrpcCommandCenter getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GrpcCommandCenter>
-        PARSER = new com.google.protobuf.AbstractParser<GrpcCommandCenter>() {
-      @java.lang.Override
-      public GrpcCommandCenter parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<GrpcCommandCenter> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GrpcCommandCenter> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public protoc.MessageProto.GrpcCommandCenter getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface GrpcRoundResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:service.GrpcRoundResult)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int32 current_round = 1;</code>
-     * @return The currentRound.
-     */
-    int getCurrentRound();
-
-    /**
-     * <code>repeated int32 remaining_hps = 2;</code>
-     * @return A list containing the remainingHps.
-     */
-    java.util.List<java.lang.Integer> getRemainingHpsList();
-    /**
-     * <code>repeated int32 remaining_hps = 2;</code>
-     * @return The count of remainingHps.
-     */
-    int getRemainingHpsCount();
-    /**
-     * <code>repeated int32 remaining_hps = 2;</code>
-     * @param index The index of the element to return.
-     * @return The remainingHps at the given index.
-     */
-    int getRemainingHps(int index);
-
-    /**
-     * <code>int32 elapsed_frame = 3;</code>
-     * @return The elapsedFrame.
-     */
-    int getElapsedFrame();
-  }
-  /**
-   * Protobuf type {@code service.GrpcRoundResult}
-   */
-  public static final class GrpcRoundResult extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:service.GrpcRoundResult)
-      GrpcRoundResultOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GrpcRoundResult.newBuilder() to construct.
-    private GrpcRoundResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private GrpcRoundResult() {
-      remainingHps_ = emptyIntList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GrpcRoundResult();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return protoc.MessageProto.internal_static_service_GrpcRoundResult_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return protoc.MessageProto.internal_static_service_GrpcRoundResult_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              protoc.MessageProto.GrpcRoundResult.class, protoc.MessageProto.GrpcRoundResult.Builder.class);
-    }
-
-    public static final int CURRENT_ROUND_FIELD_NUMBER = 1;
-    private int currentRound_;
-    /**
-     * <code>int32 current_round = 1;</code>
-     * @return The currentRound.
-     */
-    @java.lang.Override
-    public int getCurrentRound() {
-      return currentRound_;
-    }
-
-    public static final int REMAINING_HPS_FIELD_NUMBER = 2;
-    private com.google.protobuf.Internal.IntList remainingHps_;
-    /**
-     * <code>repeated int32 remaining_hps = 2;</code>
-     * @return A list containing the remainingHps.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getRemainingHpsList() {
-      return remainingHps_;
-    }
-    /**
-     * <code>repeated int32 remaining_hps = 2;</code>
-     * @return The count of remainingHps.
-     */
-    public int getRemainingHpsCount() {
-      return remainingHps_.size();
-    }
-    /**
-     * <code>repeated int32 remaining_hps = 2;</code>
-     * @param index The index of the element to return.
-     * @return The remainingHps at the given index.
-     */
-    public int getRemainingHps(int index) {
-      return remainingHps_.getInt(index);
-    }
-    private int remainingHpsMemoizedSerializedSize = -1;
-
-    public static final int ELAPSED_FRAME_FIELD_NUMBER = 3;
-    private int elapsedFrame_;
-    /**
-     * <code>int32 elapsed_frame = 3;</code>
-     * @return The elapsedFrame.
-     */
-    @java.lang.Override
-    public int getElapsedFrame() {
-      return elapsedFrame_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (currentRound_ != 0) {
-        output.writeInt32(1, currentRound_);
-      }
-      if (getRemainingHpsList().size() > 0) {
-        output.writeUInt32NoTag(18);
-        output.writeUInt32NoTag(remainingHpsMemoizedSerializedSize);
-      }
-      for (int i = 0; i < remainingHps_.size(); i++) {
-        output.writeInt32NoTag(remainingHps_.getInt(i));
-      }
-      if (elapsedFrame_ != 0) {
-        output.writeInt32(3, elapsedFrame_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (currentRound_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, currentRound_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < remainingHps_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(remainingHps_.getInt(i));
-        }
-        size += dataSize;
-        if (!getRemainingHpsList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        remainingHpsMemoizedSerializedSize = dataSize;
-      }
-      if (elapsedFrame_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, elapsedFrame_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof protoc.MessageProto.GrpcRoundResult)) {
-        return super.equals(obj);
-      }
-      protoc.MessageProto.GrpcRoundResult other = (protoc.MessageProto.GrpcRoundResult) obj;
-
-      if (getCurrentRound()
-          != other.getCurrentRound()) return false;
-      if (!getRemainingHpsList()
-          .equals(other.getRemainingHpsList())) return false;
-      if (getElapsedFrame()
-          != other.getElapsedFrame()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CURRENT_ROUND_FIELD_NUMBER;
-      hash = (53 * hash) + getCurrentRound();
-      if (getRemainingHpsCount() > 0) {
-        hash = (37 * hash) + REMAINING_HPS_FIELD_NUMBER;
-        hash = (53 * hash) + getRemainingHpsList().hashCode();
-      }
-      hash = (37 * hash) + ELAPSED_FRAME_FIELD_NUMBER;
-      hash = (53 * hash) + getElapsedFrame();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static protoc.MessageProto.GrpcRoundResult parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.MessageProto.GrpcRoundResult parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.MessageProto.GrpcRoundResult parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.MessageProto.GrpcRoundResult parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.MessageProto.GrpcRoundResult parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static protoc.MessageProto.GrpcRoundResult parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static protoc.MessageProto.GrpcRoundResult parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static protoc.MessageProto.GrpcRoundResult parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static protoc.MessageProto.GrpcRoundResult parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static protoc.MessageProto.GrpcRoundResult parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static protoc.MessageProto.GrpcRoundResult parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static protoc.MessageProto.GrpcRoundResult parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(protoc.MessageProto.GrpcRoundResult prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code service.GrpcRoundResult}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:service.GrpcRoundResult)
-        protoc.MessageProto.GrpcRoundResultOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return protoc.MessageProto.internal_static_service_GrpcRoundResult_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return protoc.MessageProto.internal_static_service_GrpcRoundResult_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                protoc.MessageProto.GrpcRoundResult.class, protoc.MessageProto.GrpcRoundResult.Builder.class);
-      }
-
-      // Construct using protoc.MessageProto.GrpcRoundResult.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        currentRound_ = 0;
-
-        remainingHps_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        elapsedFrame_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return protoc.MessageProto.internal_static_service_GrpcRoundResult_descriptor;
-      }
-
-      @java.lang.Override
-      public protoc.MessageProto.GrpcRoundResult getDefaultInstanceForType() {
-        return protoc.MessageProto.GrpcRoundResult.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public protoc.MessageProto.GrpcRoundResult build() {
-        protoc.MessageProto.GrpcRoundResult result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public protoc.MessageProto.GrpcRoundResult buildPartial() {
-        protoc.MessageProto.GrpcRoundResult result = new protoc.MessageProto.GrpcRoundResult(this);
-        int from_bitField0_ = bitField0_;
-        result.currentRound_ = currentRound_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          remainingHps_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.remainingHps_ = remainingHps_;
-        result.elapsedFrame_ = elapsedFrame_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof protoc.MessageProto.GrpcRoundResult) {
-          return mergeFrom((protoc.MessageProto.GrpcRoundResult)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(protoc.MessageProto.GrpcRoundResult other) {
-        if (other == protoc.MessageProto.GrpcRoundResult.getDefaultInstance()) return this;
-        if (other.getCurrentRound() != 0) {
-          setCurrentRound(other.getCurrentRound());
-        }
-        if (!other.remainingHps_.isEmpty()) {
-          if (remainingHps_.isEmpty()) {
-            remainingHps_ = other.remainingHps_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureRemainingHpsIsMutable();
-            remainingHps_.addAll(other.remainingHps_);
-          }
-          onChanged();
-        }
-        if (other.getElapsedFrame() != 0) {
-          setElapsedFrame(other.getElapsedFrame());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                currentRound_ = input.readInt32();
-
-                break;
-              } // case 8
-              case 16: {
-                int v = input.readInt32();
-                ensureRemainingHpsIsMutable();
-                remainingHps_.addInt(v);
-                break;
-              } // case 16
-              case 18: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureRemainingHpsIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  remainingHps_.addInt(input.readInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 18
-              case 24: {
-                elapsedFrame_ = input.readInt32();
-
-                break;
-              } // case 24
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int currentRound_ ;
-      /**
-       * <code>int32 current_round = 1;</code>
-       * @return The currentRound.
-       */
-      @java.lang.Override
-      public int getCurrentRound() {
-        return currentRound_;
-      }
-      /**
-       * <code>int32 current_round = 1;</code>
-       * @param value The currentRound to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurrentRound(int value) {
-        
-        currentRound_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 current_round = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCurrentRound() {
-        
-        currentRound_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.IntList remainingHps_ = emptyIntList();
-      private void ensureRemainingHpsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          remainingHps_ = mutableCopy(remainingHps_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated int32 remaining_hps = 2;</code>
-       * @return A list containing the remainingHps.
-       */
-      public java.util.List<java.lang.Integer>
-          getRemainingHpsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(remainingHps_) : remainingHps_;
-      }
-      /**
-       * <code>repeated int32 remaining_hps = 2;</code>
-       * @return The count of remainingHps.
-       */
-      public int getRemainingHpsCount() {
-        return remainingHps_.size();
-      }
-      /**
-       * <code>repeated int32 remaining_hps = 2;</code>
-       * @param index The index of the element to return.
-       * @return The remainingHps at the given index.
-       */
-      public int getRemainingHps(int index) {
-        return remainingHps_.getInt(index);
-      }
-      /**
-       * <code>repeated int32 remaining_hps = 2;</code>
-       * @param index The index to set the value at.
-       * @param value The remainingHps to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRemainingHps(
-          int index, int value) {
-        ensureRemainingHpsIsMutable();
-        remainingHps_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int32 remaining_hps = 2;</code>
-       * @param value The remainingHps to add.
-       * @return This builder for chaining.
-       */
-      public Builder addRemainingHps(int value) {
-        ensureRemainingHpsIsMutable();
-        remainingHps_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int32 remaining_hps = 2;</code>
-       * @param values The remainingHps to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllRemainingHps(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureRemainingHpsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, remainingHps_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int32 remaining_hps = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRemainingHps() {
-        remainingHps_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-
-      private int elapsedFrame_ ;
-      /**
-       * <code>int32 elapsed_frame = 3;</code>
-       * @return The elapsedFrame.
-       */
-      @java.lang.Override
-      public int getElapsedFrame() {
-        return elapsedFrame_;
-      }
-      /**
-       * <code>int32 elapsed_frame = 3;</code>
-       * @param value The elapsedFrame to set.
-       * @return This builder for chaining.
-       */
-      public Builder setElapsedFrame(int value) {
-        
-        elapsedFrame_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 elapsed_frame = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearElapsedFrame() {
-        
-        elapsedFrame_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:service.GrpcRoundResult)
-    }
-
-    // @@protoc_insertion_point(class_scope:service.GrpcRoundResult)
-    private static final protoc.MessageProto.GrpcRoundResult DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new protoc.MessageProto.GrpcRoundResult();
-    }
-
-    public static protoc.MessageProto.GrpcRoundResult getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GrpcRoundResult>
-        PARSER = new com.google.protobuf.AbstractParser<GrpcRoundResult>() {
-      @java.lang.Override
-      public GrpcRoundResult parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<GrpcRoundResult> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GrpcRoundResult> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public protoc.MessageProto.GrpcRoundResult getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_service_GrpcHitArea_descriptor;
   private static final 
@@ -11176,20 +11447,20 @@ public final class MessageProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_service_GrpcAudioData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service_GrpcKey_descriptor;
+    internal_static_service_GrpcGameData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service_GrpcKey_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service_GrpcCommandCenter_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service_GrpcCommandCenter_fieldAccessorTable;
+      internal_static_service_GrpcGameData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_service_GrpcRoundResult_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_service_GrpcRoundResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_service_GrpcKey_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_service_GrpcKey_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11238,15 +11509,15 @@ public final class MessageProto {
       "GrpcScreenData\022\025\n\rdisplay_bytes\030\001 \001(\014\"u\n" +
       "\rGrpcAudioData\022\031\n\021raw_data_as_bytes\030\001 \001(" +
       "\014\022&\n\010fft_data\030\002 \003(\0132\024.service.GrpcFftDat" +
-      "a\022!\n\031spectrogram_data_as_bytes\030\003 \001(\014\"V\n\007" +
-      "GrpcKey\022\t\n\001A\030\001 \001(\010\022\t\n\001B\030\002 \001(\010\022\t\n\001C\030\003 \001(\010" +
-      "\022\t\n\001U\030\004 \001(\010\022\t\n\001R\030\005 \001(\010\022\t\n\001D\030\006 \001(\010\022\t\n\001L\030\007" +
-      " \001(\010\"P\n\021GrpcCommandCenter\022#\n\tskill_key\030\001" +
-      " \003(\0132\020.service.GrpcKey\022\026\n\016called_command" +
-      "\030\002 \001(\t\"V\n\017GrpcRoundResult\022\025\n\rcurrent_rou" +
-      "nd\030\001 \001(\005\022\025\n\rremaining_hps\030\002 \003(\005\022\025\n\relaps" +
-      "ed_frame\030\003 \001(\005B\036\n\006protocB\014MessageProtoP\000" +
-      "\242\002\003HLWb\006proto3"
+      "a\022!\n\031spectrogram_data_as_bytes\030\003 \001(\014\"`\n\014" +
+      "GrpcGameData\022\017\n\007max_hps\030\001 \003(\005\022\024\n\014max_ene" +
+      "rgies\030\002 \003(\005\022\027\n\017character_names\030\003 \003(\t\022\020\n\010" +
+      "ai_names\030\004 \003(\t\"V\n\017GrpcRoundResult\022\025\n\rcur" +
+      "rent_round\030\001 \001(\005\022\025\n\rremaining_hps\030\002 \003(\005\022" +
+      "\025\n\relapsed_frame\030\003 \001(\005\"V\n\007GrpcKey\022\t\n\001A\030\001" +
+      " \001(\010\022\t\n\001B\030\002 \001(\010\022\t\n\001C\030\003 \001(\010\022\t\n\001U\030\004 \001(\010\022\t\n" +
+      "\001R\030\005 \001(\010\022\t\n\001D\030\006 \001(\010\022\t\n\001L\030\007 \001(\010B\036\n\006protoc" +
+      "B\014MessageProtoP\000\242\002\003HLWb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11295,24 +11566,24 @@ public final class MessageProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service_GrpcAudioData_descriptor,
         new java.lang.String[] { "RawDataAsBytes", "FftData", "SpectrogramDataAsBytes", });
-    internal_static_service_GrpcKey_descriptor =
+    internal_static_service_GrpcGameData_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_service_GrpcKey_fieldAccessorTable = new
+    internal_static_service_GrpcGameData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service_GrpcKey_descriptor,
-        new java.lang.String[] { "A", "B", "C", "U", "R", "D", "L", });
-    internal_static_service_GrpcCommandCenter_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_service_GrpcCommandCenter_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service_GrpcCommandCenter_descriptor,
-        new java.lang.String[] { "SkillKey", "CalledCommand", });
+        internal_static_service_GrpcGameData_descriptor,
+        new java.lang.String[] { "MaxHps", "MaxEnergies", "CharacterNames", "AiNames", });
     internal_static_service_GrpcRoundResult_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_service_GrpcRoundResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service_GrpcRoundResult_descriptor,
         new java.lang.String[] { "CurrentRound", "RemainingHps", "ElapsedFrame", });
+    internal_static_service_GrpcKey_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_service_GrpcKey_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_service_GrpcKey_descriptor,
+        new java.lang.String[] { "A", "B", "C", "U", "R", "D", "L", });
     protoc.EnumProto.getDescriptor();
   }
 
