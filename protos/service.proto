@@ -13,11 +13,12 @@ message SpectateRequest {
 	
 }
 
-message SpectatorGameData {
-	bool empty_flag = 1;
+message SpectatorGameState {
+	GrpcFlag state_flag = 1;
 	GrpcFrameData frame_data = 2;
 	GrpcScreenData screen_data = 3;
 	GrpcAudioData audio_data = 4;
+	GrpcRoundResult round_result = 5;
 }
 
 message InitializeRequest {
@@ -34,8 +35,8 @@ message ParticipateRequest {
 	string player_uuid = 1;
 }
 
-message PlayerGameData {
-	GrpcFlag flag = 1;
+message PlayerGameState {
+	GrpcFlag state_flag = 1;
 	bool is_control = 2;
 	GrpcFrameData frame_data = 3;
 	GrpcScreenData screen_data = 4;
@@ -44,16 +45,15 @@ message PlayerGameData {
 	GrpcRoundResult round_result = 7;
 }
 
-message PlayerAction {
+message PlayerInput {
 	string player_uuid = 1;
 	GrpcKey input_key = 2;
-	string called_command = 3;
 }
 
 service Service {
-	rpc Spectate(SpectateRequest) returns (stream SpectatorGameData) {}
+	rpc Spectate(SpectateRequest) returns (stream SpectatorGameState) {}
 
 	rpc Initialize (InitializeRequest) returns (InitializeResponse) {}
-	rpc Participate (ParticipateRequest) returns (stream PlayerGameData) {}
-	rpc Input (PlayerAction) returns (google.protobuf.Empty) {}
+	rpc Participate (ParticipateRequest) returns (stream PlayerGameState) {}
+	rpc Input (PlayerInput) returns (google.protobuf.Empty) {}
 }

@@ -414,15 +414,20 @@ public final class ServiceProto {
 
   }
 
-  public interface SpectatorGameDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:service.SpectatorGameData)
+  public interface SpectatorGameStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:service.SpectatorGameState)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool empty_flag = 1;</code>
-     * @return The emptyFlag.
+     * <code>.service.GrpcFlag state_flag = 1;</code>
+     * @return The enum numeric value on the wire for stateFlag.
      */
-    boolean getEmptyFlag();
+    int getStateFlagValue();
+    /**
+     * <code>.service.GrpcFlag state_flag = 1;</code>
+     * @return The stateFlag.
+     */
+    protoc.EnumProto.GrpcFlag getStateFlag();
 
     /**
      * <code>.service.GrpcFrameData frame_data = 2;</code>
@@ -468,27 +473,43 @@ public final class ServiceProto {
      * <code>.service.GrpcAudioData audio_data = 4;</code>
      */
     protoc.MessageProto.GrpcAudioDataOrBuilder getAudioDataOrBuilder();
+
+    /**
+     * <code>.service.GrpcRoundResult round_result = 5;</code>
+     * @return Whether the roundResult field is set.
+     */
+    boolean hasRoundResult();
+    /**
+     * <code>.service.GrpcRoundResult round_result = 5;</code>
+     * @return The roundResult.
+     */
+    protoc.MessageProto.GrpcRoundResult getRoundResult();
+    /**
+     * <code>.service.GrpcRoundResult round_result = 5;</code>
+     */
+    protoc.MessageProto.GrpcRoundResultOrBuilder getRoundResultOrBuilder();
   }
   /**
-   * Protobuf type {@code service.SpectatorGameData}
+   * Protobuf type {@code service.SpectatorGameState}
    */
-  public static final class SpectatorGameData extends
+  public static final class SpectatorGameState extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:service.SpectatorGameData)
-      SpectatorGameDataOrBuilder {
+      // @@protoc_insertion_point(message_implements:service.SpectatorGameState)
+      SpectatorGameStateOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use SpectatorGameData.newBuilder() to construct.
-    private SpectatorGameData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use SpectatorGameState.newBuilder() to construct.
+    private SpectatorGameState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private SpectatorGameData() {
+    private SpectatorGameState() {
+      stateFlag_ = 0;
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new SpectatorGameData();
+      return new SpectatorGameState();
     }
 
     @java.lang.Override
@@ -498,26 +519,34 @@ public final class ServiceProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return protoc.ServiceProto.internal_static_service_SpectatorGameData_descriptor;
+      return protoc.ServiceProto.internal_static_service_SpectatorGameState_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return protoc.ServiceProto.internal_static_service_SpectatorGameData_fieldAccessorTable
+      return protoc.ServiceProto.internal_static_service_SpectatorGameState_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              protoc.ServiceProto.SpectatorGameData.class, protoc.ServiceProto.SpectatorGameData.Builder.class);
+              protoc.ServiceProto.SpectatorGameState.class, protoc.ServiceProto.SpectatorGameState.Builder.class);
     }
 
-    public static final int EMPTY_FLAG_FIELD_NUMBER = 1;
-    private boolean emptyFlag_;
+    public static final int STATE_FLAG_FIELD_NUMBER = 1;
+    private int stateFlag_;
     /**
-     * <code>bool empty_flag = 1;</code>
-     * @return The emptyFlag.
+     * <code>.service.GrpcFlag state_flag = 1;</code>
+     * @return The enum numeric value on the wire for stateFlag.
      */
-    @java.lang.Override
-    public boolean getEmptyFlag() {
-      return emptyFlag_;
+    @java.lang.Override public int getStateFlagValue() {
+      return stateFlag_;
+    }
+    /**
+     * <code>.service.GrpcFlag state_flag = 1;</code>
+     * @return The stateFlag.
+     */
+    @java.lang.Override public protoc.EnumProto.GrpcFlag getStateFlag() {
+      @SuppressWarnings("deprecation")
+      protoc.EnumProto.GrpcFlag result = protoc.EnumProto.GrpcFlag.valueOf(stateFlag_);
+      return result == null ? protoc.EnumProto.GrpcFlag.UNRECOGNIZED : result;
     }
 
     public static final int FRAME_DATA_FIELD_NUMBER = 2;
@@ -598,6 +627,32 @@ public final class ServiceProto {
       return getAudioData();
     }
 
+    public static final int ROUND_RESULT_FIELD_NUMBER = 5;
+    private protoc.MessageProto.GrpcRoundResult roundResult_;
+    /**
+     * <code>.service.GrpcRoundResult round_result = 5;</code>
+     * @return Whether the roundResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasRoundResult() {
+      return roundResult_ != null;
+    }
+    /**
+     * <code>.service.GrpcRoundResult round_result = 5;</code>
+     * @return The roundResult.
+     */
+    @java.lang.Override
+    public protoc.MessageProto.GrpcRoundResult getRoundResult() {
+      return roundResult_ == null ? protoc.MessageProto.GrpcRoundResult.getDefaultInstance() : roundResult_;
+    }
+    /**
+     * <code>.service.GrpcRoundResult round_result = 5;</code>
+     */
+    @java.lang.Override
+    public protoc.MessageProto.GrpcRoundResultOrBuilder getRoundResultOrBuilder() {
+      return getRoundResult();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -612,8 +667,8 @@ public final class ServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (emptyFlag_ != false) {
-        output.writeBool(1, emptyFlag_);
+      if (stateFlag_ != protoc.EnumProto.GrpcFlag.EMPTY.getNumber()) {
+        output.writeEnum(1, stateFlag_);
       }
       if (frameData_ != null) {
         output.writeMessage(2, getFrameData());
@@ -624,6 +679,9 @@ public final class ServiceProto {
       if (audioData_ != null) {
         output.writeMessage(4, getAudioData());
       }
+      if (roundResult_ != null) {
+        output.writeMessage(5, getRoundResult());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -633,9 +691,9 @@ public final class ServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (emptyFlag_ != false) {
+      if (stateFlag_ != protoc.EnumProto.GrpcFlag.EMPTY.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, emptyFlag_);
+          .computeEnumSize(1, stateFlag_);
       }
       if (frameData_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -649,6 +707,10 @@ public final class ServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getAudioData());
       }
+      if (roundResult_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getRoundResult());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -659,13 +721,12 @@ public final class ServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof protoc.ServiceProto.SpectatorGameData)) {
+      if (!(obj instanceof protoc.ServiceProto.SpectatorGameState)) {
         return super.equals(obj);
       }
-      protoc.ServiceProto.SpectatorGameData other = (protoc.ServiceProto.SpectatorGameData) obj;
+      protoc.ServiceProto.SpectatorGameState other = (protoc.ServiceProto.SpectatorGameState) obj;
 
-      if (getEmptyFlag()
-          != other.getEmptyFlag()) return false;
+      if (stateFlag_ != other.stateFlag_) return false;
       if (hasFrameData() != other.hasFrameData()) return false;
       if (hasFrameData()) {
         if (!getFrameData()
@@ -681,6 +742,11 @@ public final class ServiceProto {
         if (!getAudioData()
             .equals(other.getAudioData())) return false;
       }
+      if (hasRoundResult() != other.hasRoundResult()) return false;
+      if (hasRoundResult()) {
+        if (!getRoundResult()
+            .equals(other.getRoundResult())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -692,9 +758,8 @@ public final class ServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + EMPTY_FLAG_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getEmptyFlag());
+      hash = (37 * hash) + STATE_FLAG_FIELD_NUMBER;
+      hash = (53 * hash) + stateFlag_;
       if (hasFrameData()) {
         hash = (37 * hash) + FRAME_DATA_FIELD_NUMBER;
         hash = (53 * hash) + getFrameData().hashCode();
@@ -707,74 +772,78 @@ public final class ServiceProto {
         hash = (37 * hash) + AUDIO_DATA_FIELD_NUMBER;
         hash = (53 * hash) + getAudioData().hashCode();
       }
+      if (hasRoundResult()) {
+        hash = (37 * hash) + ROUND_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getRoundResult().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static protoc.ServiceProto.SpectatorGameData parseFrom(
+    public static protoc.ServiceProto.SpectatorGameState parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static protoc.ServiceProto.SpectatorGameData parseFrom(
+    public static protoc.ServiceProto.SpectatorGameState parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static protoc.ServiceProto.SpectatorGameData parseFrom(
+    public static protoc.ServiceProto.SpectatorGameState parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static protoc.ServiceProto.SpectatorGameData parseFrom(
+    public static protoc.ServiceProto.SpectatorGameState parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static protoc.ServiceProto.SpectatorGameData parseFrom(byte[] data)
+    public static protoc.ServiceProto.SpectatorGameState parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static protoc.ServiceProto.SpectatorGameData parseFrom(
+    public static protoc.ServiceProto.SpectatorGameState parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static protoc.ServiceProto.SpectatorGameData parseFrom(java.io.InputStream input)
+    public static protoc.ServiceProto.SpectatorGameState parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static protoc.ServiceProto.SpectatorGameData parseFrom(
+    public static protoc.ServiceProto.SpectatorGameState parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static protoc.ServiceProto.SpectatorGameData parseDelimitedFrom(java.io.InputStream input)
+    public static protoc.ServiceProto.SpectatorGameState parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static protoc.ServiceProto.SpectatorGameData parseDelimitedFrom(
+    public static protoc.ServiceProto.SpectatorGameState parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static protoc.ServiceProto.SpectatorGameData parseFrom(
+    public static protoc.ServiceProto.SpectatorGameState parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static protoc.ServiceProto.SpectatorGameData parseFrom(
+    public static protoc.ServiceProto.SpectatorGameState parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -787,7 +856,7 @@ public final class ServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(protoc.ServiceProto.SpectatorGameData prototype) {
+    public static Builder newBuilder(protoc.ServiceProto.SpectatorGameState prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -803,26 +872,26 @@ public final class ServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code service.SpectatorGameData}
+     * Protobuf type {@code service.SpectatorGameState}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:service.SpectatorGameData)
-        protoc.ServiceProto.SpectatorGameDataOrBuilder {
+        // @@protoc_insertion_point(builder_implements:service.SpectatorGameState)
+        protoc.ServiceProto.SpectatorGameStateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return protoc.ServiceProto.internal_static_service_SpectatorGameData_descriptor;
+        return protoc.ServiceProto.internal_static_service_SpectatorGameState_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return protoc.ServiceProto.internal_static_service_SpectatorGameData_fieldAccessorTable
+        return protoc.ServiceProto.internal_static_service_SpectatorGameState_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                protoc.ServiceProto.SpectatorGameData.class, protoc.ServiceProto.SpectatorGameData.Builder.class);
+                protoc.ServiceProto.SpectatorGameState.class, protoc.ServiceProto.SpectatorGameState.Builder.class);
       }
 
-      // Construct using protoc.ServiceProto.SpectatorGameData.newBuilder()
+      // Construct using protoc.ServiceProto.SpectatorGameState.newBuilder()
       private Builder() {
 
       }
@@ -835,7 +904,7 @@ public final class ServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        emptyFlag_ = false;
+        stateFlag_ = 0;
 
         if (frameDataBuilder_ == null) {
           frameData_ = null;
@@ -855,23 +924,29 @@ public final class ServiceProto {
           audioData_ = null;
           audioDataBuilder_ = null;
         }
+        if (roundResultBuilder_ == null) {
+          roundResult_ = null;
+        } else {
+          roundResult_ = null;
+          roundResultBuilder_ = null;
+        }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return protoc.ServiceProto.internal_static_service_SpectatorGameData_descriptor;
+        return protoc.ServiceProto.internal_static_service_SpectatorGameState_descriptor;
       }
 
       @java.lang.Override
-      public protoc.ServiceProto.SpectatorGameData getDefaultInstanceForType() {
-        return protoc.ServiceProto.SpectatorGameData.getDefaultInstance();
+      public protoc.ServiceProto.SpectatorGameState getDefaultInstanceForType() {
+        return protoc.ServiceProto.SpectatorGameState.getDefaultInstance();
       }
 
       @java.lang.Override
-      public protoc.ServiceProto.SpectatorGameData build() {
-        protoc.ServiceProto.SpectatorGameData result = buildPartial();
+      public protoc.ServiceProto.SpectatorGameState build() {
+        protoc.ServiceProto.SpectatorGameState result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -879,9 +954,9 @@ public final class ServiceProto {
       }
 
       @java.lang.Override
-      public protoc.ServiceProto.SpectatorGameData buildPartial() {
-        protoc.ServiceProto.SpectatorGameData result = new protoc.ServiceProto.SpectatorGameData(this);
-        result.emptyFlag_ = emptyFlag_;
+      public protoc.ServiceProto.SpectatorGameState buildPartial() {
+        protoc.ServiceProto.SpectatorGameState result = new protoc.ServiceProto.SpectatorGameState(this);
+        result.stateFlag_ = stateFlag_;
         if (frameDataBuilder_ == null) {
           result.frameData_ = frameData_;
         } else {
@@ -896,6 +971,11 @@ public final class ServiceProto {
           result.audioData_ = audioData_;
         } else {
           result.audioData_ = audioDataBuilder_.build();
+        }
+        if (roundResultBuilder_ == null) {
+          result.roundResult_ = roundResult_;
+        } else {
+          result.roundResult_ = roundResultBuilder_.build();
         }
         onBuilt();
         return result;
@@ -935,18 +1015,18 @@ public final class ServiceProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof protoc.ServiceProto.SpectatorGameData) {
-          return mergeFrom((protoc.ServiceProto.SpectatorGameData)other);
+        if (other instanceof protoc.ServiceProto.SpectatorGameState) {
+          return mergeFrom((protoc.ServiceProto.SpectatorGameState)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(protoc.ServiceProto.SpectatorGameData other) {
-        if (other == protoc.ServiceProto.SpectatorGameData.getDefaultInstance()) return this;
-        if (other.getEmptyFlag() != false) {
-          setEmptyFlag(other.getEmptyFlag());
+      public Builder mergeFrom(protoc.ServiceProto.SpectatorGameState other) {
+        if (other == protoc.ServiceProto.SpectatorGameState.getDefaultInstance()) return this;
+        if (other.stateFlag_ != 0) {
+          setStateFlagValue(other.getStateFlagValue());
         }
         if (other.hasFrameData()) {
           mergeFrameData(other.getFrameData());
@@ -956,6 +1036,9 @@ public final class ServiceProto {
         }
         if (other.hasAudioData()) {
           mergeAudioData(other.getAudioData());
+        }
+        if (other.hasRoundResult()) {
+          mergeRoundResult(other.getRoundResult());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -984,7 +1067,7 @@ public final class ServiceProto {
                 done = true;
                 break;
               case 8: {
-                emptyFlag_ = input.readBool();
+                stateFlag_ = input.readEnum();
 
                 break;
               } // case 8
@@ -1009,6 +1092,13 @@ public final class ServiceProto {
 
                 break;
               } // case 34
+              case 42: {
+                input.readMessage(
+                    getRoundResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1025,33 +1115,56 @@ public final class ServiceProto {
         return this;
       }
 
-      private boolean emptyFlag_ ;
+      private int stateFlag_ = 0;
       /**
-       * <code>bool empty_flag = 1;</code>
-       * @return The emptyFlag.
+       * <code>.service.GrpcFlag state_flag = 1;</code>
+       * @return The enum numeric value on the wire for stateFlag.
        */
-      @java.lang.Override
-      public boolean getEmptyFlag() {
-        return emptyFlag_;
+      @java.lang.Override public int getStateFlagValue() {
+        return stateFlag_;
       }
       /**
-       * <code>bool empty_flag = 1;</code>
-       * @param value The emptyFlag to set.
+       * <code>.service.GrpcFlag state_flag = 1;</code>
+       * @param value The enum numeric value on the wire for stateFlag to set.
        * @return This builder for chaining.
        */
-      public Builder setEmptyFlag(boolean value) {
+      public Builder setStateFlagValue(int value) {
         
-        emptyFlag_ = value;
+        stateFlag_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool empty_flag = 1;</code>
+       * <code>.service.GrpcFlag state_flag = 1;</code>
+       * @return The stateFlag.
+       */
+      @java.lang.Override
+      public protoc.EnumProto.GrpcFlag getStateFlag() {
+        @SuppressWarnings("deprecation")
+        protoc.EnumProto.GrpcFlag result = protoc.EnumProto.GrpcFlag.valueOf(stateFlag_);
+        return result == null ? protoc.EnumProto.GrpcFlag.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.service.GrpcFlag state_flag = 1;</code>
+       * @param value The stateFlag to set.
        * @return This builder for chaining.
        */
-      public Builder clearEmptyFlag() {
+      public Builder setStateFlag(protoc.EnumProto.GrpcFlag value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         
-        emptyFlag_ = false;
+        stateFlag_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.service.GrpcFlag state_flag = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStateFlag() {
+        
+        stateFlag_ = 0;
         onChanged();
         return this;
       }
@@ -1412,6 +1525,125 @@ public final class ServiceProto {
         }
         return audioDataBuilder_;
       }
+
+      private protoc.MessageProto.GrpcRoundResult roundResult_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          protoc.MessageProto.GrpcRoundResult, protoc.MessageProto.GrpcRoundResult.Builder, protoc.MessageProto.GrpcRoundResultOrBuilder> roundResultBuilder_;
+      /**
+       * <code>.service.GrpcRoundResult round_result = 5;</code>
+       * @return Whether the roundResult field is set.
+       */
+      public boolean hasRoundResult() {
+        return roundResultBuilder_ != null || roundResult_ != null;
+      }
+      /**
+       * <code>.service.GrpcRoundResult round_result = 5;</code>
+       * @return The roundResult.
+       */
+      public protoc.MessageProto.GrpcRoundResult getRoundResult() {
+        if (roundResultBuilder_ == null) {
+          return roundResult_ == null ? protoc.MessageProto.GrpcRoundResult.getDefaultInstance() : roundResult_;
+        } else {
+          return roundResultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.service.GrpcRoundResult round_result = 5;</code>
+       */
+      public Builder setRoundResult(protoc.MessageProto.GrpcRoundResult value) {
+        if (roundResultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          roundResult_ = value;
+          onChanged();
+        } else {
+          roundResultBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.service.GrpcRoundResult round_result = 5;</code>
+       */
+      public Builder setRoundResult(
+          protoc.MessageProto.GrpcRoundResult.Builder builderForValue) {
+        if (roundResultBuilder_ == null) {
+          roundResult_ = builderForValue.build();
+          onChanged();
+        } else {
+          roundResultBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.service.GrpcRoundResult round_result = 5;</code>
+       */
+      public Builder mergeRoundResult(protoc.MessageProto.GrpcRoundResult value) {
+        if (roundResultBuilder_ == null) {
+          if (roundResult_ != null) {
+            roundResult_ =
+              protoc.MessageProto.GrpcRoundResult.newBuilder(roundResult_).mergeFrom(value).buildPartial();
+          } else {
+            roundResult_ = value;
+          }
+          onChanged();
+        } else {
+          roundResultBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.service.GrpcRoundResult round_result = 5;</code>
+       */
+      public Builder clearRoundResult() {
+        if (roundResultBuilder_ == null) {
+          roundResult_ = null;
+          onChanged();
+        } else {
+          roundResult_ = null;
+          roundResultBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.service.GrpcRoundResult round_result = 5;</code>
+       */
+      public protoc.MessageProto.GrpcRoundResult.Builder getRoundResultBuilder() {
+        
+        onChanged();
+        return getRoundResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.service.GrpcRoundResult round_result = 5;</code>
+       */
+      public protoc.MessageProto.GrpcRoundResultOrBuilder getRoundResultOrBuilder() {
+        if (roundResultBuilder_ != null) {
+          return roundResultBuilder_.getMessageOrBuilder();
+        } else {
+          return roundResult_ == null ?
+              protoc.MessageProto.GrpcRoundResult.getDefaultInstance() : roundResult_;
+        }
+      }
+      /**
+       * <code>.service.GrpcRoundResult round_result = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          protoc.MessageProto.GrpcRoundResult, protoc.MessageProto.GrpcRoundResult.Builder, protoc.MessageProto.GrpcRoundResultOrBuilder> 
+          getRoundResultFieldBuilder() {
+        if (roundResultBuilder_ == null) {
+          roundResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              protoc.MessageProto.GrpcRoundResult, protoc.MessageProto.GrpcRoundResult.Builder, protoc.MessageProto.GrpcRoundResultOrBuilder>(
+                  getRoundResult(),
+                  getParentForChildren(),
+                  isClean());
+          roundResult_ = null;
+        }
+        return roundResultBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1425,23 +1657,23 @@ public final class ServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:service.SpectatorGameData)
+      // @@protoc_insertion_point(builder_scope:service.SpectatorGameState)
     }
 
-    // @@protoc_insertion_point(class_scope:service.SpectatorGameData)
-    private static final protoc.ServiceProto.SpectatorGameData DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:service.SpectatorGameState)
+    private static final protoc.ServiceProto.SpectatorGameState DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new protoc.ServiceProto.SpectatorGameData();
+      DEFAULT_INSTANCE = new protoc.ServiceProto.SpectatorGameState();
     }
 
-    public static protoc.ServiceProto.SpectatorGameData getDefaultInstance() {
+    public static protoc.ServiceProto.SpectatorGameState getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SpectatorGameData>
-        PARSER = new com.google.protobuf.AbstractParser<SpectatorGameData>() {
+    private static final com.google.protobuf.Parser<SpectatorGameState>
+        PARSER = new com.google.protobuf.AbstractParser<SpectatorGameState>() {
       @java.lang.Override
-      public SpectatorGameData parsePartialFrom(
+      public SpectatorGameState parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1460,17 +1692,17 @@ public final class ServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<SpectatorGameData> parser() {
+    public static com.google.protobuf.Parser<SpectatorGameState> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<SpectatorGameData> getParserForType() {
+    public com.google.protobuf.Parser<SpectatorGameState> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public protoc.ServiceProto.SpectatorGameData getDefaultInstanceForType() {
+    public protoc.ServiceProto.SpectatorGameState getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3265,20 +3497,20 @@ public final class ServiceProto {
 
   }
 
-  public interface PlayerGameDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:service.PlayerGameData)
+  public interface PlayerGameStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:service.PlayerGameState)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.service.GrpcFlag flag = 1;</code>
-     * @return The enum numeric value on the wire for flag.
+     * <code>.service.GrpcFlag state_flag = 1;</code>
+     * @return The enum numeric value on the wire for stateFlag.
      */
-    int getFlagValue();
+    int getStateFlagValue();
     /**
-     * <code>.service.GrpcFlag flag = 1;</code>
-     * @return The flag.
+     * <code>.service.GrpcFlag state_flag = 1;</code>
+     * @return The stateFlag.
      */
-    protoc.EnumProto.GrpcFlag getFlag();
+    protoc.EnumProto.GrpcFlag getStateFlag();
 
     /**
      * <code>bool is_control = 2;</code>
@@ -3362,26 +3594,26 @@ public final class ServiceProto {
     protoc.MessageProto.GrpcRoundResultOrBuilder getRoundResultOrBuilder();
   }
   /**
-   * Protobuf type {@code service.PlayerGameData}
+   * Protobuf type {@code service.PlayerGameState}
    */
-  public static final class PlayerGameData extends
+  public static final class PlayerGameState extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:service.PlayerGameData)
-      PlayerGameDataOrBuilder {
+      // @@protoc_insertion_point(message_implements:service.PlayerGameState)
+      PlayerGameStateOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PlayerGameData.newBuilder() to construct.
-    private PlayerGameData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PlayerGameState.newBuilder() to construct.
+    private PlayerGameState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PlayerGameData() {
-      flag_ = 0;
+    private PlayerGameState() {
+      stateFlag_ = 0;
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PlayerGameData();
+      return new PlayerGameState();
     }
 
     @java.lang.Override
@@ -3391,33 +3623,33 @@ public final class ServiceProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return protoc.ServiceProto.internal_static_service_PlayerGameData_descriptor;
+      return protoc.ServiceProto.internal_static_service_PlayerGameState_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return protoc.ServiceProto.internal_static_service_PlayerGameData_fieldAccessorTable
+      return protoc.ServiceProto.internal_static_service_PlayerGameState_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              protoc.ServiceProto.PlayerGameData.class, protoc.ServiceProto.PlayerGameData.Builder.class);
+              protoc.ServiceProto.PlayerGameState.class, protoc.ServiceProto.PlayerGameState.Builder.class);
     }
 
-    public static final int FLAG_FIELD_NUMBER = 1;
-    private int flag_;
+    public static final int STATE_FLAG_FIELD_NUMBER = 1;
+    private int stateFlag_;
     /**
-     * <code>.service.GrpcFlag flag = 1;</code>
-     * @return The enum numeric value on the wire for flag.
+     * <code>.service.GrpcFlag state_flag = 1;</code>
+     * @return The enum numeric value on the wire for stateFlag.
      */
-    @java.lang.Override public int getFlagValue() {
-      return flag_;
+    @java.lang.Override public int getStateFlagValue() {
+      return stateFlag_;
     }
     /**
-     * <code>.service.GrpcFlag flag = 1;</code>
-     * @return The flag.
+     * <code>.service.GrpcFlag state_flag = 1;</code>
+     * @return The stateFlag.
      */
-    @java.lang.Override public protoc.EnumProto.GrpcFlag getFlag() {
+    @java.lang.Override public protoc.EnumProto.GrpcFlag getStateFlag() {
       @SuppressWarnings("deprecation")
-      protoc.EnumProto.GrpcFlag result = protoc.EnumProto.GrpcFlag.valueOf(flag_);
+      protoc.EnumProto.GrpcFlag result = protoc.EnumProto.GrpcFlag.valueOf(stateFlag_);
       return result == null ? protoc.EnumProto.GrpcFlag.UNRECOGNIZED : result;
     }
 
@@ -3576,8 +3808,8 @@ public final class ServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (flag_ != protoc.EnumProto.GrpcFlag.EMPTY.getNumber()) {
-        output.writeEnum(1, flag_);
+      if (stateFlag_ != protoc.EnumProto.GrpcFlag.EMPTY.getNumber()) {
+        output.writeEnum(1, stateFlag_);
       }
       if (isControl_ != false) {
         output.writeBool(2, isControl_);
@@ -3606,9 +3838,9 @@ public final class ServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (flag_ != protoc.EnumProto.GrpcFlag.EMPTY.getNumber()) {
+      if (stateFlag_ != protoc.EnumProto.GrpcFlag.EMPTY.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, flag_);
+          .computeEnumSize(1, stateFlag_);
       }
       if (isControl_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -3644,12 +3876,12 @@ public final class ServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof protoc.ServiceProto.PlayerGameData)) {
+      if (!(obj instanceof protoc.ServiceProto.PlayerGameState)) {
         return super.equals(obj);
       }
-      protoc.ServiceProto.PlayerGameData other = (protoc.ServiceProto.PlayerGameData) obj;
+      protoc.ServiceProto.PlayerGameState other = (protoc.ServiceProto.PlayerGameState) obj;
 
-      if (flag_ != other.flag_) return false;
+      if (stateFlag_ != other.stateFlag_) return false;
       if (getIsControl()
           != other.getIsControl()) return false;
       if (hasFrameData() != other.hasFrameData()) return false;
@@ -3688,8 +3920,8 @@ public final class ServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FLAG_FIELD_NUMBER;
-      hash = (53 * hash) + flag_;
+      hash = (37 * hash) + STATE_FLAG_FIELD_NUMBER;
+      hash = (53 * hash) + stateFlag_;
       hash = (37 * hash) + IS_CONTROL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsControl());
@@ -3718,69 +3950,69 @@ public final class ServiceProto {
       return hash;
     }
 
-    public static protoc.ServiceProto.PlayerGameData parseFrom(
+    public static protoc.ServiceProto.PlayerGameState parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static protoc.ServiceProto.PlayerGameData parseFrom(
+    public static protoc.ServiceProto.PlayerGameState parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static protoc.ServiceProto.PlayerGameData parseFrom(
+    public static protoc.ServiceProto.PlayerGameState parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static protoc.ServiceProto.PlayerGameData parseFrom(
+    public static protoc.ServiceProto.PlayerGameState parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static protoc.ServiceProto.PlayerGameData parseFrom(byte[] data)
+    public static protoc.ServiceProto.PlayerGameState parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static protoc.ServiceProto.PlayerGameData parseFrom(
+    public static protoc.ServiceProto.PlayerGameState parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static protoc.ServiceProto.PlayerGameData parseFrom(java.io.InputStream input)
+    public static protoc.ServiceProto.PlayerGameState parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static protoc.ServiceProto.PlayerGameData parseFrom(
+    public static protoc.ServiceProto.PlayerGameState parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static protoc.ServiceProto.PlayerGameData parseDelimitedFrom(java.io.InputStream input)
+    public static protoc.ServiceProto.PlayerGameState parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static protoc.ServiceProto.PlayerGameData parseDelimitedFrom(
+    public static protoc.ServiceProto.PlayerGameState parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static protoc.ServiceProto.PlayerGameData parseFrom(
+    public static protoc.ServiceProto.PlayerGameState parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static protoc.ServiceProto.PlayerGameData parseFrom(
+    public static protoc.ServiceProto.PlayerGameState parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3793,7 +4025,7 @@ public final class ServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(protoc.ServiceProto.PlayerGameData prototype) {
+    public static Builder newBuilder(protoc.ServiceProto.PlayerGameState prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3809,26 +4041,26 @@ public final class ServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code service.PlayerGameData}
+     * Protobuf type {@code service.PlayerGameState}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:service.PlayerGameData)
-        protoc.ServiceProto.PlayerGameDataOrBuilder {
+        // @@protoc_insertion_point(builder_implements:service.PlayerGameState)
+        protoc.ServiceProto.PlayerGameStateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return protoc.ServiceProto.internal_static_service_PlayerGameData_descriptor;
+        return protoc.ServiceProto.internal_static_service_PlayerGameState_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return protoc.ServiceProto.internal_static_service_PlayerGameData_fieldAccessorTable
+        return protoc.ServiceProto.internal_static_service_PlayerGameState_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                protoc.ServiceProto.PlayerGameData.class, protoc.ServiceProto.PlayerGameData.Builder.class);
+                protoc.ServiceProto.PlayerGameState.class, protoc.ServiceProto.PlayerGameState.Builder.class);
       }
 
-      // Construct using protoc.ServiceProto.PlayerGameData.newBuilder()
+      // Construct using protoc.ServiceProto.PlayerGameState.newBuilder()
       private Builder() {
 
       }
@@ -3841,7 +4073,7 @@ public final class ServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        flag_ = 0;
+        stateFlag_ = 0;
 
         isControl_ = false;
 
@@ -3881,17 +4113,17 @@ public final class ServiceProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return protoc.ServiceProto.internal_static_service_PlayerGameData_descriptor;
+        return protoc.ServiceProto.internal_static_service_PlayerGameState_descriptor;
       }
 
       @java.lang.Override
-      public protoc.ServiceProto.PlayerGameData getDefaultInstanceForType() {
-        return protoc.ServiceProto.PlayerGameData.getDefaultInstance();
+      public protoc.ServiceProto.PlayerGameState getDefaultInstanceForType() {
+        return protoc.ServiceProto.PlayerGameState.getDefaultInstance();
       }
 
       @java.lang.Override
-      public protoc.ServiceProto.PlayerGameData build() {
-        protoc.ServiceProto.PlayerGameData result = buildPartial();
+      public protoc.ServiceProto.PlayerGameState build() {
+        protoc.ServiceProto.PlayerGameState result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3899,9 +4131,9 @@ public final class ServiceProto {
       }
 
       @java.lang.Override
-      public protoc.ServiceProto.PlayerGameData buildPartial() {
-        protoc.ServiceProto.PlayerGameData result = new protoc.ServiceProto.PlayerGameData(this);
-        result.flag_ = flag_;
+      public protoc.ServiceProto.PlayerGameState buildPartial() {
+        protoc.ServiceProto.PlayerGameState result = new protoc.ServiceProto.PlayerGameState(this);
+        result.stateFlag_ = stateFlag_;
         result.isControl_ = isControl_;
         if (frameDataBuilder_ == null) {
           result.frameData_ = frameData_;
@@ -3966,18 +4198,18 @@ public final class ServiceProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof protoc.ServiceProto.PlayerGameData) {
-          return mergeFrom((protoc.ServiceProto.PlayerGameData)other);
+        if (other instanceof protoc.ServiceProto.PlayerGameState) {
+          return mergeFrom((protoc.ServiceProto.PlayerGameState)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(protoc.ServiceProto.PlayerGameData other) {
-        if (other == protoc.ServiceProto.PlayerGameData.getDefaultInstance()) return this;
-        if (other.flag_ != 0) {
-          setFlagValue(other.getFlagValue());
+      public Builder mergeFrom(protoc.ServiceProto.PlayerGameState other) {
+        if (other == protoc.ServiceProto.PlayerGameState.getDefaultInstance()) return this;
+        if (other.stateFlag_ != 0) {
+          setStateFlagValue(other.getStateFlagValue());
         }
         if (other.getIsControl() != false) {
           setIsControl(other.getIsControl());
@@ -4024,7 +4256,7 @@ public final class ServiceProto {
                 done = true;
                 break;
               case 8: {
-                flag_ = input.readEnum();
+                stateFlag_ = input.readEnum();
 
                 break;
               } // case 8
@@ -4084,56 +4316,56 @@ public final class ServiceProto {
         return this;
       }
 
-      private int flag_ = 0;
+      private int stateFlag_ = 0;
       /**
-       * <code>.service.GrpcFlag flag = 1;</code>
-       * @return The enum numeric value on the wire for flag.
+       * <code>.service.GrpcFlag state_flag = 1;</code>
+       * @return The enum numeric value on the wire for stateFlag.
        */
-      @java.lang.Override public int getFlagValue() {
-        return flag_;
+      @java.lang.Override public int getStateFlagValue() {
+        return stateFlag_;
       }
       /**
-       * <code>.service.GrpcFlag flag = 1;</code>
-       * @param value The enum numeric value on the wire for flag to set.
+       * <code>.service.GrpcFlag state_flag = 1;</code>
+       * @param value The enum numeric value on the wire for stateFlag to set.
        * @return This builder for chaining.
        */
-      public Builder setFlagValue(int value) {
+      public Builder setStateFlagValue(int value) {
         
-        flag_ = value;
+        stateFlag_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.service.GrpcFlag flag = 1;</code>
-       * @return The flag.
+       * <code>.service.GrpcFlag state_flag = 1;</code>
+       * @return The stateFlag.
        */
       @java.lang.Override
-      public protoc.EnumProto.GrpcFlag getFlag() {
+      public protoc.EnumProto.GrpcFlag getStateFlag() {
         @SuppressWarnings("deprecation")
-        protoc.EnumProto.GrpcFlag result = protoc.EnumProto.GrpcFlag.valueOf(flag_);
+        protoc.EnumProto.GrpcFlag result = protoc.EnumProto.GrpcFlag.valueOf(stateFlag_);
         return result == null ? protoc.EnumProto.GrpcFlag.UNRECOGNIZED : result;
       }
       /**
-       * <code>.service.GrpcFlag flag = 1;</code>
-       * @param value The flag to set.
+       * <code>.service.GrpcFlag state_flag = 1;</code>
+       * @param value The stateFlag to set.
        * @return This builder for chaining.
        */
-      public Builder setFlag(protoc.EnumProto.GrpcFlag value) {
+      public Builder setStateFlag(protoc.EnumProto.GrpcFlag value) {
         if (value == null) {
           throw new NullPointerException();
         }
         
-        flag_ = value.getNumber();
+        stateFlag_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.service.GrpcFlag flag = 1;</code>
+       * <code>.service.GrpcFlag state_flag = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearFlag() {
+      public Builder clearStateFlag() {
         
-        flag_ = 0;
+        stateFlag_ = 0;
         onChanged();
         return this;
       }
@@ -4776,23 +5008,23 @@ public final class ServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:service.PlayerGameData)
+      // @@protoc_insertion_point(builder_scope:service.PlayerGameState)
     }
 
-    // @@protoc_insertion_point(class_scope:service.PlayerGameData)
-    private static final protoc.ServiceProto.PlayerGameData DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:service.PlayerGameState)
+    private static final protoc.ServiceProto.PlayerGameState DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new protoc.ServiceProto.PlayerGameData();
+      DEFAULT_INSTANCE = new protoc.ServiceProto.PlayerGameState();
     }
 
-    public static protoc.ServiceProto.PlayerGameData getDefaultInstance() {
+    public static protoc.ServiceProto.PlayerGameState getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PlayerGameData>
-        PARSER = new com.google.protobuf.AbstractParser<PlayerGameData>() {
+    private static final com.google.protobuf.Parser<PlayerGameState>
+        PARSER = new com.google.protobuf.AbstractParser<PlayerGameState>() {
       @java.lang.Override
-      public PlayerGameData parsePartialFrom(
+      public PlayerGameState parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4811,24 +5043,24 @@ public final class ServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<PlayerGameData> parser() {
+    public static com.google.protobuf.Parser<PlayerGameState> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PlayerGameData> getParserForType() {
+    public com.google.protobuf.Parser<PlayerGameState> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public protoc.ServiceProto.PlayerGameData getDefaultInstanceForType() {
+    public protoc.ServiceProto.PlayerGameState getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PlayerActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:service.PlayerAction)
+  public interface PlayerInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:service.PlayerInput)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4857,41 +5089,28 @@ public final class ServiceProto {
      * <code>.service.GrpcKey input_key = 2;</code>
      */
     protoc.MessageProto.GrpcKeyOrBuilder getInputKeyOrBuilder();
-
-    /**
-     * <code>string called_command = 3;</code>
-     * @return The calledCommand.
-     */
-    java.lang.String getCalledCommand();
-    /**
-     * <code>string called_command = 3;</code>
-     * @return The bytes for calledCommand.
-     */
-    com.google.protobuf.ByteString
-        getCalledCommandBytes();
   }
   /**
-   * Protobuf type {@code service.PlayerAction}
+   * Protobuf type {@code service.PlayerInput}
    */
-  public static final class PlayerAction extends
+  public static final class PlayerInput extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:service.PlayerAction)
-      PlayerActionOrBuilder {
+      // @@protoc_insertion_point(message_implements:service.PlayerInput)
+      PlayerInputOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PlayerAction.newBuilder() to construct.
-    private PlayerAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PlayerInput.newBuilder() to construct.
+    private PlayerInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PlayerAction() {
+    private PlayerInput() {
       playerUuid_ = "";
-      calledCommand_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PlayerAction();
+      return new PlayerInput();
     }
 
     @java.lang.Override
@@ -4901,15 +5120,15 @@ public final class ServiceProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return protoc.ServiceProto.internal_static_service_PlayerAction_descriptor;
+      return protoc.ServiceProto.internal_static_service_PlayerInput_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return protoc.ServiceProto.internal_static_service_PlayerAction_fieldAccessorTable
+      return protoc.ServiceProto.internal_static_service_PlayerInput_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              protoc.ServiceProto.PlayerAction.class, protoc.ServiceProto.PlayerAction.Builder.class);
+              protoc.ServiceProto.PlayerInput.class, protoc.ServiceProto.PlayerInput.Builder.class);
     }
 
     public static final int PLAYER_UUID_FIELD_NUMBER = 1;
@@ -4976,44 +5195,6 @@ public final class ServiceProto {
       return getInputKey();
     }
 
-    public static final int CALLED_COMMAND_FIELD_NUMBER = 3;
-    private volatile java.lang.Object calledCommand_;
-    /**
-     * <code>string called_command = 3;</code>
-     * @return The calledCommand.
-     */
-    @java.lang.Override
-    public java.lang.String getCalledCommand() {
-      java.lang.Object ref = calledCommand_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        calledCommand_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string called_command = 3;</code>
-     * @return The bytes for calledCommand.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCalledCommandBytes() {
-      java.lang.Object ref = calledCommand_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        calledCommand_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5034,9 +5215,6 @@ public final class ServiceProto {
       if (inputKey_ != null) {
         output.writeMessage(2, getInputKey());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(calledCommand_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, calledCommand_);
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5053,9 +5231,6 @@ public final class ServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getInputKey());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(calledCommand_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, calledCommand_);
-      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5066,10 +5241,10 @@ public final class ServiceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof protoc.ServiceProto.PlayerAction)) {
+      if (!(obj instanceof protoc.ServiceProto.PlayerInput)) {
         return super.equals(obj);
       }
-      protoc.ServiceProto.PlayerAction other = (protoc.ServiceProto.PlayerAction) obj;
+      protoc.ServiceProto.PlayerInput other = (protoc.ServiceProto.PlayerInput) obj;
 
       if (!getPlayerUuid()
           .equals(other.getPlayerUuid())) return false;
@@ -5078,8 +5253,6 @@ public final class ServiceProto {
         if (!getInputKey()
             .equals(other.getInputKey())) return false;
       }
-      if (!getCalledCommand()
-          .equals(other.getCalledCommand())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5097,76 +5270,74 @@ public final class ServiceProto {
         hash = (37 * hash) + INPUT_KEY_FIELD_NUMBER;
         hash = (53 * hash) + getInputKey().hashCode();
       }
-      hash = (37 * hash) + CALLED_COMMAND_FIELD_NUMBER;
-      hash = (53 * hash) + getCalledCommand().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static protoc.ServiceProto.PlayerAction parseFrom(
+    public static protoc.ServiceProto.PlayerInput parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static protoc.ServiceProto.PlayerAction parseFrom(
+    public static protoc.ServiceProto.PlayerInput parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static protoc.ServiceProto.PlayerAction parseFrom(
+    public static protoc.ServiceProto.PlayerInput parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static protoc.ServiceProto.PlayerAction parseFrom(
+    public static protoc.ServiceProto.PlayerInput parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static protoc.ServiceProto.PlayerAction parseFrom(byte[] data)
+    public static protoc.ServiceProto.PlayerInput parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static protoc.ServiceProto.PlayerAction parseFrom(
+    public static protoc.ServiceProto.PlayerInput parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static protoc.ServiceProto.PlayerAction parseFrom(java.io.InputStream input)
+    public static protoc.ServiceProto.PlayerInput parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static protoc.ServiceProto.PlayerAction parseFrom(
+    public static protoc.ServiceProto.PlayerInput parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static protoc.ServiceProto.PlayerAction parseDelimitedFrom(java.io.InputStream input)
+    public static protoc.ServiceProto.PlayerInput parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static protoc.ServiceProto.PlayerAction parseDelimitedFrom(
+    public static protoc.ServiceProto.PlayerInput parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static protoc.ServiceProto.PlayerAction parseFrom(
+    public static protoc.ServiceProto.PlayerInput parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static protoc.ServiceProto.PlayerAction parseFrom(
+    public static protoc.ServiceProto.PlayerInput parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5179,7 +5350,7 @@ public final class ServiceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(protoc.ServiceProto.PlayerAction prototype) {
+    public static Builder newBuilder(protoc.ServiceProto.PlayerInput prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5195,26 +5366,26 @@ public final class ServiceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code service.PlayerAction}
+     * Protobuf type {@code service.PlayerInput}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:service.PlayerAction)
-        protoc.ServiceProto.PlayerActionOrBuilder {
+        // @@protoc_insertion_point(builder_implements:service.PlayerInput)
+        protoc.ServiceProto.PlayerInputOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return protoc.ServiceProto.internal_static_service_PlayerAction_descriptor;
+        return protoc.ServiceProto.internal_static_service_PlayerInput_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return protoc.ServiceProto.internal_static_service_PlayerAction_fieldAccessorTable
+        return protoc.ServiceProto.internal_static_service_PlayerInput_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                protoc.ServiceProto.PlayerAction.class, protoc.ServiceProto.PlayerAction.Builder.class);
+                protoc.ServiceProto.PlayerInput.class, protoc.ServiceProto.PlayerInput.Builder.class);
       }
 
-      // Construct using protoc.ServiceProto.PlayerAction.newBuilder()
+      // Construct using protoc.ServiceProto.PlayerInput.newBuilder()
       private Builder() {
 
       }
@@ -5235,25 +5406,23 @@ public final class ServiceProto {
           inputKey_ = null;
           inputKeyBuilder_ = null;
         }
-        calledCommand_ = "";
-
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return protoc.ServiceProto.internal_static_service_PlayerAction_descriptor;
+        return protoc.ServiceProto.internal_static_service_PlayerInput_descriptor;
       }
 
       @java.lang.Override
-      public protoc.ServiceProto.PlayerAction getDefaultInstanceForType() {
-        return protoc.ServiceProto.PlayerAction.getDefaultInstance();
+      public protoc.ServiceProto.PlayerInput getDefaultInstanceForType() {
+        return protoc.ServiceProto.PlayerInput.getDefaultInstance();
       }
 
       @java.lang.Override
-      public protoc.ServiceProto.PlayerAction build() {
-        protoc.ServiceProto.PlayerAction result = buildPartial();
+      public protoc.ServiceProto.PlayerInput build() {
+        protoc.ServiceProto.PlayerInput result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5261,15 +5430,14 @@ public final class ServiceProto {
       }
 
       @java.lang.Override
-      public protoc.ServiceProto.PlayerAction buildPartial() {
-        protoc.ServiceProto.PlayerAction result = new protoc.ServiceProto.PlayerAction(this);
+      public protoc.ServiceProto.PlayerInput buildPartial() {
+        protoc.ServiceProto.PlayerInput result = new protoc.ServiceProto.PlayerInput(this);
         result.playerUuid_ = playerUuid_;
         if (inputKeyBuilder_ == null) {
           result.inputKey_ = inputKey_;
         } else {
           result.inputKey_ = inputKeyBuilder_.build();
         }
-        result.calledCommand_ = calledCommand_;
         onBuilt();
         return result;
       }
@@ -5308,26 +5476,22 @@ public final class ServiceProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof protoc.ServiceProto.PlayerAction) {
-          return mergeFrom((protoc.ServiceProto.PlayerAction)other);
+        if (other instanceof protoc.ServiceProto.PlayerInput) {
+          return mergeFrom((protoc.ServiceProto.PlayerInput)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(protoc.ServiceProto.PlayerAction other) {
-        if (other == protoc.ServiceProto.PlayerAction.getDefaultInstance()) return this;
+      public Builder mergeFrom(protoc.ServiceProto.PlayerInput other) {
+        if (other == protoc.ServiceProto.PlayerInput.getDefaultInstance()) return this;
         if (!other.getPlayerUuid().isEmpty()) {
           playerUuid_ = other.playerUuid_;
           onChanged();
         }
         if (other.hasInputKey()) {
           mergeInputKey(other.getInputKey());
-        }
-        if (!other.getCalledCommand().isEmpty()) {
-          calledCommand_ = other.calledCommand_;
-          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -5367,11 +5531,6 @@ public final class ServiceProto {
 
                 break;
               } // case 18
-              case 26: {
-                calledCommand_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5582,82 +5741,6 @@ public final class ServiceProto {
         }
         return inputKeyBuilder_;
       }
-
-      private java.lang.Object calledCommand_ = "";
-      /**
-       * <code>string called_command = 3;</code>
-       * @return The calledCommand.
-       */
-      public java.lang.String getCalledCommand() {
-        java.lang.Object ref = calledCommand_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          calledCommand_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string called_command = 3;</code>
-       * @return The bytes for calledCommand.
-       */
-      public com.google.protobuf.ByteString
-          getCalledCommandBytes() {
-        java.lang.Object ref = calledCommand_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          calledCommand_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string called_command = 3;</code>
-       * @param value The calledCommand to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCalledCommand(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        calledCommand_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string called_command = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCalledCommand() {
-        
-        calledCommand_ = getDefaultInstance().getCalledCommand();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string called_command = 3;</code>
-       * @param value The bytes for calledCommand to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCalledCommandBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        calledCommand_ = value;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5671,23 +5754,23 @@ public final class ServiceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:service.PlayerAction)
+      // @@protoc_insertion_point(builder_scope:service.PlayerInput)
     }
 
-    // @@protoc_insertion_point(class_scope:service.PlayerAction)
-    private static final protoc.ServiceProto.PlayerAction DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:service.PlayerInput)
+    private static final protoc.ServiceProto.PlayerInput DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new protoc.ServiceProto.PlayerAction();
+      DEFAULT_INSTANCE = new protoc.ServiceProto.PlayerInput();
     }
 
-    public static protoc.ServiceProto.PlayerAction getDefaultInstance() {
+    public static protoc.ServiceProto.PlayerInput getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PlayerAction>
-        PARSER = new com.google.protobuf.AbstractParser<PlayerAction>() {
+    private static final com.google.protobuf.Parser<PlayerInput>
+        PARSER = new com.google.protobuf.AbstractParser<PlayerInput>() {
       @java.lang.Override
-      public PlayerAction parsePartialFrom(
+      public PlayerInput parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5706,17 +5789,17 @@ public final class ServiceProto {
       }
     };
 
-    public static com.google.protobuf.Parser<PlayerAction> parser() {
+    public static com.google.protobuf.Parser<PlayerInput> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PlayerAction> getParserForType() {
+    public com.google.protobuf.Parser<PlayerInput> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public protoc.ServiceProto.PlayerAction getDefaultInstanceForType() {
+    public protoc.ServiceProto.PlayerInput getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5728,10 +5811,10 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_service_SpectateRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service_SpectatorGameData_descriptor;
+    internal_static_service_SpectatorGameState_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service_SpectatorGameData_fieldAccessorTable;
+      internal_static_service_SpectatorGameState_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_service_InitializeRequest_descriptor;
   private static final 
@@ -5748,15 +5831,15 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_service_ParticipateRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service_PlayerGameData_descriptor;
+    internal_static_service_PlayerGameState_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service_PlayerGameData_fieldAccessorTable;
+      internal_static_service_PlayerGameState_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_service_PlayerAction_descriptor;
+    internal_static_service_PlayerInput_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_service_PlayerAction_fieldAccessorTable;
+      internal_static_service_PlayerInput_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5768,34 +5851,35 @@ public final class ServiceProto {
     java.lang.String[] descriptorData = {
       "\n\rservice.proto\022\007service\032\033google/protobu" +
       "f/empty.proto\032\nenum.proto\032\rmessage.proto" +
-      "\"\021\n\017SpectateRequest\"\255\001\n\021SpectatorGameDat" +
-      "a\022\022\n\nempty_flag\030\001 \001(\010\022*\n\nframe_data\030\002 \001(" +
-      "\0132\026.service.GrpcFrameData\022,\n\013screen_data" +
-      "\030\003 \001(\0132\027.service.GrpcScreenData\022*\n\naudio" +
-      "_data\030\004 \001(\0132\026.service.GrpcAudioData\"Q\n\021I" +
-      "nitializeRequest\022\025\n\rplayer_number\030\001 \001(\010\022" +
-      "\023\n\013player_name\030\002 \001(\t\022\020\n\010is_blind\030\003 \001(\010\")" +
-      "\n\022InitializeResponse\022\023\n\013player_uuid\030\001 \001(" +
-      "\t\")\n\022ParticipateRequest\022\023\n\013player_uuid\030\001" +
-      " \001(\t\"\245\002\n\016PlayerGameData\022\037\n\004flag\030\001 \001(\0162\021." +
-      "service.GrpcFlag\022\022\n\nis_control\030\002 \001(\010\022*\n\n" +
-      "frame_data\030\003 \001(\0132\026.service.GrpcFrameData" +
-      "\022,\n\013screen_data\030\004 \001(\0132\027.service.GrpcScre" +
-      "enData\022*\n\naudio_data\030\005 \001(\0132\026.service.Grp" +
-      "cAudioData\022(\n\tgame_data\030\006 \001(\0132\025.service." +
-      "GrpcGameData\022.\n\014round_result\030\007 \001(\0132\030.ser" +
-      "vice.GrpcRoundResult\"`\n\014PlayerAction\022\023\n\013" +
-      "player_uuid\030\001 \001(\t\022#\n\tinput_key\030\002 \001(\0132\020.s" +
-      "ervice.GrpcKey\022\026\n\016called_command\030\003 \001(\t2\233" +
-      "\002\n\007Service\022D\n\010Spectate\022\030.service.Spectat" +
-      "eRequest\032\032.service.SpectatorGameData\"\0000\001" +
-      "\022G\n\nInitialize\022\032.service.InitializeReque" +
-      "st\032\033.service.InitializeResponse\"\000\022G\n\013Par" +
-      "ticipate\022\033.service.ParticipateRequest\032\027." +
-      "service.PlayerGameData\"\0000\001\0228\n\005Input\022\025.se" +
-      "rvice.PlayerAction\032\026.google.protobuf.Emp" +
-      "ty\"\000B\036\n\006protocB\014ServiceProtoP\000\242\002\003HLWb\006pr" +
-      "oto3"
+      "\"\021\n\017SpectateRequest\"\361\001\n\022SpectatorGameSta" +
+      "te\022%\n\nstate_flag\030\001 \001(\0162\021.service.GrpcFla" +
+      "g\022*\n\nframe_data\030\002 \001(\0132\026.service.GrpcFram" +
+      "eData\022,\n\013screen_data\030\003 \001(\0132\027.service.Grp" +
+      "cScreenData\022*\n\naudio_data\030\004 \001(\0132\026.servic" +
+      "e.GrpcAudioData\022.\n\014round_result\030\005 \001(\0132\030." +
+      "service.GrpcRoundResult\"Q\n\021InitializeReq" +
+      "uest\022\025\n\rplayer_number\030\001 \001(\010\022\023\n\013player_na" +
+      "me\030\002 \001(\t\022\020\n\010is_blind\030\003 \001(\010\")\n\022Initialize" +
+      "Response\022\023\n\013player_uuid\030\001 \001(\t\")\n\022Partici" +
+      "pateRequest\022\023\n\013player_uuid\030\001 \001(\t\"\254\002\n\017Pla" +
+      "yerGameState\022%\n\nstate_flag\030\001 \001(\0162\021.servi" +
+      "ce.GrpcFlag\022\022\n\nis_control\030\002 \001(\010\022*\n\nframe" +
+      "_data\030\003 \001(\0132\026.service.GrpcFrameData\022,\n\013s" +
+      "creen_data\030\004 \001(\0132\027.service.GrpcScreenDat" +
+      "a\022*\n\naudio_data\030\005 \001(\0132\026.service.GrpcAudi" +
+      "oData\022(\n\tgame_data\030\006 \001(\0132\025.service.GrpcG" +
+      "ameData\022.\n\014round_result\030\007 \001(\0132\030.service." +
+      "GrpcRoundResult\"G\n\013PlayerInput\022\023\n\013player" +
+      "_uuid\030\001 \001(\t\022#\n\tinput_key\030\002 \001(\0132\020.service" +
+      ".GrpcKey2\234\002\n\007Service\022E\n\010Spectate\022\030.servi" +
+      "ce.SpectateRequest\032\033.service.SpectatorGa" +
+      "meState\"\0000\001\022G\n\nInitialize\022\032.service.Init" +
+      "ializeRequest\032\033.service.InitializeRespon" +
+      "se\"\000\022H\n\013Participate\022\033.service.Participat" +
+      "eRequest\032\030.service.PlayerGameState\"\0000\001\0227" +
+      "\n\005Input\022\024.service.PlayerInput\032\026.google.p" +
+      "rotobuf.Empty\"\000B\036\n\006protocB\014ServiceProtoP" +
+      "\000\242\002\003HLWb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5810,12 +5894,12 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service_SpectateRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_service_SpectatorGameData_descriptor =
+    internal_static_service_SpectatorGameState_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_service_SpectatorGameData_fieldAccessorTable = new
+    internal_static_service_SpectatorGameState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service_SpectatorGameData_descriptor,
-        new java.lang.String[] { "EmptyFlag", "FrameData", "ScreenData", "AudioData", });
+        internal_static_service_SpectatorGameState_descriptor,
+        new java.lang.String[] { "StateFlag", "FrameData", "ScreenData", "AudioData", "RoundResult", });
     internal_static_service_InitializeRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_service_InitializeRequest_fieldAccessorTable = new
@@ -5834,18 +5918,18 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_service_ParticipateRequest_descriptor,
         new java.lang.String[] { "PlayerUuid", });
-    internal_static_service_PlayerGameData_descriptor =
+    internal_static_service_PlayerGameState_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_service_PlayerGameData_fieldAccessorTable = new
+    internal_static_service_PlayerGameState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service_PlayerGameData_descriptor,
-        new java.lang.String[] { "Flag", "IsControl", "FrameData", "ScreenData", "AudioData", "GameData", "RoundResult", });
-    internal_static_service_PlayerAction_descriptor =
+        internal_static_service_PlayerGameState_descriptor,
+        new java.lang.String[] { "StateFlag", "IsControl", "FrameData", "ScreenData", "AudioData", "GameData", "RoundResult", });
+    internal_static_service_PlayerInput_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_service_PlayerAction_fieldAccessorTable = new
+    internal_static_service_PlayerInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_service_PlayerAction_descriptor,
-        new java.lang.String[] { "PlayerUuid", "InputKey", "CalledCommand", });
+        internal_static_service_PlayerInput_descriptor,
+        new java.lang.String[] { "PlayerUuid", "InputKey", });
     com.google.protobuf.EmptyProto.getDescriptor();
     protoc.EnumProto.getDescriptor();
     protoc.MessageProto.getDescriptor();

@@ -79,4 +79,9 @@ public class KickAI implements AIInterface {
 		System.out.println(roundResult.getRemainingHPs()[0] + " " + roundResult.getRemainingHPs()[1] + " " + roundResult.getElapsedFrame());
 	}
 	
+	@Override
+	public void gameEnd() {
+		System.out.println("game end");
+	}
+	
 }

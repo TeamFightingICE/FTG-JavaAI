@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.2)",
+    value = "by gRPC proto compiler (version 1.52.1)",
     comments = "Source: service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ServiceGrpc {
@@ -16,28 +16,28 @@ public final class ServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<protoc.ServiceProto.SpectateRequest,
-      protoc.ServiceProto.SpectatorGameData> getSpectateMethod;
+      protoc.ServiceProto.SpectatorGameState> getSpectateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Spectate",
       requestType = protoc.ServiceProto.SpectateRequest.class,
-      responseType = protoc.ServiceProto.SpectatorGameData.class,
+      responseType = protoc.ServiceProto.SpectatorGameState.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<protoc.ServiceProto.SpectateRequest,
-      protoc.ServiceProto.SpectatorGameData> getSpectateMethod() {
-    io.grpc.MethodDescriptor<protoc.ServiceProto.SpectateRequest, protoc.ServiceProto.SpectatorGameData> getSpectateMethod;
+      protoc.ServiceProto.SpectatorGameState> getSpectateMethod() {
+    io.grpc.MethodDescriptor<protoc.ServiceProto.SpectateRequest, protoc.ServiceProto.SpectatorGameState> getSpectateMethod;
     if ((getSpectateMethod = ServiceGrpc.getSpectateMethod) == null) {
       synchronized (ServiceGrpc.class) {
         if ((getSpectateMethod = ServiceGrpc.getSpectateMethod) == null) {
           ServiceGrpc.getSpectateMethod = getSpectateMethod =
-              io.grpc.MethodDescriptor.<protoc.ServiceProto.SpectateRequest, protoc.ServiceProto.SpectatorGameData>newBuilder()
+              io.grpc.MethodDescriptor.<protoc.ServiceProto.SpectateRequest, protoc.ServiceProto.SpectatorGameState>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Spectate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   protoc.ServiceProto.SpectateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoc.ServiceProto.SpectatorGameData.getDefaultInstance()))
+                  protoc.ServiceProto.SpectatorGameState.getDefaultInstance()))
               .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Spectate"))
               .build();
         }
@@ -78,28 +78,28 @@ public final class ServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<protoc.ServiceProto.ParticipateRequest,
-      protoc.ServiceProto.PlayerGameData> getParticipateMethod;
+      protoc.ServiceProto.PlayerGameState> getParticipateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Participate",
       requestType = protoc.ServiceProto.ParticipateRequest.class,
-      responseType = protoc.ServiceProto.PlayerGameData.class,
+      responseType = protoc.ServiceProto.PlayerGameState.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<protoc.ServiceProto.ParticipateRequest,
-      protoc.ServiceProto.PlayerGameData> getParticipateMethod() {
-    io.grpc.MethodDescriptor<protoc.ServiceProto.ParticipateRequest, protoc.ServiceProto.PlayerGameData> getParticipateMethod;
+      protoc.ServiceProto.PlayerGameState> getParticipateMethod() {
+    io.grpc.MethodDescriptor<protoc.ServiceProto.ParticipateRequest, protoc.ServiceProto.PlayerGameState> getParticipateMethod;
     if ((getParticipateMethod = ServiceGrpc.getParticipateMethod) == null) {
       synchronized (ServiceGrpc.class) {
         if ((getParticipateMethod = ServiceGrpc.getParticipateMethod) == null) {
           ServiceGrpc.getParticipateMethod = getParticipateMethod =
-              io.grpc.MethodDescriptor.<protoc.ServiceProto.ParticipateRequest, protoc.ServiceProto.PlayerGameData>newBuilder()
+              io.grpc.MethodDescriptor.<protoc.ServiceProto.ParticipateRequest, protoc.ServiceProto.PlayerGameState>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Participate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   protoc.ServiceProto.ParticipateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoc.ServiceProto.PlayerGameData.getDefaultInstance()))
+                  protoc.ServiceProto.PlayerGameState.getDefaultInstance()))
               .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Participate"))
               .build();
         }
@@ -108,27 +108,27 @@ public final class ServiceGrpc {
     return getParticipateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<protoc.ServiceProto.PlayerAction,
+  private static volatile io.grpc.MethodDescriptor<protoc.ServiceProto.PlayerInput,
       com.google.protobuf.Empty> getInputMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Input",
-      requestType = protoc.ServiceProto.PlayerAction.class,
+      requestType = protoc.ServiceProto.PlayerInput.class,
       responseType = com.google.protobuf.Empty.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<protoc.ServiceProto.PlayerAction,
+  public static io.grpc.MethodDescriptor<protoc.ServiceProto.PlayerInput,
       com.google.protobuf.Empty> getInputMethod() {
-    io.grpc.MethodDescriptor<protoc.ServiceProto.PlayerAction, com.google.protobuf.Empty> getInputMethod;
+    io.grpc.MethodDescriptor<protoc.ServiceProto.PlayerInput, com.google.protobuf.Empty> getInputMethod;
     if ((getInputMethod = ServiceGrpc.getInputMethod) == null) {
       synchronized (ServiceGrpc.class) {
         if ((getInputMethod = ServiceGrpc.getInputMethod) == null) {
           ServiceGrpc.getInputMethod = getInputMethod =
-              io.grpc.MethodDescriptor.<protoc.ServiceProto.PlayerAction, com.google.protobuf.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<protoc.ServiceProto.PlayerInput, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Input"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoc.ServiceProto.PlayerAction.getDefaultInstance()))
+                  protoc.ServiceProto.PlayerInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setSchemaDescriptor(new ServiceMethodDescriptorSupplier("Input"))
@@ -190,7 +190,7 @@ public final class ServiceGrpc {
     /**
      */
     public void spectate(protoc.ServiceProto.SpectateRequest request,
-        io.grpc.stub.StreamObserver<protoc.ServiceProto.SpectatorGameData> responseObserver) {
+        io.grpc.stub.StreamObserver<protoc.ServiceProto.SpectatorGameState> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSpectateMethod(), responseObserver);
     }
 
@@ -204,13 +204,13 @@ public final class ServiceGrpc {
     /**
      */
     public void participate(protoc.ServiceProto.ParticipateRequest request,
-        io.grpc.stub.StreamObserver<protoc.ServiceProto.PlayerGameData> responseObserver) {
+        io.grpc.stub.StreamObserver<protoc.ServiceProto.PlayerGameState> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getParticipateMethod(), responseObserver);
     }
 
     /**
      */
-    public void input(protoc.ServiceProto.PlayerAction request,
+    public void input(protoc.ServiceProto.PlayerInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInputMethod(), responseObserver);
     }
@@ -222,7 +222,7 @@ public final class ServiceGrpc {
             io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 protoc.ServiceProto.SpectateRequest,
-                protoc.ServiceProto.SpectatorGameData>(
+                protoc.ServiceProto.SpectatorGameState>(
                   this, METHODID_SPECTATE)))
           .addMethod(
             getInitializeMethod(),
@@ -236,13 +236,13 @@ public final class ServiceGrpc {
             io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 protoc.ServiceProto.ParticipateRequest,
-                protoc.ServiceProto.PlayerGameData>(
+                protoc.ServiceProto.PlayerGameState>(
                   this, METHODID_PARTICIPATE)))
           .addMethod(
             getInputMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                protoc.ServiceProto.PlayerAction,
+                protoc.ServiceProto.PlayerInput,
                 com.google.protobuf.Empty>(
                   this, METHODID_INPUT)))
           .build();
@@ -266,7 +266,7 @@ public final class ServiceGrpc {
     /**
      */
     public void spectate(protoc.ServiceProto.SpectateRequest request,
-        io.grpc.stub.StreamObserver<protoc.ServiceProto.SpectatorGameData> responseObserver) {
+        io.grpc.stub.StreamObserver<protoc.ServiceProto.SpectatorGameState> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getSpectateMethod(), getCallOptions()), request, responseObserver);
     }
@@ -282,14 +282,14 @@ public final class ServiceGrpc {
     /**
      */
     public void participate(protoc.ServiceProto.ParticipateRequest request,
-        io.grpc.stub.StreamObserver<protoc.ServiceProto.PlayerGameData> responseObserver) {
+        io.grpc.stub.StreamObserver<protoc.ServiceProto.PlayerGameState> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getParticipateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void input(protoc.ServiceProto.PlayerAction request,
+    public void input(protoc.ServiceProto.PlayerInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getInputMethod(), getCallOptions()), request, responseObserver);
@@ -312,7 +312,7 @@ public final class ServiceGrpc {
 
     /**
      */
-    public java.util.Iterator<protoc.ServiceProto.SpectatorGameData> spectate(
+    public java.util.Iterator<protoc.ServiceProto.SpectatorGameState> spectate(
         protoc.ServiceProto.SpectateRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getSpectateMethod(), getCallOptions(), request);
@@ -327,7 +327,7 @@ public final class ServiceGrpc {
 
     /**
      */
-    public java.util.Iterator<protoc.ServiceProto.PlayerGameData> participate(
+    public java.util.Iterator<protoc.ServiceProto.PlayerGameState> participate(
         protoc.ServiceProto.ParticipateRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getParticipateMethod(), getCallOptions(), request);
@@ -335,7 +335,7 @@ public final class ServiceGrpc {
 
     /**
      */
-    public com.google.protobuf.Empty input(protoc.ServiceProto.PlayerAction request) {
+    public com.google.protobuf.Empty input(protoc.ServiceProto.PlayerInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInputMethod(), getCallOptions(), request);
     }
@@ -366,7 +366,7 @@ public final class ServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> input(
-        protoc.ServiceProto.PlayerAction request) {
+        protoc.ServiceProto.PlayerInput request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getInputMethod(), getCallOptions()), request);
     }
@@ -396,7 +396,7 @@ public final class ServiceGrpc {
       switch (methodId) {
         case METHODID_SPECTATE:
           serviceImpl.spectate((protoc.ServiceProto.SpectateRequest) request,
-              (io.grpc.stub.StreamObserver<protoc.ServiceProto.SpectatorGameData>) responseObserver);
+              (io.grpc.stub.StreamObserver<protoc.ServiceProto.SpectatorGameState>) responseObserver);
           break;
         case METHODID_INITIALIZE:
           serviceImpl.initialize((protoc.ServiceProto.InitializeRequest) request,
@@ -404,10 +404,10 @@ public final class ServiceGrpc {
           break;
         case METHODID_PARTICIPATE:
           serviceImpl.participate((protoc.ServiceProto.ParticipateRequest) request,
-              (io.grpc.stub.StreamObserver<protoc.ServiceProto.PlayerGameData>) responseObserver);
+              (io.grpc.stub.StreamObserver<protoc.ServiceProto.PlayerGameState>) responseObserver);
           break;
         case METHODID_INPUT:
-          serviceImpl.input((protoc.ServiceProto.PlayerAction) request,
+          serviceImpl.input((protoc.ServiceProto.PlayerInput) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:

@@ -18,5 +18,6 @@ public interface AIInterface {
 	public void processing();
 	public Key input();
 	public void roundEnd(RoundResult roundResult);
+	public void gameEnd();
 	
 }

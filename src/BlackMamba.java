@@ -319,5 +319,10 @@ public class BlackMamba implements AIInterface {
 	public void getAudioData(AudioData audioData) {
 		
 	}
+	
+	@Override
+	public void gameEnd() {
+		
+	}
 
 }
