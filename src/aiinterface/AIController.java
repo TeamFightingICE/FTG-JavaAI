@@ -81,6 +81,7 @@ public class AIController extends Thread {
 				this.ai.roundEnd(new RoundResult(state.getRoundResult()));
 				break;
 			case GAME_END:
+				this.ai.roundEnd(new RoundResult(state.getRoundResult()));
 				this.ai.gameEnd();
 				break;
 			default:
