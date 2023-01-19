@@ -12,7 +12,7 @@ public interface AIInterface {
 	public String name();
 	public boolean isBlind();
 	public void initialize(GameData gameData, boolean playerNumber);
-	public void getInformation(FrameData frameData, boolean isControl);
+	public void getInformation(FrameData frameData, boolean isControl, FrameData nonDelayFrameData);
 	public void getScreenData(ScreenData screenData);
 	public void getAudioData(AudioData audioData);
 	public void processing();

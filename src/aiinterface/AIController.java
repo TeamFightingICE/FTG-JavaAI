@@ -64,7 +64,8 @@ public class AIController extends Thread {
 				this.ai.initialize(new GameData(state.getGameData()), playerNumber);
 				break;
 			case PROCESSING:
-				this.ai.getInformation(new FrameData(state.getFrameData()), state.getIsControl());
+				FrameData nonDelay = state.hasNonDelayFrameData() ? new FrameData(state.getNonDelayFrameData()) : null;
+				this.ai.getInformation(new FrameData(state.getFrameData()), state.getIsControl(), nonDelay);
 				
 				if (state.hasScreenData()) {
 					this.ai.getScreenData(new ScreenData(state.getScreenData()));
