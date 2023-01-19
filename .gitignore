@@ -12,9 +12,7 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.jardesc
-!lib/**/*.jar
 *.war
 *.ear
 *.zip
@@ -33,6 +31,8 @@ hs_err_pid*
 bin
 data
 log
+AIToolkit.jar
+FightingICE_JavaAI.jar
 !.gitkeep
 log/point/*
 !.gitkeep
