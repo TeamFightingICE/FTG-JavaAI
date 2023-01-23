@@ -25,14 +25,13 @@ hs_err_pid*
 # .
 .metadata
 .recommenders
-.classpath
 .project
 .settings
 bin
 data
 log
 AIToolkit.jar
-FightingICE_JavaAI.jar
+FTG-JavaAI.jar
 !.gitkeep
 log/point/*
 !.gitkeep
