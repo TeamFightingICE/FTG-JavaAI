@@ -3,44 +3,40 @@ package struct;
 import protoc.MessageProto.GrpcRoundResult;
 
 /**
- * ラウンドの結果を処理するクラス．
+ * A class that processes round results.
  */
 public class RoundResult {
-
+	
 	/**
-	 * 現在のラウンド数．
+	 * Current round number
 	 */
 	private int currentRound;
-
+	
 	/**
-	 * P1とP2の残りHPを格納する配列．
+	 * An array that stores the remaining HP of P1 and P2
 	 */
 	private int[] remainingHPs;
-
+	
 	/**
-	 * ラウンドの経過フレーム数．
+	 * The number of frames elapsed in the round
 	 */
 	private int elapsedFrame;
-
+	
 	/**
-	 * クラスコンストラクタ．
-	 */
+     * The class constructor.
+     */
 	public RoundResult() {
 		this.currentRound = -1;
 		this.remainingHPs = new int[2];
 		this.elapsedFrame = -1;
 	}
-
+	
 	/**
-	 * 指定された値でRoundResultを更新するクラスコンストラクタ．
-	 *
-	 * @param round
-	 *            ラウンド数
-	 * @param hp
-	 *            P1,P2の残りHP
-	 * @param frame
-	 *            経過フレーム数
-	 */
+	 * @param rr
+     * 		grpc data
+	 * 
+     * @hidden
+     */
 	public RoundResult(GrpcRoundResult rr) {
 		this.currentRound = rr.getCurrentRound();
 		this.remainingHPs = new int[2];
@@ -50,27 +46,27 @@ public class RoundResult {
 	}
 
 	/**
-	 * 現在のラウンド数を返す．
+	 * Returns the current round number.
 	 *
-	 * @return 現在のラウンド数
+	 * @return the current round number
 	 */
 	public int getRound() {
 		return this.currentRound;
 	}
 
 	/**
-	 * P1,P2の残りHPを格納した配列を返す．
+	 * Returns an array that stores the remaining HP of P1 and P2.
 	 *
-	 * @return P1,P2の残りHPを格納した配列
+	 * @return An array that stores the remaining HP of P1 and P2
 	 */
 	public int[] getRemainingHPs() {
 		return this.remainingHPs.clone();
 	}
 
 	/**
-	 * 経過フレーム数を返す．
+	 * Returns the number of elapsed frames.
 	 *
-	 * @return 経過フレーム数
+	 * @return the number of elapsed frames
 	 */
 	public int getElapsedFrame() {
 		return this.elapsedFrame;

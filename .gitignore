@@ -29,6 +29,7 @@ hs_err_pid*
 .settings
 bin
 data
+doc
 log
 AIToolkit.jar
 FTG-JavaAI.jar

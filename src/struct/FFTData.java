@@ -10,18 +10,33 @@ import protoc.MessageProto.GrpcFftData;
  * For more details on the data structure, please see <a href="https://tinyurl.com/DareFightingICE/AI" target="blank">https://tinyurl.com/DareFightingICE/AI</a>.
  */
 public class FFTData {
+	
     /**
      * Real parts
      */
     private float[] real;
 
+    /** 
+     * Real parts as bytes
+     */
     private byte[] realAsBytes;
+    
     /**
      * Imaginary parts
      */
     private float[] imag;
+    
+    /**
+     * Imaginary parts as bytes
+     */
     private byte[] imagAsBytes;
     
+    /**
+     * @param fd
+     * 		grpc data
+     * 
+     * @hidden
+     */
     public FFTData(GrpcFftData fd) {
     	this.realAsBytes = fd.getRealDataAsBytes().toByteArray();
     	this.imagAsBytes = fd.getImaginaryDataAsBytes().toByteArray();

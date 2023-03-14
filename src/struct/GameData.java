@@ -34,6 +34,7 @@ public class GameData {
 
 	/**
 	 * The class constructor.
+	 * @hidden
 	 */
 	public GameData() {
 		this.maxHPs = new int[2];
@@ -43,14 +44,11 @@ public class GameData {
 	}
 
 	/**
-	 * The class constructor that creates an instance of the GameData class by
-	 * using character information.
-	 *
-	 * @param players
-	 *            character information of P1 and P2
-	 *
-	 * @see Character
-	 */
+	 * @param gameData
+     * 		grpc data
+	 * 
+     * @hidden
+     */
 	public GameData(GrpcGameData gameData) {
 		this();
 		this.maxHPs[0] = gameData.getMaxHps(0);

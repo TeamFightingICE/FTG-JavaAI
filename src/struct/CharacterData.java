@@ -134,12 +134,11 @@ public class CharacterData {
 	private int lastHitFrame;
 
 	/**
-	 * The copy constructor that creates a copy of an instance of the
-	 * CharacterData class passed as the argument.
-	 *
-	 * @param characterData
-	 *            an instance of CharacterData class
-	 */
+	 * @param cd
+     * 		grpc data
+	 * 
+     * @hidden
+     */
 	public CharacterData(GrpcCharacterData cd) {
 		this.playerNumber = cd.getPlayerNumber();
 		this.hp = cd.getHp();

@@ -8,17 +8,25 @@ import protoc.MessageProto.GrpcScreenData;
  */
 public class ScreenData {
 
+	/**
+	 * RGB data of the screen in the form of bytes
+	 */
 	private byte[] displayBytes;
 	
+	/**
+	 * @param sd
+     * 		grpc data
+	 * 
+     * @hidden
+     */
 	public ScreenData(GrpcScreenData sd) {
 		this.displayBytes = sd.getDisplayBytes().toByteArray();
 	}
 
 	/**
-	 * Obtains RGB data of the screen in the form of ByteBuffer.<br>
-	 * Warning: If the window is disabled, will just return a black buffer.
+	 * Obtains RGB data of the screen in the form of bytes.
 	 *
-	 * @return the RGB data of the screen in the form of ByteBuffer
+	 * @return the RGB data of the screen in the form of bytes
 	 */
 	public byte[] getDisplayBytes() {
 		return this.displayBytes;

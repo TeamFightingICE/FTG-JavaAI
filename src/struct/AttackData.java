@@ -59,15 +59,11 @@ public class AttackData {
 
 	/**
 	 * The number of frames in Startup.
-	 *
-	 * @see MotionData#attackStartUp
 	 */
 	private int startUp;
 
 	/**
 	 * The number of frames in Active.
-	 *
-	 * @see MotionData#attackActive
 	 */
 	private int active;
 
@@ -141,6 +137,7 @@ public class AttackData {
 
 	/**
 	 * The class constructor.
+	 * @hidden
 	 */
 	public AttackData() {
 		this.settingHitArea = new HitArea();
@@ -168,12 +165,11 @@ public class AttackData {
 	}
 
 	/**
-	 * The copy constructor that creates a copy of an instance of the AttackData
-	 * class.
-	 *
 	 * @param attackData
-	 *            an instance of the AttackData class
-	 */
+     * 		grpc data
+	 *
+     * @hidden
+     */
 	public AttackData(GrpcAttackData attackData) {
 		this.settingHitArea = new HitArea(attackData.getSettingHitArea());
 		this.settingSpeedX = attackData.getSettingSpeedX();
@@ -270,8 +266,6 @@ public class AttackData {
 	/**
 	 * Returns the number of frames in Startup.
 	 *
-	 * @see MotionData#attackStartUp
-	 *
 	 * @return the number of frames in Startup
 	 */
 	public int getStartUp() {
@@ -280,8 +274,6 @@ public class AttackData {
 
 	/**
 	 * Returns the number of frames in Active.
-	 *
-	 * @see MotionData#attackActive
 	 *
 	 * @return the number of frames in Active
 	 */
@@ -522,8 +514,6 @@ public class AttackData {
 	/**
 	 * Sets the number of frames in Startup.
 	 *
-	 * @see MotionData#attackStartUp
-	 *
 	 * @param startUp
 	 *            the number of frames in Startup
 	 */
@@ -533,8 +523,6 @@ public class AttackData {
 
 	/**
 	 * Sets the number of frames in Active.
-	 *
-	 * @see MotionData#attackActive
 	 *
 	 * @param active
 	 *            the number of frames in Active

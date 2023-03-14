@@ -39,12 +39,13 @@ public class FrameData {
     private boolean emptyFlag;
 
     /**
-     * imported from {@link CharacterData's front}
+     * The facing direction of both characters
      */
     private boolean[] front;
 
     /**
      * The class constructor.
+     * @hidden
      */
     public FrameData() {
         this.characterData = new CharacterData[]{null, null};
@@ -55,6 +56,12 @@ public class FrameData {
         this.front = new boolean[2];
     }
     
+    /**
+     * @param fd
+     * 		grpc data
+     * 
+     * @hidden
+     */
     public FrameData(GrpcFrameData fd) {
         this();
         
@@ -172,6 +179,13 @@ public class FrameData {
         return Math.abs((this.characterData[0].getCenterY() - this.characterData[1].getCenterY()));
     }
 
+    /**
+	 * The character's facing direction.
+	 * 
+	 * @param player
+	 * 		The character's side flag
+	 * @return {@code true} if the character is facing right, {@code false} otherwise.
+	 */
     public boolean isFront(boolean player) {
         return this.front[player ? 0 : 1];
     }

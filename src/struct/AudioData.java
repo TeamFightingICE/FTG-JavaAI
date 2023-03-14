@@ -9,6 +9,7 @@ import protoc.MessageProto.GrpcAudioData;
  * For more details on the data structure, please see <a href="https://tinyurl.com/DareFightingICE/AI" target="blank">https://tinyurl.com/DareFightingICE/AI</a>.
  */
 public class AudioData {
+	
     /**
      * Raw audio data.
      */
@@ -33,6 +34,7 @@ public class AudioData {
 
     /**
      * Initialize data.
+     * @hidden
      */
     public AudioData() {
         this.rawData = new float[2][1024];
@@ -40,6 +42,12 @@ public class AudioData {
         this.spectrogramData = new float[2][][];
     }
     
+    /**
+     * @param ad
+     * 		grpc data
+     * 
+     * @hidden
+     */
     public AudioData(GrpcAudioData ad) {
     	this();
     	

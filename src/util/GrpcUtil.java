@@ -4,7 +4,7 @@ import protoc.MessageProto.GrpcKey;
 import struct.Key;
 
 public class GrpcUtil {
-  	
+	
     public static GrpcKey convertKey(Key key) {
     	if (key == null) key = new Key();
     	return GrpcKey.newBuilder()

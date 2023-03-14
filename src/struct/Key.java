@@ -37,6 +37,7 @@ public class Key {
 
 	/**
 	 * This constructor initializes all keys to false, or not pressed.
+	 * @hidden
 	 */
 	public Key() {
 		this.empty();
@@ -47,6 +48,7 @@ public class Key {
 	 *
 	 * @param key
 	 *            an instance of the Key class
+	 * @hidden
 	 */
 	public Key(Key key) {
 		if (key != null) {
@@ -62,6 +64,12 @@ public class Key {
 		}
 	}
 	
+	/**
+	 * @param grpcKey
+     * 		grpc data
+	 * 
+     * @hidden
+     */
 	public Key(GrpcKey grpcKey) {
 		this.A = grpcKey.getA();
 		this.B = grpcKey.getB();
@@ -85,6 +93,11 @@ public class Key {
 		this.L = false;
 	}
 	
+	/**
+	 * Returns the flag whether or not the key is being pressed.
+	 *
+	 * @return {@code true} if no key is being pressed, {@code false} otherwise
+	 */
 	public boolean isEmpty() {
 		if (this.A) return false;
 		else if (this.B) return false;

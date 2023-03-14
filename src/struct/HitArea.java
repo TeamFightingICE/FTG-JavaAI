@@ -30,6 +30,7 @@ public class HitArea {
 
 	/**
 	 * The class constructor.
+	 * @hidden
 	 */
 	public HitArea() {
 		this.left = 0;
@@ -39,12 +40,11 @@ public class HitArea {
 	}
 
 	/**
-	 * The class constructor that initializes the hit determination area using
-	 * the specified data.
-	 *
 	 * @param hitArea
-	 *            an instance of the HitArea class
-	 */
+     * 		grpc data
+	 * 
+     * @hidden
+     */
 	public HitArea(GrpcHitArea hitArea) {
 		this.left = hitArea.getLeft();
 		this.right = hitArea.getRight();
@@ -64,6 +64,7 @@ public class HitArea {
 	 *            the most top y coordinate of the hit box
 	 * @param bottom
 	 *            the most bottom y coordinate of the hit box
+	 * @hidden
 	 */
 	public HitArea(int left, int right, int top, int bottom) {
 		this.left = left;
