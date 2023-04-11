@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 import aiinterface.AIController;
 import aiinterface.AIInterface;
 import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
+import io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder;
 import loader.ResourceLoader;
 import protoc.ServiceGrpc;
 import protoc.ServiceGrpc.ServiceBlockingStub;
@@ -14,6 +14,8 @@ import setting.LaunchSetting;
 
 public class Game {
 
+	private static final String GZIP_COMPRESSION = "gzip";
+	
 	private ManagedChannel channel;
 	private ServiceBlockingStub stub;
 	private AIController[] ais =  new AIController[2];
@@ -42,11 +44,12 @@ public class Game {
 	}
 	
 	public void initialize() {
-		this.channel = ManagedChannelBuilder
-			.forAddress(LaunchSetting.grpcAddr, LaunchSetting.grpcPort)
-			.usePlaintext()
-			.build();
-		this.stub = ServiceGrpc.newBlockingStub(channel);
+		channel = NettyChannelBuilder
+				.forAddress(LaunchSetting.grpcAddr, LaunchSetting.grpcPort)
+				.usePlaintext()
+				.flowControlWindow(16 * 1024)
+				.build();
+		stub = ServiceGrpc.newBlockingStub(channel).withCompression(GZIP_COMPRESSION);
 	}
 	
 	public void start() {
