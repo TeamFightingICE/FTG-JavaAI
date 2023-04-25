@@ -70,7 +70,7 @@ public class Game {
 				AIInterface ai = ResourceLoader.getInstance().loadAI(LaunchSetting.AI_NAMES[i]);
 				this.ais[i] = new AIController(stub, ai, i == 0);
 			    tasks.add(this.pool.submit(this.ais[i]));
-				Logger.getAnonymousLogger().log(Level.INFO, "AI controller for " + LaunchSetting.AI_NAMES[i] + " is ready.");
+				Logger.getAnonymousLogger().log(Level.INFO, String.format("AI controller for P%d (%s) is ready.", i+1, LaunchSetting.AI_NAMES[i]));
 			}
 		}
 		for (ForkJoinTask<?> task : tasks) {
