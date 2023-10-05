@@ -2,6 +2,8 @@ package aiinterface;
 
 import java.util.Iterator;
 import java.util.UUID;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import protoc.ServiceGrpc.ServiceBlockingStub;
 import protoc.ServiceProto.InitializeRequest;
@@ -55,39 +57,43 @@ public class AIController extends Thread {
 	
 	@Override
 	public void run() {
-		this.initializeRPC();
-		Iterator<PlayerGameState> gameDataIterator = this.participateRPC();
-		while (gameDataIterator.hasNext()) {
-			PlayerGameState state = gameDataIterator.next();
-			switch (state.getStateFlag()) {
-			case INITIALIZE:
-				this.ai.initialize(new GameData(state.getGameData()), playerNumber);
-				break;
-			case PROCESSING:
-				FrameData nonDelay = state.hasNonDelayFrameData() ? new FrameData(state.getNonDelayFrameData()) : null;
-				this.ai.getInformation(new FrameData(state.getFrameData()), state.getIsControl(), nonDelay);
-				
-				if (state.hasScreenData()) {
-					this.ai.getScreenData(new ScreenData(state.getScreenData()));
+		try {
+			this.initializeRPC();
+			Iterator<PlayerGameState> gameDataIterator = this.participateRPC();
+			while (gameDataIterator.hasNext()) {
+				PlayerGameState state = gameDataIterator.next();
+				switch (state.getStateFlag()) {
+				case INITIALIZE:
+					this.ai.initialize(new GameData(state.getGameData()), playerNumber);
+					break;
+				case PROCESSING:
+					FrameData nonDelay = state.hasNonDelayFrameData() ? new FrameData(state.getNonDelayFrameData()) : null;
+					this.ai.getInformation(new FrameData(state.getFrameData()), state.getIsControl(), nonDelay);
+					
+					if (state.hasScreenData()) {
+						this.ai.getScreenData(new ScreenData(state.getScreenData()));
+					}
+					
+					if (state.hasAudioData()) {
+						this.ai.getAudioData(new AudioData(state.getAudioData()));
+					}
+					
+					this.ai.processing();
+					this.inputRPC(this.ai.input());
+					break;
+				case ROUND_END:
+					this.ai.roundEnd(new RoundResult(state.getRoundResult()));
+					break;
+				case GAME_END:
+					this.ai.roundEnd(new RoundResult(state.getRoundResult()));
+					this.ai.gameEnd();
+					break;
+				default:
+					break;
 				}
-				
-				if (state.hasAudioData()) {
-					this.ai.getAudioData(new AudioData(state.getAudioData()));
-				}
-				
-				this.ai.processing();
-				this.inputRPC(this.ai.input());
-				break;
-			case ROUND_END:
-				this.ai.roundEnd(new RoundResult(state.getRoundResult()));
-				break;
-			case GAME_END:
-				this.ai.roundEnd(new RoundResult(state.getRoundResult()));
-				this.ai.gameEnd();
-				break;
-			default:
-				break;
 			}
+		} catch (Exception e) {
+			Logger.getAnonymousLogger().log(Level.SEVERE, "There was an error connecting to the gRPC server. Please try again.");
 		}
 	}
 	
