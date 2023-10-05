@@ -1,5 +1,10 @@
 package struct;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.zip.GZIPInputStream;
+
 import protoc.MessageProto.GrpcScreenData;
 
 /**
@@ -20,7 +25,25 @@ public class ScreenData {
      * @hidden
      */
 	public ScreenData(GrpcScreenData sd) {
-		this.displayBytes = sd.getDisplayBytes().toByteArray();
+		byte[] compressedData = sd.getDisplayBytes().toByteArray();
+        try {
+            ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(compressedData);
+            GZIPInputStream gzipInputStream = new GZIPInputStream(byteArrayInputStream);
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+            while ((bytesRead = gzipInputStream.read(buffer)) != -1) {
+                byteArrayOutputStream.write(buffer, 0, bytesRead);
+            }
+
+            gzipInputStream.close();
+            byteArrayOutputStream.close();
+
+            this.displayBytes = byteArrayOutputStream.toByteArray();
+        } catch (IOException e) {
+            this.displayBytes = new byte[1];
+        }
 	}
 
 	/**
